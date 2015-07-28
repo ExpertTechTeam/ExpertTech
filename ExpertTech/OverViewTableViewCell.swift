@@ -9,9 +9,9 @@
 import UIKit
 
 class OverViewTableViewCell: UITableViewCell {
-    @IBOutlet weak var imageTitle:UIImageView!
-    @IBOutlet weak var title:UILabel!
-    @IBOutlet weak var status:UILabel!
+    @IBOutlet weak var vImageTitle:UIImageView!
+    @IBOutlet weak var vTitle:UILabel!
+    @IBOutlet weak var vStatus:UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

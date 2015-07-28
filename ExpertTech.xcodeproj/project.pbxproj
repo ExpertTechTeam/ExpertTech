@@ -9,9 +9,11 @@
 /* Begin PBXBuildFile section */
 		A148B22C1B66261800840D7A /* messege_box.png in Resources */ = {isa = PBXBuildFile; fileRef = A148B22B1B66261800840D7A /* messege_box.png */; };
 		A148B2311B66281200840D7A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A148B2301B66281200840D7A /* LoginViewController.swift */; };
-		A148B2331B66288800840D7A /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A148B2321B66288800840D7A /* MenuTableViewController.swift */; };
-		A148B2351B6630AC00840D7A /* WorkOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A148B2341B6630AC00840D7A /* WorkOrderTableViewCell.swift */; };
-		A148B2371B66369800840D7A /* OverViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A148B2361B66369800840D7A /* OverViewTableViewCell.swift */; };
+		A148B2401B676F6200840D7A /* OverViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A148B23E1B676F6200840D7A /* OverViewTableViewCell.xib */; };
+		A148B2411B676F6200840D7A /* WorkOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A148B23F1B676F6200840D7A /* WorkOrderTableViewCell.xib */; };
+		A148B2451B676FC800840D7A /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A148B2421B676FC800840D7A /* MenuTableViewController.swift */; };
+		A148B2461B676FC800840D7A /* WorkOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A148B2431B676FC800840D7A /* WorkOrderTableViewCell.swift */; };
+		A148B2471B676FC800840D7A /* OverViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A148B2441B676FC800840D7A /* OverViewTableViewCell.swift */; };
 		CC765CDE9EBA77FC061E8480 /* Pods_ExpertTech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FC225681CC8AB9346F8E1CB /* Pods_ExpertTech.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		F94EE4471B5A5ACF009E2D9D /* icon_dashboard.png in Resources */ = {isa = PBXBuildFile; fileRef = F94EE4421B5A5ACF009E2D9D /* icon_dashboard.png */; };
 		F94EE4481B5A5ACF009E2D9D /* icon_expert.png in Resources */ = {isa = PBXBuildFile; fileRef = F94EE4431B5A5ACF009E2D9D /* icon_expert.png */; };
@@ -36,9 +38,11 @@
 		8FC225681CC8AB9346F8E1CB /* Pods_ExpertTech.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExpertTech.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A148B22B1B66261800840D7A /* messege_box.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = messege_box.png; sourceTree = "<group>"; };
 		A148B2301B66281200840D7A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = View/LoginViewController.swift; sourceTree = "<group>"; };
-		A148B2321B66288800840D7A /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuTableViewController.swift; path = View/MenuTableViewController.swift; sourceTree = "<group>"; };
-		A148B2341B6630AC00840D7A /* WorkOrderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorkOrderTableViewCell.swift; path = View/WorkOrderTableViewCell.swift; sourceTree = "<group>"; };
-		A148B2361B66369800840D7A /* OverViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OverViewTableViewCell.swift; path = View/OverViewTableViewCell.swift; sourceTree = "<group>"; };
+		A148B23E1B676F6200840D7A /* OverViewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverViewTableViewCell.xib; sourceTree = "<group>"; };
+		A148B23F1B676F6200840D7A /* WorkOrderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WorkOrderTableViewCell.xib; sourceTree = "<group>"; };
+		A148B2421B676FC800840D7A /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		A148B2431B676FC800840D7A /* WorkOrderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkOrderTableViewCell.swift; sourceTree = "<group>"; };
+		A148B2441B676FC800840D7A /* OverViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverViewTableViewCell.swift; sourceTree = "<group>"; };
 		CBD04698935FE637BEFC4F5A /* Pods-ExpertTech.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExpertTech.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExpertTech/Pods-ExpertTech.release.xcconfig"; sourceTree = "<group>"; };
 		D6AF87070C6C060ADCABF368 /* Pods-ExpertTech.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExpertTech.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ExpertTech/Pods-ExpertTech.debug.xcconfig"; sourceTree = "<group>"; };
 		F94EE4421B5A5ACF009E2D9D /* icon_dashboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_dashboard.png; path = images/icon_dashboard.png; sourceTree = "<group>"; };
@@ -79,9 +83,11 @@
 			isa = PBXGroup;
 			children = (
 				A148B2301B66281200840D7A /* LoginViewController.swift */,
-				A148B2321B66288800840D7A /* MenuTableViewController.swift */,
-				A148B2341B6630AC00840D7A /* WorkOrderTableViewCell.swift */,
-				A148B2361B66369800840D7A /* OverViewTableViewCell.swift */,
+				A148B2421B676FC800840D7A /* MenuTableViewController.swift */,
+				A148B2431B676FC800840D7A /* WorkOrderTableViewCell.swift */,
+				A148B2441B676FC800840D7A /* OverViewTableViewCell.swift */,
+				A148B23E1B676F6200840D7A /* OverViewTableViewCell.xib */,
+				A148B23F1B676F6200840D7A /* WorkOrderTableViewCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -239,6 +245,8 @@
 				F96594291B59526C00A8B63B /* LaunchScreen.storyboard in Resources */,
 				F94EE4471B5A5ACF009E2D9D /* icon_dashboard.png in Resources */,
 				F94EE4491B5A5ACF009E2D9D /* icon_instruction.png in Resources */,
+				A148B2401B676F6200840D7A /* OverViewTableViewCell.xib in Resources */,
+				A148B2411B676F6200840D7A /* WorkOrderTableViewCell.xib in Resources */,
 				F9FFE7BE1B5E2E9D005A28B8 /* pic_profile.png in Resources */,
 				F94EE44F1B5A5EEF009E2D9D /* icon_1.png in Resources */,
 				F96594261B59526C00A8B63B /* Assets.xcassets in Resources */,
@@ -308,11 +316,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A148B2331B66288800840D7A /* MenuTableViewController.swift in Sources */,
-				A148B2351B6630AC00840D7A /* WorkOrderTableViewCell.swift in Sources */,
+				A148B2461B676FC800840D7A /* WorkOrderTableViewCell.swift in Sources */,
+				A148B2451B676FC800840D7A /* MenuTableViewController.swift in Sources */,
+				A148B2471B676FC800840D7A /* OverViewTableViewCell.swift in Sources */,
 				A148B2311B66281200840D7A /* LoginViewController.swift in Sources */,
 				F96594241B59526C00A8B63B /* ExpertTech.xcdatamodeld in Sources */,
-				A148B2371B66369800840D7A /* OverViewTableViewCell.swift in Sources */,
 				F965941C1B59526C00A8B63B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

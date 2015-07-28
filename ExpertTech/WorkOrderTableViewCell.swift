@@ -9,14 +9,14 @@
 import UIKit
 
 class WorkOrderTableViewCell: UITableViewCell {
-    @IBOutlet weak var sequence:UILabel!
-    @IBOutlet weak var orderName:UILabel!
-    @IBOutlet weak var orderNo:UILabel!
+    @IBOutlet weak var vSequence:UILabel!
+    @IBOutlet weak var vOrderType1:UILabel!
+    @IBOutlet weak var vOrderType2:UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        self.didAddSubview(sequence)
+        
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

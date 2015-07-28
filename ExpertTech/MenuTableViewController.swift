@@ -17,6 +17,8 @@ class MenuTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        tableView.registerNib(UINib(nibName: "OverViewTableViewCell", bundle: nil), forCellReuseIdentifier: "overViewCell")
+        tableView.registerNib(UINib(nibName: "WorkOrderTableViewCell", bundle: nil), forCellReuseIdentifier: "workOrderCell")
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,42 +36,56 @@ class MenuTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         if section == 0 {
-            return 1
-        }else if section == 1{
-            return 1
-        }else {
+            return 2
+        }else{
             return 1
         }
     }
+    
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 55
+    }
+    
 
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String?
+    {
+        if section == 0 {
+            return "OVERVIEW"
+        }else if section == 1{
+            return "OPEN WORK ORDERS"
+        }else{
+            return "CLOSED WORK ORDERS"
+        }
+    }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-
-        // Configure the cell...
-        
+    
         if indexPath.section == 0 {
-         /*  let cell = tableView.dequeueReusableCellWithIdentifier("overViewCell") as! OverViewTableViewCell
-            cell.title.text = "Dashboard"
-            cell.status.text = "selected"
-            return cell*/
-            return tableView.dequeueReusableCellWithIdentifier("overViewCell", forIndexPath: indexPath)
-        }
-        else if indexPath.section == 1 {
-            
-            let cell = tableView.dequeueReusableCellWithIdentifier("openWorkOrderCell") as! WorkOrderTableViewCell
-            cell.sequence.text = "1"
-            cell.orderName.text = "ADSL"
-            cell.orderNo.text = "00000000"
+            let cell = tableView.dequeueReusableCellWithIdentifier("overViewCell", forIndexPath: indexPath) as! OverViewTableViewCell
+            if indexPath.row == 0 {
+                cell.vImageTitle.image = UIImage(named: "icon_dashboard.png")
+                cell.vTitle.text = "Dashboard"
+                cell.vStatus.text = ""
+            }else{
+                cell.vImageTitle.image = UIImage(named: "icon_vehical.png")
+                cell.vTitle.text = "Vehicle"
+                cell.vStatus.text = "Selected"
+            }
             return cell
-        
-        }else{
-            let cell = tableView.dequeueReusableCellWithIdentifier("completedWorkOrderCell") as! WorkOrderTableViewCell
-            cell.sequence.text = "2"
-            cell.orderName.text = "ADSL"
-            cell.orderNo.text = "00000000"
+        }else if indexPath.section == 1{
+            let cell = tableView.dequeueReusableCellWithIdentifier("workOrderCell", forIndexPath: indexPath) as! WorkOrderTableViewCell
+            cell.vOrderType1.text = "Type1"
+            cell.vOrderType2.text = "Type2"
+            cell.vSequence.text = "1"
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCellWithIdentifier("workOrderCell", forIndexPath: indexPath) as! WorkOrderTableViewCell
+            cell.vOrderType1.text = "Type1"
+            cell.vOrderType2.text = "Type2"
+            cell.vSequence.text = "2"
             return cell
         }
-        
+
     }
 
     /*
