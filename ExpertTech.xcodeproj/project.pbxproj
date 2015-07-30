@@ -14,6 +14,10 @@
 		A148B2451B676FC800840D7A /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A148B2421B676FC800840D7A /* MenuTableViewController.swift */; };
 		A148B2461B676FC800840D7A /* WorkOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A148B2431B676FC800840D7A /* WorkOrderTableViewCell.swift */; };
 		A148B2471B676FC800840D7A /* OverViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A148B2441B676FC800840D7A /* OverViewTableViewCell.swift */; };
+		A1E91E551B6A7826003DDC35 /* CustomerFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E91E511B6A7826003DDC35 /* CustomerFeedback.swift */; };
+		A1E91E561B6A7826003DDC35 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E91E521B6A7826003DDC35 /* Profile.swift */; };
+		A1E91E571B6A7826003DDC35 /* WorkOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E91E531B6A7826003DDC35 /* WorkOrder.swift */; };
+		A1E91E581B6A7826003DDC35 /* WorkOrderStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E91E541B6A7826003DDC35 /* WorkOrderStatus.swift */; };
 		CC765CDE9EBA77FC061E8480 /* Pods_ExpertTech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FC225681CC8AB9346F8E1CB /* Pods_ExpertTech.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		F94EE4471B5A5ACF009E2D9D /* icon_dashboard.png in Resources */ = {isa = PBXBuildFile; fileRef = F94EE4421B5A5ACF009E2D9D /* icon_dashboard.png */; };
 		F94EE4481B5A5ACF009E2D9D /* icon_expert.png in Resources */ = {isa = PBXBuildFile; fileRef = F94EE4431B5A5ACF009E2D9D /* icon_expert.png */; };
@@ -43,6 +47,10 @@
 		A148B2421B676FC800840D7A /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		A148B2431B676FC800840D7A /* WorkOrderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkOrderTableViewCell.swift; sourceTree = "<group>"; };
 		A148B2441B676FC800840D7A /* OverViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverViewTableViewCell.swift; sourceTree = "<group>"; };
+		A1E91E511B6A7826003DDC35 /* CustomerFeedback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerFeedback.swift; sourceTree = "<group>"; };
+		A1E91E521B6A7826003DDC35 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		A1E91E531B6A7826003DDC35 /* WorkOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkOrder.swift; sourceTree = "<group>"; };
+		A1E91E541B6A7826003DDC35 /* WorkOrderStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkOrderStatus.swift; sourceTree = "<group>"; };
 		CBD04698935FE637BEFC4F5A /* Pods-ExpertTech.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExpertTech.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExpertTech/Pods-ExpertTech.release.xcconfig"; sourceTree = "<group>"; };
 		D6AF87070C6C060ADCABF368 /* Pods-ExpertTech.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExpertTech.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ExpertTech/Pods-ExpertTech.debug.xcconfig"; sourceTree = "<group>"; };
 		F94EE4421B5A5ACF009E2D9D /* icon_dashboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_dashboard.png; path = images/icon_dashboard.png; sourceTree = "<group>"; };
@@ -95,6 +103,10 @@
 		A148B22E1B6627A900840D7A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A1E91E511B6A7826003DDC35 /* CustomerFeedback.swift */,
+				A1E91E521B6A7826003DDC35 /* Profile.swift */,
+				A1E91E531B6A7826003DDC35 /* WorkOrder.swift */,
+				A1E91E541B6A7826003DDC35 /* WorkOrderStatus.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -317,9 +329,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A148B2461B676FC800840D7A /* WorkOrderTableViewCell.swift in Sources */,
+				A1E91E561B6A7826003DDC35 /* Profile.swift in Sources */,
 				A148B2451B676FC800840D7A /* MenuTableViewController.swift in Sources */,
 				A148B2471B676FC800840D7A /* OverViewTableViewCell.swift in Sources */,
+				A1E91E571B6A7826003DDC35 /* WorkOrder.swift in Sources */,
+				A1E91E581B6A7826003DDC35 /* WorkOrderStatus.swift in Sources */,
 				A148B2311B66281200840D7A /* LoginViewController.swift in Sources */,
+				A1E91E551B6A7826003DDC35 /* CustomerFeedback.swift in Sources */,
 				F96594241B59526C00A8B63B /* ExpertTech.xcdatamodeld in Sources */,
 				F965941C1B59526C00A8B63B /* AppDelegate.swift in Sources */,
 			);
