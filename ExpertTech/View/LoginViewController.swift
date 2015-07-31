@@ -4,16 +4,14 @@
 //
 //  Created by Kewalin Sakawattananon on 7/27/2558 BE.
 //  Copyright © 2558 IBM. All rights reserved.
-//  Ning
+//  
 
 import UIKit
 
 class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
-        super.viewDidLoad()
-        print("Testing")
-        // Do any additional setup after loading the view.
+        super.viewDidLoad()        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
