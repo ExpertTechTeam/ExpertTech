@@ -15,14 +15,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <imageView key="tableFooterView" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic_bottommenu.png" id="dNs-Fe-u7g">
-                            <rect key="frame" x="0.0" y="705" width="703" height="44"/>
+                            <rect key="frame" x="0.0" y="725" width="1024" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <sections>
                             <tableViewSection id="Lgv-eN-ENh">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="63" id="nZS-o4-fUj">
-                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="63"/>
+                                        <rect key="frame" x="0.0" y="64" width="1024" height="63"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nZS-o4-fUj" id="xO1-Pd-NdE">
                                             <rect key="frame" x="0.0" y="0.0" width="1024" height="62.5"/>
@@ -42,7 +42,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="136" id="o7g-0M-GJ8">
-                                        <rect key="frame" x="0.0" y="63" width="1024" height="136"/>
+                                        <rect key="frame" x="0.0" y="127" width="1024" height="136"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o7g-0M-GJ8" id="Z41-o2-Nyp">
                                             <rect key="frame" x="0.0" y="0.0" width="1024" height="135.5"/>
@@ -84,7 +84,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="211" id="adI-Na-qQa">
-                                        <rect key="frame" x="0.0" y="199" width="1024" height="211"/>
+                                        <rect key="frame" x="0.0" y="263" width="1024" height="211"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="adI-Na-qQa" id="mxO-3h-W9D">
                                             <rect key="frame" x="0.0" y="0.0" width="1024" height="210.5"/>
@@ -150,7 +150,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="118" id="lcn-Yq-UpT">
-                                        <rect key="frame" x="0.0" y="410" width="1024" height="118"/>
+                                        <rect key="frame" x="0.0" y="474" width="1024" height="118"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lcn-Yq-UpT" id="0TC-ln-iOY">
                                             <rect key="frame" x="0.0" y="0.0" width="1024" height="117.5"/>
@@ -188,7 +188,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="133" id="9vz-DW-dED">
-                                        <rect key="frame" x="0.0" y="528" width="1024" height="133"/>
+                                        <rect key="frame" x="0.0" y="592" width="1024" height="133"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9vz-DW-dED" id="EAy-K1-gcL">
                                             <rect key="frame" x="0.0" y="0.0" width="1024" height="132.5"/>
@@ -248,32 +248,7 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="d17-aG-0hX" id="grH-Rn-IB2">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="39.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dashboard" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nhE-uF-zXl">
-                                            <rect key="frame" x="38" y="11" width="158" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.08235294118" green="0.36078431370000003" blue="0.58823529409999997" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_dashboard.png" id="Q99-ws-v07">
-                                            <rect key="frame" x="8" y="8" width="28" height="27"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gRM-qr-4Te">
-                                            <rect key="frame" x="216" y="10" width="96" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="imageTitle" destination="Q99-ws-v07" id="pgO-i8-akw"/>
-                                    <outlet property="status" destination="gRM-qr-4Te" id="13X-7g-GJ6"/>
-                                    <outlet property="title" destination="nhE-uF-zXl" id="lt9-8E-kGy"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
@@ -493,7 +468,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icon_dashboard.png" width="122" height="116"/>
         <image name="messege_box.png" width="324" height="66"/>
         <image name="pic_bottommenu.png" width="1424" height="116"/>
         <image name="pic_map.png" width="310" height="138"/>
