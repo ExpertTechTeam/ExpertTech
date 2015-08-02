@@ -14,6 +14,8 @@
 		A148B2451B676FC800840D7A /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A148B2421B676FC800840D7A /* MenuTableViewController.swift */; };
 		A148B2461B676FC800840D7A /* WorkOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A148B2431B676FC800840D7A /* WorkOrderTableViewCell.swift */; };
 		A148B2471B676FC800840D7A /* OverViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A148B2441B676FC800840D7A /* OverViewTableViewCell.swift */; };
+		A14A0BC31B6B84720040C90C /* DetailWorkOrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14A0BC21B6B84720040C90C /* DetailWorkOrderTableViewController.swift */; };
+		A14A0BC51B6E153E0040C90C /* DetailWorkOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14A0BC41B6E153E0040C90C /* DetailWorkOrderViewController.swift */; };
 		A1E91E551B6A7826003DDC35 /* CustomerFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E91E511B6A7826003DDC35 /* CustomerFeedback.swift */; };
 		A1E91E561B6A7826003DDC35 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E91E521B6A7826003DDC35 /* Profile.swift */; };
 		A1E91E571B6A7826003DDC35 /* WorkOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E91E531B6A7826003DDC35 /* WorkOrder.swift */; };
@@ -47,6 +49,8 @@
 		A148B2421B676FC800840D7A /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		A148B2431B676FC800840D7A /* WorkOrderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkOrderTableViewCell.swift; sourceTree = "<group>"; };
 		A148B2441B676FC800840D7A /* OverViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverViewTableViewCell.swift; sourceTree = "<group>"; };
+		A14A0BC21B6B84720040C90C /* DetailWorkOrderTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailWorkOrderTableViewController.swift; path = View/DetailWorkOrderTableViewController.swift; sourceTree = "<group>"; };
+		A14A0BC41B6E153E0040C90C /* DetailWorkOrderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailWorkOrderViewController.swift; path = View/DetailWorkOrderViewController.swift; sourceTree = "<group>"; };
 		A1E91E511B6A7826003DDC35 /* CustomerFeedback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomerFeedback.swift; sourceTree = "<group>"; };
 		A1E91E521B6A7826003DDC35 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		A1E91E531B6A7826003DDC35 /* WorkOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkOrder.swift; sourceTree = "<group>"; };
@@ -95,7 +99,9 @@
 				A148B2431B676FC800840D7A /* WorkOrderTableViewCell.swift */,
 				A148B2441B676FC800840D7A /* OverViewTableViewCell.swift */,
 				A148B23E1B676F6200840D7A /* OverViewTableViewCell.xib */,
+				A14A0BC41B6E153E0040C90C /* DetailWorkOrderViewController.swift */,
 				A148B23F1B676F6200840D7A /* WorkOrderTableViewCell.xib */,
+				A14A0BC21B6B84720040C90C /* DetailWorkOrderTableViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -331,10 +337,12 @@
 				A148B2461B676FC800840D7A /* WorkOrderTableViewCell.swift in Sources */,
 				A1E91E561B6A7826003DDC35 /* Profile.swift in Sources */,
 				A148B2451B676FC800840D7A /* MenuTableViewController.swift in Sources */,
+				A14A0BC51B6E153E0040C90C /* DetailWorkOrderViewController.swift in Sources */,
 				A148B2471B676FC800840D7A /* OverViewTableViewCell.swift in Sources */,
 				A1E91E571B6A7826003DDC35 /* WorkOrder.swift in Sources */,
 				A1E91E581B6A7826003DDC35 /* WorkOrderStatus.swift in Sources */,
 				A148B2311B66281200840D7A /* LoginViewController.swift in Sources */,
+				A14A0BC31B6B84720040C90C /* DetailWorkOrderTableViewController.swift in Sources */,
 				A1E91E551B6A7826003DDC35 /* CustomerFeedback.swift in Sources */,
 				F96594241B59526C00A8B63B /* ExpertTech.xcdatamodeld in Sources */,
 				F965941C1B59526C00A8B63B /* AppDelegate.swift in Sources */,

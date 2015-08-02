@@ -19,8 +19,18 @@ class OverViewTableViewCell: UITableViewCell {
 
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        let bgView = UIView()
+        if selected == true {
+            bgView.backgroundColor = UIColor(hex: 0x0168A2)
+            self.selectedBackgroundView = bgView
+            self.vStatus.textColor = UIColor.greenColor()
+            self.vTitle.textColor = UIColor.whiteColor()
+        }else{
+            bgView.backgroundColor = UIColor.whiteColor()
+            self.selectedBackgroundView = bgView
+            self.vStatus.textColor = UIColor.greenColor()
+            self.vTitle.textColor = UIColor(hex: 0x0168A2)
+        }
         // Configure the view for the selected state
     }
-
 }
