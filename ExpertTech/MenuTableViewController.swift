@@ -66,7 +66,7 @@ class MenuTableViewController: UITableViewController {
         selectedCell!.setSelected(true, animated: false)
         if indexPath.section == 0 && indexPath.row == 0 {
             performSegueWithIdentifier("overViewSegue", sender: nil)
-        }else{//if indexPath.section == 1 && indexPath.section == 2{
+        }else if indexPath.section == 1 || indexPath.section == 2{
             performSegueWithIdentifier("workOrderSegue", sender: nil)
         }
     }
