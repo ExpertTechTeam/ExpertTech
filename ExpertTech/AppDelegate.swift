@@ -1,4 +1,4 @@
-//
+    //
 //  AppDelegate.swift
 //  ExpertTech
 //
@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        UINavigationBar.appearance().barTintColor = UIColor(hex: 0x0168A2)
+        UINavigationBar.appearance().barTintColor = Constants.Color.Blue
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.whiteColor()]
         return true

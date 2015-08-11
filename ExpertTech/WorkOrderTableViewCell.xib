@@ -14,8 +14,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9oa-E2-C4B">
-                        <rect key="frame" x="8" y="10" width="28" height="28"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_circle.png" translatesAutoresizingMaskIntoConstraints="NO" id="9oa-E2-C4B">
+                        <rect key="frame" x="8" y="9" width="28" height="28"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="849-cB-YLV">
                         <rect key="frame" x="50" y="4" width="175" height="21"/>
@@ -47,8 +47,13 @@
                 <outlet property="vOrderType1" destination="849-cB-YLV" id="9Qn-KJ-2R2"/>
                 <outlet property="vOrderType2" destination="YA5-7k-mrQ" id="UIJ-ZJ-y5L"/>
                 <outlet property="vSequence" destination="P7D-eO-X6g" id="hB0-0t-FYy"/>
+                <outlet property="vSequenceImg" destination="9oa-E2-C4B" id="seX-kI-UIP"/>
+                <outlet property="vTime" destination="UAo-tC-8IJ" id="Pbf-KO-uK1"/>
             </connections>
             <point key="canvasLocation" x="262" y="173"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="icon_circle.png" width="100" height="100"/>
+    </resources>
 </document>

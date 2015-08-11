@@ -96,12 +96,12 @@ class MenuTableViewController: UITableViewController {
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCellWithIdentifier("overViewCell", forIndexPath: indexPath) as! OverViewTableViewCell
             if indexPath.row == 0 {
-                cell.vImageTitle.image = UIImage(named: "icon_dashboard.png")
+                cell.vImageTitle.image = UIImage(named: "menu_dashboard.png")
                 cell.vTitle.text = "Dashboard"
                 cell.vStatus.text = ""
                 
             }else{
-                cell.vImageTitle.image = UIImage(named: "icon_vehical.png")
+                cell.vImageTitle.image = UIImage(named: "menu_vehicle.png")
                 cell.vTitle.text = "Vehicle"
                 cell.vStatus.text = "Selected"
             }
@@ -114,6 +114,7 @@ class MenuTableViewController: UITableViewController {
             return cell
         } else {
             let cell = tableView.dequeueReusableCellWithIdentifier("workOrderCell", forIndexPath: indexPath) as! WorkOrderTableViewCell
+            cell.vSequenceImg.image = nil
             cell.vOrderType1.text = "Type1"
             cell.vOrderType2.text = "Type2"
             cell.vSequence.text = ""

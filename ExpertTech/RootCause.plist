@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+   RootCause.plist
+   ExpertTech
+
+   Created by Kewalin Sakawattananon on 8/10/2558 BE.
+   Copyright (c) 2558 IBM. All rights reserved.
+-->
+<plist version="1.0">
+    <array>
+        <dict>
+            <key>rootcause_id</key>
+            <integer>0</integer>
+            <key>rootcause_name</key>
+            <string>Wait for parts</string>
+        </dict>
+        <dict>
+            <key>rootcause_id</key>
+            <integer>1</integer>
+            <key>rootcause_name</key>
+            <string>Pending reschedule</string>
+        </dict>
+        <dict>
+            <key>rootcause_id</key>
+            <integer>2</integer>
+            <key>rootcause_name</key>
+            <string>Pending replacement product</string>
+        </dict>
+        <dict>
+            <key>rootcause_id</key>
+            <integer>3</integer>
+            <key>rootcause_name</key>
+            <string>Pending closure of workorder</string>
+        </dict>
+    </array>
+</plist>

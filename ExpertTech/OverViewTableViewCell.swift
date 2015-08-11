@@ -21,7 +21,7 @@ class OverViewTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
         let bgView = UIView()
         if selected == true {
-            bgView.backgroundColor = UIColor(hex: 0x0168A2)
+            bgView.backgroundColor = Constants.Color.Blue
             self.selectedBackgroundView = bgView
             self.vStatus.textColor = UIColor.greenColor()
             self.vTitle.textColor = UIColor.whiteColor()
@@ -29,7 +29,7 @@ class OverViewTableViewCell: UITableViewCell {
             bgView.backgroundColor = UIColor.whiteColor()
             self.selectedBackgroundView = bgView
             self.vStatus.textColor = UIColor.greenColor()
-            self.vTitle.textColor = UIColor(hex: 0x0168A2)
+            self.vTitle.textColor = Constants.Color.Blue
         }
         // Configure the view for the selected state
     }
