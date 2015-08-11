@@ -55,6 +55,10 @@ class DetailWorkOrderViewController: UIViewController, UISplitViewControllerDele
     }
     
     @IBAction func startWork(){
+        let animations: () -> Void = {
+            self.splitViewController?.preferredDisplayMode = .PrimaryHidden
+        }
+        UIView.animateWithDuration(0.3, animations: animations)
         //UIView.animateWithDuration(<#T##duration: NSTimeInterval##NSTimeInterval#>, animations: <#T##() -> Void#>)
         //self.splitViewController!.preferredDisplayMode = UISplitViewControllerDisplayMode.PrimaryHidden
 
@@ -67,6 +71,7 @@ class DetailWorkOrderViewController: UIViewController, UISplitViewControllerDele
                 }];
         }*/
     }
+    
     /*
     @IBAction func startWork() {
         self.startCount()
@@ -123,11 +128,18 @@ class DetailWorkOrderViewController: UIViewController, UISplitViewControllerDele
     }
     
     @IBAction func completeWorkOrder(segue:UIStoryboardSegue){
+        print("Back")
+        let animations: () -> Void = {
+            self.splitViewController?.preferredDisplayMode = .Automatic
+        }
+        UIView.animateWithDuration(0.3, animations: animations)
+        
         vStartButton.layer.borderWidth = 1.0;
         vStartButton.layer.cornerRadius = 4.0;
         vStartButton.layer.borderColor = UIColor(hex: 0x0168A2).CGColor
         vStartButton.setTitleColor(UIColor(hex: 0x0168A2), forState: UIControlState.Normal)
         vStartButton.layer.backgroundColor = UIColor.whiteColor().CGColor
+        
     }
 
     /*
