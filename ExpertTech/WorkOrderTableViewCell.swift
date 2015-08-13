@@ -40,5 +40,6 @@ class WorkOrderTableViewCell: UITableViewCell {
             self.vTime.textColor = UIColor.grayColor()
         }
     }
+    
 
 }

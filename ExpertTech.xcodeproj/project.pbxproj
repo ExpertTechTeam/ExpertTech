@@ -43,6 +43,8 @@
 		A1E91E561B6A7826003DDC35 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E91E521B6A7826003DDC35 /* Profile.swift */; };
 		A1E91E571B6A7826003DDC35 /* WorkOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E91E531B6A7826003DDC35 /* WorkOrder.swift */; };
 		A1E91E581B6A7826003DDC35 /* WorkOrderStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E91E541B6A7826003DDC35 /* WorkOrderStatus.swift */; };
+		A1ED40BF1B7CA2070099F26E /* TechniacalReportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ED40BE1B7CA2070099F26E /* TechniacalReportTableViewCell.swift */; };
+		A1ED40C11B7CA48C0099F26E /* ThankYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ED40C01B7CA48C0099F26E /* ThankYouViewController.swift */; };
 		CC765CDE9EBA77FC061E8480 /* Pods_ExpertTech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FC225681CC8AB9346F8E1CB /* Pods_ExpertTech.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		F965941C1B59526C00A8B63B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F965941B1B59526C00A8B63B /* AppDelegate.swift */; };
 		F96594211B59526C00A8B63B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F965941F1B59526C00A8B63B /* Main.storyboard */; };
@@ -91,6 +93,8 @@
 		A1E91E521B6A7826003DDC35 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		A1E91E531B6A7826003DDC35 /* WorkOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkOrder.swift; sourceTree = "<group>"; };
 		A1E91E541B6A7826003DDC35 /* WorkOrderStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkOrderStatus.swift; sourceTree = "<group>"; };
+		A1ED40BE1B7CA2070099F26E /* TechniacalReportTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TechniacalReportTableViewCell.swift; path = View/TechniacalReportTableViewCell.swift; sourceTree = "<group>"; };
+		A1ED40C01B7CA48C0099F26E /* ThankYouViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThankYouViewController.swift; path = View/ThankYouViewController.swift; sourceTree = "<group>"; };
 		CBD04698935FE637BEFC4F5A /* Pods-ExpertTech.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExpertTech.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExpertTech/Pods-ExpertTech.release.xcconfig"; sourceTree = "<group>"; };
 		D6AF87070C6C060ADCABF368 /* Pods-ExpertTech.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExpertTech.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ExpertTech/Pods-ExpertTech.debug.xcconfig"; sourceTree = "<group>"; };
 		F96594181B59526C00A8B63B /* ExpertTech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpertTech.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -132,10 +136,12 @@
 				A148B23F1B676F6200840D7A /* WorkOrderTableViewCell.xib */,
 				A148B2431B676FC800840D7A /* WorkOrderTableViewCell.swift */,
 				A133E95C1B6F894A003C531F /* TechnicianReportTableViewController.swift */,
+				A1ED40BE1B7CA2070099F26E /* TechniacalReportTableViewCell.swift */,
 				A1DB14E41B70CA4800E9AA09 /* CustomerSignOffViewController.swift */,
+				A1ED40C01B7CA48C0099F26E /* ThankYouViewController.swift */,
 				A1DB14E61B70CAC000E9AA09 /* SurveyOptionViewController.swift */,
-				A1DB14E81B70CAEA00E9AA09 /* CustomerFeedbackViewController.swift */,
 				A14CACBE1B78508D00AFBC5A /* WorkOrderStatus1TableViewController.swift */,
+				A1DB14E81B70CAEA00E9AA09 /* CustomerFeedbackViewController.swift */,
 				A14CACC61B786DD400AFBC5A /* WorkOrderStatus2TableViewController.swift */,
 				A14CACC41B786CA500AFBC5A /* RootCauseTableViewController.swift */,
 			);
@@ -385,6 +391,7 @@
 				A14CACCF1B78B4DF00AFBC5A /* Constants.swift in Sources */,
 				A148B2471B676FC800840D7A /* OverViewTableViewCell.swift in Sources */,
 				A1E91E571B6A7826003DDC35 /* WorkOrder.swift in Sources */,
+				A1ED40C11B7CA48C0099F26E /* ThankYouViewController.swift in Sources */,
 				A1E91E581B6A7826003DDC35 /* WorkOrderStatus.swift in Sources */,
 				A1DB14E51B70CA4800E9AA09 /* CustomerSignOffViewController.swift in Sources */,
 				A148B2311B66281200840D7A /* LoginViewController.swift in Sources */,
@@ -398,6 +405,7 @@
 				A1E91E551B6A7826003DDC35 /* CustomerFeedback.swift in Sources */,
 				F96594241B59526C00A8B63B /* ExpertTech.xcdatamodeld in Sources */,
 				F965941C1B59526C00A8B63B /* AppDelegate.swift in Sources */,
+				A1ED40BF1B7CA2070099F26E /* TechniacalReportTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -637,11 +637,12 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="BfH-Rc-4kb">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.94509810209274292" green="0.9647059440612793" blue="0.98431378602981567" alpha="1" colorSpace="deviceRGB"/>
+                        <inset key="separatorInset" minX="40" minY="0.0" maxX="40" maxY="0.0"/>
                         <sections>
                             <tableViewSection id="B4o-d9-Zzj">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="HkD-rD-cFD">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" id="HkD-rD-cFD" customClass="TechniacalReportTableViewCell" customModule="ExpertTech" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="109" width="1024" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HkD-rD-cFD" id="GHc-nA-Waf">
@@ -651,7 +652,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Status" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wig-vi-1dK">
                                                     <rect key="frame" x="36" y="11" width="90" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.1137254902" green="0.44705882349999998" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select a status" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iGc-0P-ASd">
@@ -672,7 +673,7 @@
                             </tableViewSection>
                             <tableViewSection id="TMU-8U-W7x">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="NYw-cN-rsz">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="NYw-cN-rsz" customClass="TechniacalReportTableViewCell" customModule="ExpertTech" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="173" width="1024" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NYw-cN-rsz" id="Cf3-df-lmG">
@@ -682,7 +683,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Root Cause" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JmY-aG-CK9">
                                                     <rect key="frame" x="36" y="11" width="89" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.1137254902" green="0.44705882349999998" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Select a root cause" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UKs-GT-8Hi">
@@ -703,7 +704,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="NOTES" id="jtX-Pk-5iN">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="102" id="c9s-oG-kEi">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="102" id="c9s-oG-kEi" customClass="TechniacalReportTableViewCell" customModule="ExpertTech" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="259" width="1024" height="102"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="c9s-oG-kEi" id="7cL-Bg-5rP">
@@ -729,7 +730,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="PHOTOS AND VIDEOS" id="6vD-x7-P86">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="116" id="tlQ-V3-2ZM">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="116" id="tlQ-V3-2ZM" customClass="TechniacalReportTableViewCell" customModule="ExpertTech" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="403" width="1024" height="116"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tlQ-V3-2ZM" id="b5E-Yd-74f">
@@ -744,12 +745,13 @@
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="40" minY="0.0" maxX="40" maxY="0.0"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="INSTALLED PARTS" id="YBk-Q7-Pq5">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="iYI-yP-DkP">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" id="iYI-yP-DkP" customClass="TechniacalReportTableViewCell" customModule="ExpertTech" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="561" width="1024" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iYI-yP-DkP" id="Hiz-R6-xv7">
@@ -913,6 +915,9 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="0.1137254902" green="0.44705882349999998" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Do Not Take Survey"/>
+                                <connections>
+                                    <segue destination="4BB-FV-IBW" kind="push" identifier="noTakeSurveySegue" id="e2A-jh-sk1"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1098,12 +1103,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GtO-Ei-znC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9235" y="322"/>
+            <point key="canvasLocation" x="9761" y="-46"/>
         </scene>
         <!--Thank You-->
         <scene sceneID="gZj-1g-QHK">
             <objects>
-                <viewController id="4BB-FV-IBW" sceneMemberID="viewController">
+                <viewController id="4BB-FV-IBW" customClass="ThankYouViewController" customModule="ExpertTech" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ua8-Dm-UcC"/>
                         <viewControllerLayoutGuide type="bottom" id="QGT-aq-EQA"/>
@@ -1133,7 +1138,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y4V-r4-bf0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10329" y="322"/>
+            <point key="canvasLocation" x="9761" y="954"/>
         </scene>
         <!--Status2 Rescheduled-->
         <scene sceneID="73l-Jw-pJT">
@@ -1770,5 +1775,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="EWY-H5-glj"/>
+        <segue reference="e2A-jh-sk1"/>
     </inferredMetricsTieBreakers>
 </document>
