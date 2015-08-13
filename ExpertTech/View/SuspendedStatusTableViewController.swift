@@ -7,12 +7,12 @@
 //
 
 import UIKit
-
 class SuspendedStatusTableViewController: UITableViewController {
-
+    var selectedStatusId:Int!
+    var delegate:communicationControllerStatus? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("Selected Status ID : \(selectedStatusId)")
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -25,6 +25,10 @@ class SuspendedStatusTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        delegate?.backFromSelectedStatus(selectedStatusId, statusId2: indexPath.row)
+        dismissViewControllerAnimated(true, completion: nil)
+    }
     // MARK: - Table view data source
 /*
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {

@@ -1,31 +1,31 @@
 //
-//  SurveyOptionViewController.swift
+//  ThankYouViewController.swift
 //  ExpertTech
 //
-//  Created by Kewalin Sakawattananon on 8/4/2558 BE.
+//  Created by Kewalin Sakawattananon on 8/11/2558 BE.
 //  Copyright © 2558 IBM. All rights reserved.
 //
 
 import UIKit
-
-class SurveyOptionViewController: UIViewController {
-
-    @IBOutlet weak var vTakeSurwayBtn: UIButton!
-    @IBOutlet weak var vDoNotTakeSurway: UIButton!
+class ThankYouViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBar.hidden = true
-        self.view.backgroundColor = Constants.Color.LightGray
-        self.vTakeSurwayBtn.layer.cornerRadius = 6.0
-        self.vDoNotTakeSurway.layer.cornerRadius = 6.0
+        
+        // Do any additional setup after loading the view.
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func closeThankYouPage(sender: AnyObject) {
+    //     self.dismissViewControllerAnimated(false, completion: nil)
+   //     self.delegate?.backFromWorkOrder()
+    }
 
     /*
     // MARK: - Navigation

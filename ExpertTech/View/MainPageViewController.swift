@@ -10,12 +10,17 @@ import UIKit
 
 class MainPageViewController: UIViewController {
 
-    @IBOutlet weak var vTechniicianImg: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
+        let technicianIcon = UIImage(named: "icon_technician")
+        let imageView = UIImageView(image: technicianIcon)
+        let imageLeftBarButton = UIBarButtonItem(customView: imageView)
+        
+        self.navigationItem.leftBarButtonItem = imageLeftBarButton;
+        /*
         let technicianImg: UIImage = UIImage(named: "icon_technician")!
         technicianImg.drawInRect(CGRectMake(0, 0, 22, 22))
-        vTechniicianImg.image=technicianImg
+        vTechniicianImg.image=technicianImg*/
         // Do any additional setup after loading the view.
     }
 

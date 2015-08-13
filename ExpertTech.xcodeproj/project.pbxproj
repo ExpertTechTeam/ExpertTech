@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A106E59F1B7C4C1D000EBEAC /* icon_technician.png in Resources */ = {isa = PBXBuildFile; fileRef = A106E59E1B7C4C1D000EBEAC /* icon_technician.png */; };
+		A106E5A71B7C52CC000EBEAC /* icon_expert80@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A106E5A61B7C52CC000EBEAC /* icon_expert80@2x.png */; };
+		A106E5A91B7C52F1000EBEAC /* icon_instruction80@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A106E5A81B7C52F1000EBEAC /* icon_instruction80@2x.png */; };
+		A106E5AB1B7C530B000EBEAC /* icon_viewclip80@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A106E5AA1B7C530B000EBEAC /* icon_viewclip80@2x.png */; };
+		A106E5AD1B7C700B000EBEAC /* photo.png in Resources */ = {isa = PBXBuildFile; fileRef = A106E5AC1B7C700B000EBEAC /* photo.png */; };
 		A133E95D1B6F894A003C531F /* TechnicianReportTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A133E95C1B6F894A003C531F /* TechnicianReportTableViewController.swift */; };
 		A133E95F1B7076A3003C531F /* StartDoneWorkOrderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A133E95E1B7076A3003C531F /* StartDoneWorkOrderButton.swift */; };
 		A148B2311B66281200840D7A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A148B2301B66281200840D7A /* LoginViewController.swift */; };
@@ -20,23 +25,17 @@
 		A14CACBF1B78508D00AFBC5A /* WorkOrderStatus1TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14CACBE1B78508D00AFBC5A /* WorkOrderStatus1TableViewController.swift */; };
 		A14CACC31B785DD200AFBC5A /* WorkOrderStatus.plist in Resources */ = {isa = PBXBuildFile; fileRef = A14CACC21B785DD200AFBC5A /* WorkOrderStatus.plist */; };
 		A14CACC51B786CA500AFBC5A /* RootCauseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14CACC41B786CA500AFBC5A /* RootCauseTableViewController.swift */; };
-		A14CACC71B786DD400AFBC5A /* SuspendedStatusTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14CACC61B786DD400AFBC5A /* SuspendedStatusTableViewController.swift */; };
-		A14CACC91B786DF600AFBC5A /* RescheduledStatusTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14CACC81B786DF600AFBC5A /* RescheduledStatusTableViewController.swift */; };
-		A14CACCB1B786E8100AFBC5A /* NoActionStatusTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14CACCA1B786E8100AFBC5A /* NoActionStatusTableViewController.swift */; };
+		A14CACC71B786DD400AFBC5A /* WorkOrderStatus2TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14CACC61B786DD400AFBC5A /* WorkOrderStatus2TableViewController.swift */; };
 		A14CACCD1B786F9900AFBC5A /* RootCause.plist in Resources */ = {isa = PBXBuildFile; fileRef = A14CACCC1B786F9900AFBC5A /* RootCause.plist */; };
 		A14CACCF1B78B4DF00AFBC5A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14CACCE1B78B4DF00AFBC5A /* Constants.swift */; };
 		A1C262D11B79CB8900D5DD72 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1C262D01B79CB8900D5DD72 /* LocalAuthentication.framework */; };
-		A1C262F91B79E48700D5DD72 /* icon_expert.png in Resources */ = {isa = PBXBuildFile; fileRef = A1C262F31B79E48700D5DD72 /* icon_expert.png */; };
-		A1C262FA1B79E48700D5DD72 /* icon_instruction.png in Resources */ = {isa = PBXBuildFile; fileRef = A1C262F41B79E48700D5DD72 /* icon_instruction.png */; };
 		A1C262FC1B79E48700D5DD72 /* menu_dashboard.png in Resources */ = {isa = PBXBuildFile; fileRef = A1C262F61B79E48700D5DD72 /* menu_dashboard.png */; };
 		A1C262FD1B79E48700D5DD72 /* menu_vehicle.png in Resources */ = {isa = PBXBuildFile; fileRef = A1C262F71B79E48700D5DD72 /* menu_vehicle.png */; };
-		A1C262FF1B79E4DE00D5DD72 /* icon_viewclip.png in Resources */ = {isa = PBXBuildFile; fileRef = A1C262FE1B79E4DE00D5DD72 /* icon_viewclip.png */; };
 		A1C263011B79E68000D5DD72 /* icon_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = A1C263001B79E68000D5DD72 /* icon_circle.png */; };
 		A1C263051B79EDD100D5DD72 /* overview_dailyvisit.png in Resources */ = {isa = PBXBuildFile; fileRef = A1C263021B79EDD100D5DD72 /* overview_dailyvisit.png */; };
 		A1C263061B79EDD100D5DD72 /* overview_rating.png in Resources */ = {isa = PBXBuildFile; fileRef = A1C263031B79EDD100D5DD72 /* overview_rating.png */; };
 		A1C263071B79EDD100D5DD72 /* overview_resolutionrate.png in Resources */ = {isa = PBXBuildFile; fileRef = A1C263041B79EDD100D5DD72 /* overview_resolutionrate.png */; };
 		A1C263091B79F78E00D5DD72 /* MainPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1C263081B79F78E00D5DD72 /* MainPageViewController.swift */; };
-		A1C263111B79FBA700D5DD72 /* icon_technician.png in Resources */ = {isa = PBXBuildFile; fileRef = A1C263101B79FBA700D5DD72 /* icon_technician.png */; };
 		A1DB14E51B70CA4800E9AA09 /* CustomerSignOffViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DB14E41B70CA4800E9AA09 /* CustomerSignOffViewController.swift */; };
 		A1DB14E71B70CAC000E9AA09 /* SurveyOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DB14E61B70CAC000E9AA09 /* SurveyOptionViewController.swift */; };
 		A1DB14E91B70CAEA00E9AA09 /* CustomerFeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1DB14E81B70CAEA00E9AA09 /* CustomerFeedbackViewController.swift */; };
@@ -56,6 +55,11 @@
 
 /* Begin PBXFileReference section */
 		8FC225681CC8AB9346F8E1CB /* Pods_ExpertTech.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExpertTech.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A106E59E1B7C4C1D000EBEAC /* icon_technician.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_technician.png; sourceTree = "<group>"; };
+		A106E5A61B7C52CC000EBEAC /* icon_expert80@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_expert80@2x.png"; sourceTree = "<group>"; };
+		A106E5A81B7C52F1000EBEAC /* icon_instruction80@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_instruction80@2x.png"; sourceTree = "<group>"; };
+		A106E5AA1B7C530B000EBEAC /* icon_viewclip80@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_viewclip80@2x.png"; sourceTree = "<group>"; };
+		A106E5AC1B7C700B000EBEAC /* photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo.png; sourceTree = "<group>"; };
 		A133E95C1B6F894A003C531F /* TechnicianReportTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TechnicianReportTableViewController.swift; sourceTree = "<group>"; };
 		A133E95E1B7076A3003C531F /* StartDoneWorkOrderButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StartDoneWorkOrderButton.swift; path = View/StartDoneWorkOrderButton.swift; sourceTree = "<group>"; };
 		A148B2301B66281200840D7A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = View/LoginViewController.swift; sourceTree = "<group>"; };
@@ -69,23 +73,17 @@
 		A14CACBE1B78508D00AFBC5A /* WorkOrderStatus1TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorkOrderStatus1TableViewController.swift; path = View/WorkOrderStatus1TableViewController.swift; sourceTree = "<group>"; };
 		A14CACC21B785DD200AFBC5A /* WorkOrderStatus.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = WorkOrderStatus.plist; sourceTree = "<group>"; };
 		A14CACC41B786CA500AFBC5A /* RootCauseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootCauseTableViewController.swift; path = View/RootCauseTableViewController.swift; sourceTree = "<group>"; };
-		A14CACC61B786DD400AFBC5A /* SuspendedStatusTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SuspendedStatusTableViewController.swift; path = View/SuspendedStatusTableViewController.swift; sourceTree = "<group>"; };
-		A14CACC81B786DF600AFBC5A /* RescheduledStatusTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RescheduledStatusTableViewController.swift; path = View/RescheduledStatusTableViewController.swift; sourceTree = "<group>"; };
-		A14CACCA1B786E8100AFBC5A /* NoActionStatusTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NoActionStatusTableViewController.swift; path = View/NoActionStatusTableViewController.swift; sourceTree = "<group>"; };
+		A14CACC61B786DD400AFBC5A /* WorkOrderStatus2TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorkOrderStatus2TableViewController.swift; path = View/WorkOrderStatus2TableViewController.swift; sourceTree = "<group>"; };
 		A14CACCC1B786F9900AFBC5A /* RootCause.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = RootCause.plist; sourceTree = "<group>"; };
 		A14CACCE1B78B4DF00AFBC5A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A1C262D01B79CB8900D5DD72 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
-		A1C262F31B79E48700D5DD72 /* icon_expert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_expert.png; sourceTree = "<group>"; };
-		A1C262F41B79E48700D5DD72 /* icon_instruction.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_instruction.png; sourceTree = "<group>"; };
 		A1C262F61B79E48700D5DD72 /* menu_dashboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_dashboard.png; sourceTree = "<group>"; };
 		A1C262F71B79E48700D5DD72 /* menu_vehicle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_vehicle.png; sourceTree = "<group>"; };
-		A1C262FE1B79E4DE00D5DD72 /* icon_viewclip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_viewclip.png; sourceTree = "<group>"; };
 		A1C263001B79E68000D5DD72 /* icon_circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_circle.png; sourceTree = "<group>"; };
 		A1C263021B79EDD100D5DD72 /* overview_dailyvisit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overview_dailyvisit.png; sourceTree = "<group>"; };
 		A1C263031B79EDD100D5DD72 /* overview_rating.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overview_rating.png; sourceTree = "<group>"; };
 		A1C263041B79EDD100D5DD72 /* overview_resolutionrate.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overview_resolutionrate.png; sourceTree = "<group>"; };
 		A1C263081B79F78E00D5DD72 /* MainPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainPageViewController.swift; path = View/MainPageViewController.swift; sourceTree = "<group>"; };
-		A1C263101B79FBA700D5DD72 /* icon_technician.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_technician.png; sourceTree = "<group>"; };
 		A1DB14E41B70CA4800E9AA09 /* CustomerSignOffViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomerSignOffViewController.swift; path = View/CustomerSignOffViewController.swift; sourceTree = "<group>"; };
 		A1DB14E61B70CAC000E9AA09 /* SurveyOptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SurveyOptionViewController.swift; path = View/SurveyOptionViewController.swift; sourceTree = "<group>"; };
 		A1DB14E81B70CAEA00E9AA09 /* CustomerFeedbackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomerFeedbackViewController.swift; path = View/CustomerFeedbackViewController.swift; sourceTree = "<group>"; };
@@ -138,10 +136,8 @@
 				A1DB14E61B70CAC000E9AA09 /* SurveyOptionViewController.swift */,
 				A1DB14E81B70CAEA00E9AA09 /* CustomerFeedbackViewController.swift */,
 				A14CACBE1B78508D00AFBC5A /* WorkOrderStatus1TableViewController.swift */,
-				A14CACC81B786DF600AFBC5A /* RescheduledStatusTableViewController.swift */,
-				A14CACCA1B786E8100AFBC5A /* NoActionStatusTableViewController.swift */,
+				A14CACC61B786DD400AFBC5A /* WorkOrderStatus2TableViewController.swift */,
 				A14CACC41B786CA500AFBC5A /* RootCauseTableViewController.swift */,
-				A14CACC61B786DD400AFBC5A /* SuspendedStatusTableViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -186,14 +182,15 @@
 		F94EE4411B5A5AB0009E2D9D /* images */ = {
 			isa = PBXGroup;
 			children = (
-				A1C263101B79FBA700D5DD72 /* icon_technician.png */,
+				A106E5AC1B7C700B000EBEAC /* photo.png */,
+				A106E5AA1B7C530B000EBEAC /* icon_viewclip80@2x.png */,
+				A106E5A81B7C52F1000EBEAC /* icon_instruction80@2x.png */,
+				A106E5A61B7C52CC000EBEAC /* icon_expert80@2x.png */,
 				A1C263021B79EDD100D5DD72 /* overview_dailyvisit.png */,
 				A1C263031B79EDD100D5DD72 /* overview_rating.png */,
+				A106E59E1B7C4C1D000EBEAC /* icon_technician.png */,
 				A1C263041B79EDD100D5DD72 /* overview_resolutionrate.png */,
 				A1C263001B79E68000D5DD72 /* icon_circle.png */,
-				A1C262FE1B79E4DE00D5DD72 /* icon_viewclip.png */,
-				A1C262F31B79E48700D5DD72 /* icon_expert.png */,
-				A1C262F41B79E48700D5DD72 /* icon_instruction.png */,
 				A1C262F61B79E48700D5DD72 /* menu_dashboard.png */,
 				A1C262F71B79E48700D5DD72 /* menu_vehicle.png */,
 				F9FFE7B81B5E2D38005A28B8 /* pic_map.png */,
@@ -303,20 +300,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1C263071B79EDD100D5DD72 /* overview_resolutionrate.png in Resources */,
+				A106E59F1B7C4C1D000EBEAC /* icon_technician.png in Resources */,
+				A106E5A91B7C52F1000EBEAC /* icon_instruction80@2x.png in Resources */,
+				A106E5A71B7C52CC000EBEAC /* icon_expert80@2x.png in Resources */,
 				A14CACCD1B786F9900AFBC5A /* RootCause.plist in Resources */,
 				A1C263061B79EDD100D5DD72 /* overview_rating.png in Resources */,
+				A106E5AB1B7C530B000EBEAC /* icon_viewclip80@2x.png in Resources */,
 				F96594291B59526C00A8B63B /* LaunchScreen.storyboard in Resources */,
 				A1C263051B79EDD100D5DD72 /* overview_dailyvisit.png in Resources */,
-				A1C262F91B79E48700D5DD72 /* icon_expert.png in Resources */,
 				A148B2401B676F6200840D7A /* OverViewTableViewCell.xib in Resources */,
 				A148B2411B676F6200840D7A /* WorkOrderTableViewCell.xib in Resources */,
 				F96594261B59526C00A8B63B /* Assets.xcassets in Resources */,
 				A1C262FD1B79E48700D5DD72 /* menu_vehicle.png in Resources */,
+				A106E5AD1B7C700B000EBEAC /* photo.png in Resources */,
 				F96594211B59526C00A8B63B /* Main.storyboard in Resources */,
 				A14CACC31B785DD200AFBC5A /* WorkOrderStatus.plist in Resources */,
-				A1C263111B79FBA700D5DD72 /* icon_technician.png in Resources */,
-				A1C262FF1B79E4DE00D5DD72 /* icon_viewclip.png in Resources */,
-				A1C262FA1B79E48700D5DD72 /* icon_instruction.png in Resources */,
 				A1C262FC1B79E48700D5DD72 /* menu_dashboard.png in Resources */,
 				A1C263011B79E68000D5DD72 /* icon_circle.png in Resources */,
 				F9FFE7BA1B5E2D38005A28B8 /* pic_map.png in Resources */,
@@ -383,7 +381,7 @@
 				A1DB14E71B70CAC000E9AA09 /* SurveyOptionViewController.swift in Sources */,
 				A148B2451B676FC800840D7A /* MenuTableViewController.swift in Sources */,
 				A14A0BC51B6E153E0040C90C /* DetailWorkOrderViewController.swift in Sources */,
-				A14CACC71B786DD400AFBC5A /* SuspendedStatusTableViewController.swift in Sources */,
+				A14CACC71B786DD400AFBC5A /* WorkOrderStatus2TableViewController.swift in Sources */,
 				A14CACCF1B78B4DF00AFBC5A /* Constants.swift in Sources */,
 				A148B2471B676FC800840D7A /* OverViewTableViewCell.swift in Sources */,
 				A1E91E571B6A7826003DDC35 /* WorkOrder.swift in Sources */,
@@ -396,11 +394,9 @@
 				A14CACC51B786CA500AFBC5A /* RootCauseTableViewController.swift in Sources */,
 				A1C263091B79F78E00D5DD72 /* MainPageViewController.swift in Sources */,
 				A133E95D1B6F894A003C531F /* TechnicianReportTableViewController.swift in Sources */,
-				A14CACCB1B786E8100AFBC5A /* NoActionStatusTableViewController.swift in Sources */,
 				A133E95F1B7076A3003C531F /* StartDoneWorkOrderButton.swift in Sources */,
 				A1E91E551B6A7826003DDC35 /* CustomerFeedback.swift in Sources */,
 				F96594241B59526C00A8B63B /* ExpertTech.xcdatamodeld in Sources */,
-				A14CACC91B786DF600AFBC5A /* RescheduledStatusTableViewController.swift in Sources */,
 				F965941C1B59526C00A8B63B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

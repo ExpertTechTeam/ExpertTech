@@ -23,11 +23,17 @@ class TechnicianReportTableViewController: UITableViewController, communicationC
         //do som stuff from the popover
     }
     
-    func backFromSelectedStatus(statusId: Int) {
-        
+    
+    func backFromSelectedStatus(statusId: Int, statusId2 : Int) {
         let statusFilePath = NSBundle.mainBundle().pathForResource("WorkOrderStatus", ofType: "plist")
         let statusArray = NSArray(contentsOfFile: statusFilePath!)!
-        vStatusLabel.text = String(statusArray[statusId].objectForKey("status_name_en")!)
+        if statusId < 3 {
+            self.vStatusLabel.text = String(statusArray[statusId].objectForKey("status_name_en")!)
+
+        }else{
+            let subArray = statusArray[statusId].objectForKey("sub") as! NSArray
+            self.vStatusLabel.text = String(subArray[statusId2].objectForKey("name_en")!)
+        }
         vStatusLabel.textColor = UIColor.blackColor()
         
     }
@@ -109,17 +115,12 @@ class TechnicianReportTableViewController: UITableViewController, communicationC
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         if segue.identifier == "workOrderStatusSegue" {
-            let workOrderStatusVC: WorkOrderStatus1TableViewController = (segue.destinationViewController as! WorkOrderStatus1TableViewController)
+            let navWorkOrderStatusVC = segue.destinationViewController as! UINavigationController
+            let workOrderStatusVC = navWorkOrderStatusVC.topViewController as! WorkOrderStatus1TableViewController
             workOrderStatusVC.delegate = self
-           /* workOrderStatusVC.modalPresentationStyle = .Popover
-            workOrderStatusVC.popoverPresentationController?.permittedArrowDirections =  UIPopoverArrowDirection.Up
-            workOrderStatusVC.preferredContentSize = CGSizeMake(280, 320)
-            workOrderStatusVC.popoverPresentationController?.delegate = self
-            workOrderStatusVC.popoverPresentationController?.sourceView = self.view
-            //workOrderStatusVC.popoverPresentationController?.sourceRect = CGRectMake(0, 50, 0, 0)
-            self.presentViewController(workOrderStatusVC, animated: true, completion: nil)*/
         }else if segue.identifier == "rootCauseSegue" {
-            let workOrderRootCauseVC: RootCauseTableViewController = (segue.destinationViewController as! RootCauseTableViewController)
+            let navWorkOrderRootCauseVC = segue.destinationViewController as! UINavigationController
+            let workOrderRootCauseVC = navWorkOrderRootCauseVC.topViewController as! RootCauseTableViewController
             workOrderRootCauseVC.delegate = self
         }
         

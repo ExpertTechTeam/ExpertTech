@@ -8,7 +8,8 @@
 
 import UIKit
 
-class DetailWorkOrderViewController: UIViewController, UISplitViewControllerDelegate {
+class DetailWorkOrderViewController: UIViewController, UISplitViewControllerDelegate{
+    @IBOutlet weak var vToolbar: UIToolbar!
     @IBOutlet weak var vTimeCount:UILabel!
     @IBOutlet weak var vStartButton:StartDoneWorkOrderButton!
     var hideMaster:Bool = false
@@ -18,12 +19,15 @@ class DetailWorkOrderViewController: UIViewController, UISplitViewControllerDele
     var strMinutes:String!
     var strSeconds:String!
     
-    var viewController:UIViewController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.vTimeCount.hidden = true
         // Do any additional setup after loading the view.
+        vToolbar.frame = CGRectMake(0, self.view.frame.size.height - 100, self.view.frame.size.width, 100)
+        vToolbar.sizeToFit()
+        print("load")
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -50,26 +54,30 @@ class DetailWorkOrderViewController: UIViewController, UISplitViewControllerDele
     
 
     func splitViewController(svc: UISplitViewController, shouldHideViewController vc: UIViewController, inOrientation orientation: UIInterfaceOrientation) -> Bool {
-        viewController = vc
-        return self.hideMaster
+        return hideMaster
     }
     
+    
     @IBAction func startWork(){
+        print("start")
+        hideMaster = !hideMaster;
         let animations: () -> Void = {
             self.splitViewController?.preferredDisplayMode = .PrimaryHidden
+            self.splitViewController?.viewWillLayoutSubviews()
+            self.splitViewController?.view.layoutSubviews()
+            
         }
-        UIView.animateWithDuration(0.3, animations: animations)
-        //UIView.animateWithDuration(<#T##duration: NSTimeInterval##NSTimeInterval#>, animations: <#T##() -> Void#>)
-        //self.splitViewController!.preferredDisplayMode = UISplitViewControllerDisplayMode.PrimaryHidden
-
-        /*
-        if (UIInterfaceOrientationIsPortrait([UIDevice currentDevice].orientation)) {
-            [UIView animateWithDuration:ANIMATION_LENGTH animations:^{
-                self.splitViewController.preferredDisplayMode = UISplitViewControllerDisplayModePrimaryHidden;
-                } completion:^(BOOL finished) {
-                self.splitViewController.preferredDisplayMode = UISplitViewControllerDisplayModeAutomatic;
-                }];
-        }*/
+        UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: animations) { (Bool) -> Void in
+        }/*
+        let animations1: () -> Void = {
+            self.splitViewController?.preferredDisplayMode = .Automatic
+            self.splitViewController?.viewWillLayoutSubviews()
+            self.splitViewController?.view.layoutSubviews()
+            
+        }
+        UIView.animateWithDuration(0.3, delay: 4, options: UIViewAnimationOptions.CurveEaseInOut, animations: animations1) { (Bool) -> Void in
+        }
+        */
     }
     
     /*
@@ -128,19 +136,50 @@ class DetailWorkOrderViewController: UIViewController, UISplitViewControllerDele
     }
     
     @IBAction func completeWorkOrder(segue:UIStoryboardSegue){
+        
         print("Back")
-        let animations: () -> Void = {
-            self.splitViewController?.preferredDisplayMode = .Automatic
+        hideMaster = !hideMaster;
+        let animations1: () -> Void = {
+            self.splitViewController?.preferredDisplayMode = .PrimaryHidden
+            self.splitViewController?.viewWillLayoutSubviews()
+            self.splitViewController?.view.layoutSubviews()
         }
-        UIView.animateWithDuration(0.3, animations: animations)
+        
+        UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: animations1) { (Bool) -> Void in
+            
+            self.splitViewController?.preferredDisplayMode = .Automatic
+            self.splitViewController?.viewWillLayoutSubviews()
+            self.splitViewController?.view.layoutSubviews()
+        }
+        /*
+        let animations2: () -> Void = {
+            self.splitViewController?.preferredDisplayMode = .PrimaryHidden
+            self.splitViewController?.viewWillLayoutSubviews()
+            self.splitViewController?.view.layoutSubviews()
+            
+        }
+        UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: animations2) { (Bool) -> Void in
+        }
+        let animations3: () -> Void = {
+            self.splitViewController?.preferredDisplayMode = .Automatic
+            self.splitViewController?.viewWillLayoutSubviews()
+            self.splitViewController?.view.layoutSubviews()
+            
+        }
+        UIView.animateWithDuration(0.3, delay: 4, options: UIViewAnimationOptions.CurveEaseInOut, animations: animations3) { (Bool) -> Void in
+        }
+        */
+        
         
         vStartButton.layer.borderWidth = 1.0;
         vStartButton.layer.cornerRadius = 4.0;
         vStartButton.layer.borderColor = UIColor(hex: 0x0168A2).CGColor
         vStartButton.setTitleColor(UIColor(hex: 0x0168A2), forState: UIControlState.Normal)
+        vStartButton.setTitle("Start", forState: UIControlState.Normal)
         vStartButton.layer.backgroundColor = UIColor.whiteColor().CGColor
-        
+
     }
+    
 
     /*
     // MARK: - Navigation
@@ -151,5 +190,5 @@ class DetailWorkOrderViewController: UIViewController, UISplitViewControllerDele
         // Pass the selected object to the new view controller.
     }
     */
-
+    
 }
