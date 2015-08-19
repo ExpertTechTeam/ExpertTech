@@ -28,8 +28,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var vUsernameTxtField: UITextField!
     @IBOutlet weak var vPasswordTxtField: UITextField!
     
-    
-    
+    var loginResult : NSArray = []
+
     override func viewDidLoad() {
         super.viewDidLoad()        // Do any additional setup after loading the view.
         self.vWhiteView.layer.cornerRadius = 5
@@ -41,6 +41,10 @@ class LoginViewController: UIViewController {
         self.vUsernameTxtField.leftViewMode = UITextFieldViewMode.Always
         self.vPasswordTxtField.leftView = UIView(frame: CGRectMake(0, 0, 10, 20))
         self.vPasswordTxtField.leftViewMode = UITextFieldViewMode.Always
+        
+        
+        //Test WL Connection
+        LoginController().login("t10001", password: "passw0rd", uiView: self)
         
     }
     
@@ -110,4 +114,21 @@ class LoginViewController: UIViewController {
         print("Logout")
     }
 
+    func updateView(response: NSArray){
+        self.loginResult = response
+        
+        print("Found the result from LoginController : \(response.count) item")
+        for item in self.loginResult as NSArray {
+            
+            let id: Int = item["PRO_ID"] as! Int
+            let fname: String = item["PRO_FNAME"] as! String
+            let lname: String = item["PRO_LNAME"] as! String
+            
+            print("ID:         \(id)")
+            print("FIRST NAME: \(fname)")
+            print("LAST NAME:  \(lname)")
+            
+        }
+    }
+    
 }
