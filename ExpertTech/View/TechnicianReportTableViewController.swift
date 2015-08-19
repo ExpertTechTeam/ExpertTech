@@ -50,6 +50,7 @@ class TechnicianReportTableViewController: UITableViewController, communicationC
         // Dispose of any resources that can be recreated.
     }
     
+    
     // MARK: - Table view data source
 /*
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -62,15 +63,6 @@ class TechnicianReportTableViewController: UITableViewController, communicationC
         return 0
     }
 */
-    /*
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
 
     /*
     // Override to support conditional editing of the table view.

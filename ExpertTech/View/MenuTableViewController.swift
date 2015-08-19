@@ -49,7 +49,7 @@ class MenuTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if indexPath.section == 0 {
-            return 35
+            return 40
         }else{
             return 50
         }
@@ -118,6 +118,8 @@ class MenuTableViewController: UITableViewController {
             cell.vOrderType1.text = "Type1"
             cell.vOrderType2.text = "Type2"
             cell.vSequence.text = ""
+            cell.vOrderType1.textColor = UIColor.grayColor()
+            cell.vOrderType2.textColor = UIColor.grayColor()
             return cell
         }
 

@@ -9,10 +9,14 @@
 import UIKit
 class ThankYouViewController: UIViewController {
     
+    var isHiddenBackBtn:Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view.
+        self.navigationController?.navigationBar.hidden = false
+        self.view.backgroundColor = Constants.Color.LightGray
+        self.navigationItem.setHidesBackButton(isHiddenBackBtn, animated: false)
     }
     
     
@@ -22,11 +26,6 @@ class ThankYouViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func closeThankYouPage(sender: AnyObject) {
-    //     self.dismissViewControllerAnimated(false, completion: nil)
-   //     self.delegate?.backFromWorkOrder()
-    }
-
     /*
     // MARK: - Navigation
 
