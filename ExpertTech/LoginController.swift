@@ -15,18 +15,26 @@ class LoginController : NSObject, WLDelegate {
     
     func login(username: String, password: String, uiView: LoginViewController){
         print("----------- [LoginController] -------------")
+        print("---------- 2 -----------")
+
         let invocationData = WLProcedureInvocationData(adapterName: "MySQLDBAdapter", procedureName: "login")
         invocationData.parameters = [username, password]
         WLClient.sharedInstance().invokeProcedure(invocationData, withDelegate: self)
         
         self.callerView = uiView
+        print("---------- 3 -----------")
+
         
     }
     
     func onSuccess(response: WLResponse!) {
+        print("---------- 4 -----------")
+
         print("[LoginController] onSuccess")
         feedsArray = response.getResponseJson()["resultSet"] as! NSArray
-        self.callerView.updateView(feedsArray)
+//        self.callerView.updateView(feedsArray)
+        print("---------- 5 -----------")
+
         
     }
     

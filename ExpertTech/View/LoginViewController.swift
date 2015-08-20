@@ -44,8 +44,10 @@ class LoginViewController: UIViewController {
         
         
         //Test WL Connection
+        print("---------- 1 -----------")
         LoginController().login("t10001", password: "passw0rd", uiView: self)
-        
+        print("---------- 6 -----------")
+
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -115,6 +117,8 @@ class LoginViewController: UIViewController {
     }
 
     func updateView(response: NSArray){
+        print("---------- 7 -----------")
+
         self.loginResult = response
         
         print("Found the result from LoginController : \(response.count) item")
@@ -129,6 +133,8 @@ class LoginViewController: UIViewController {
             print("LAST NAME:  \(lname)")
             
         }
+        print("---------- 8 -----------")
+
     }
     
 }
