@@ -24,8 +24,8 @@ class DetailWorkOrderViewController: UIViewController, UISplitViewControllerDele
         super.viewDidLoad()
         self.vTimeCount.hidden = true
         // Do any additional setup after loading the view.
-        vToolbar.frame = CGRectMake(0, self.view.frame.size.height - 100, self.view.frame.size.width, 100)
-        vToolbar.sizeToFit()
+        vToolbar.frame = CGRectMake(0, 50, 320, 35)
+       // vToolbar.sizeToFit()
         print("load")
 
     }
