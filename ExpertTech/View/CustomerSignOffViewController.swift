@@ -14,9 +14,18 @@ class CustomerSignOffViewController: UIViewController {
     var mouseSwiped:Bool!
     @IBOutlet weak var vTempDrawImage:UIImageView!
     @IBOutlet weak var vClearButton:UIButton!
+    @IBOutlet weak var vUnderlineTxtField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let border = CALayer()
+        let width = CGFloat(1.0)
+        border.borderColor = Constants.Color.LightGray_BG.CGColor
+        border.frame = CGRect(x: 0, y: self.vUnderlineTxtField.frame.size.height - width, width:  self.vUnderlineTxtField.frame.size.width, height: self.vUnderlineTxtField.frame.size.height)
+        
+        border.borderWidth = width
+        self.vUnderlineTxtField.layer.addSublayer(border)
+        self.vUnderlineTxtField.layer.masksToBounds = true
     }
     
     override func didReceiveMemoryWarning() {
