@@ -46,7 +46,9 @@ class CustomerFeedbackViewController: UIViewController {
         vOverallSlider.thumbTintColor = UIColor.lightGrayColor()
     }
     
+    @IBAction func onSubmitFeedback(){
     
+    }
     
 
     /*

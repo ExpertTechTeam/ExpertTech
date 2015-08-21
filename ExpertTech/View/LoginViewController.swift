@@ -112,6 +112,10 @@ class LoginViewController: UIViewController {
     }
     */
     
+    @IBAction func login(){
+        
+    }
+    
     @IBAction func logout(segue : UIStoryboardSegue){
         print("Logout")
     }

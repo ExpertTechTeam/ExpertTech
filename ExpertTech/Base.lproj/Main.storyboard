@@ -303,6 +303,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
+                                            <action selector="login" destination="i5s-o8-3ad" eventType="touchUpInside" id="263-fb-ih8"/>
                                             <segue destination="J67-Fx-to0" kind="modal" modalTransitionStyle="flipHorizontal" id="YL1-7W-zHQ"/>
                                         </connections>
                                     </button>
@@ -749,6 +750,9 @@
                                                     <state key="normal" image="photo.png">
                                                         <color key="titleShadowColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="onPhotoVideoCLick" destination="BIM-Fi-Ov5" eventType="touchUpInside" id="AYX-MJ-Gzk"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -1102,6 +1106,7 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Submit" id="Uod-a5-Od6">
                             <connections>
+                                <action selector="onSubmitFeedback" destination="Xqm-T0-LKC" id="bey-G7-dSv"/>
                                 <segue destination="4BB-FV-IBW" kind="push" id="P5u-oH-jLm"/>
                             </connections>
                         </barButtonItem>
@@ -1949,6 +1954,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="EWY-H5-glj"/>
-        <segue reference="e2A-jh-sk1"/>
+        <segue reference="P5u-oH-jLm"/>
     </inferredMetricsTieBreakers>
 </document>
