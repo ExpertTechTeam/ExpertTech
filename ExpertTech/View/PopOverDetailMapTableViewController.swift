@@ -11,6 +11,8 @@ import UIKit
 class PopOverDetailMapTableViewController: UITableViewController {
 
     @IBOutlet weak var vNavigationBar: UINavigationBar!
+    var indexNumber:Int = 0
+    var workOrderId:Int = 0
     override func viewDidLoad() {
         print("Popover")
         super.viewDidLoad()
@@ -23,11 +25,24 @@ class PopOverDetailMapTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    @IBAction func onSelectedDetail(sender: AnyObject) {
+        print("on select detail")
+    }
     @IBAction func onSelectWorkOrder(sender: AnyObject) {
-        print("on select work order")
-        let masterVC: UITableViewController? = self.splitViewController?.viewControllers.first as? UITableViewController
-        masterVC?.tableView.reloadData()
+        print("on select work order \(indexNumber), work order id \(workOrderId)")
+        let dict: [String : AnyObject] = ["indexNumber" : indexNumber as Int, "workOrderId" : workOrderId as Int]
+        /*if identifier == "String" {
+            passedString = array[indexPath.row] as? String
+            dict = ["String" : array[indexPath.row] as String]
+        }
+        if identifier == "Int" {
+            passedInt = array[indexPath.row] as? Int
+            dict = ["Int" : array[indexPath.row] as Int]
+        }
+        */
+        NSNotificationCenter.defaultCenter().postNotificationName("workOrderListChange", object: nil, userInfo: dict)
+        self.dismissViewControllerAnimated(false, completion: nil)
 
     }
     // MARK: - Table view data source

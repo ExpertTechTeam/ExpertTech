@@ -12,6 +12,8 @@ class DetailWorkOrderViewController: UIViewController, UISplitViewControllerDele
     @IBOutlet weak var vToolbar: UIToolbar!
     @IBOutlet weak var vTimeCount:UILabel!
     @IBOutlet weak var vStartButton:StartDoneWorkOrderButton!
+    var indexNumber:Int = 0
+    var workOrderId:Int = 0
     var hideMaster:Bool = false
     var startTime = NSTimeInterval()
     var timer:NSTimer = NSTimer()
@@ -181,14 +183,20 @@ class DetailWorkOrderViewController: UIViewController, UISplitViewControllerDele
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "detailWorkOrderSegue"{
+            let controller = (segue.destinationViewController as! DetailWorkOrderTableViewController)
+            controller.workOrderId = self.workOrderId
+            controller.indexNumber = self.indexNumber
+            print("detailWorkOrderSegue")
+        }
     }
-    */
+    
     
 }

@@ -9,6 +9,9 @@
 import UIKit
 
 class MenuTableViewController: UITableViewController {
+    var isSelectedFromMap:Bool = false
+    var indexNumber:Int = 0
+    var workOrderId:Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,9 +20,36 @@ class MenuTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "workOrderListChangeMethod:", name: "workOrderListChange", object: nil)
         tableView.registerNib(UINib(nibName: "OverViewTableViewCell", bundle: nil), forCellReuseIdentifier: "overViewCell")
         tableView.registerNib(UINib(nibName: "WorkOrderTableViewCell", bundle: nil), forCellReuseIdentifier: "workOrderCell")
         
+    }
+    
+    func workOrderListChangeMethod(notif: NSNotification) {
+        print("Work Order List Change")
+        isSelectedFromMap = true
+        if let passedInt: AnyObject = notif.userInfo?["indexNumber"] {
+            indexNumber = passedInt as! Int - 1
+        }
+        if let passedInt: AnyObject = notif.userInfo?["workOrderId"] {
+            workOrderId = passedInt as! Int
+        }
+        print("index number : \(indexNumber), work order id : \(workOrderId)")
+        self.tableView.reloadData()
+        /*
+        if let passedString: AnyObject = notif.userInfo?["String"] {
+            myString = passedString as String
+            tableView.reloadRowsAtIndexPaths([NSIndexPath(forRow: 0, inSection: 0)], withRowAnimation: .Automatic)
+        }
+        if let passedInt: AnyObject = notif.userInfo?["Int"] {
+            myInt = passedInt as Int
+            tableView.reloadRowsAtIndexPaths([NSIndexPath(forRow: 1, inSection: 0)], withRowAnimation: .Automatic)
+        }*/
+    }
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: "workOrderListChange", object:nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,7 +69,7 @@ class MenuTableViewController: UITableViewController {
         if section == 0 {
             return 2
         }else{
-            return 1
+            return 2
         }
     }
     
@@ -58,15 +88,25 @@ class MenuTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.section == 0 && indexPath.row == 0 {
             tableView.selectRowAtIndexPath(indexPath, animated: true, scrollPosition: UITableViewScrollPosition.Top)
+            performSegueWithIdentifier("overViewSegue", sender: nil)
+        }
+        if isSelectedFromMap {
+            if indexPath.section == 1 && indexNumber == indexPath.row {
+                tableView.selectRowAtIndexPath(indexPath, animated: true, scrollPosition: UITableViewScrollPosition.Top)
+                performSegueWithIdentifier("workOrderSegue", sender: nil)
+            }
         }
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        isSelectedFromMap = false
         let selectedCell = tableView.cellForRowAtIndexPath(indexPath)
         selectedCell!.setSelected(true, animated: false)
         if indexPath.section == 0 && indexPath.row == 0 {
             performSegueWithIdentifier("overViewSegue", sender: nil)
         }else if indexPath.section == 1 || indexPath.section == 2{
+            self.indexNumber = indexPath.row
+            self.workOrderId = Constants.WorkOrderList.workOrderList[indexPath.row].woo_id
             performSegueWithIdentifier("workOrderSegue", sender: nil)
         }
     }
@@ -93,7 +133,6 @@ class MenuTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        print("reload table")
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCellWithIdentifier("overViewCell", forIndexPath: indexPath) as! OverViewTableViewCell
             if indexPath.row == 0 {
@@ -111,7 +150,7 @@ class MenuTableViewController: UITableViewController {
             let cell = tableView.dequeueReusableCellWithIdentifier("workOrderCell", forIndexPath: indexPath) as! WorkOrderTableViewCell
             cell.vOrderType1.text = "Type1"
             cell.vOrderType2.text = "Type2"
-            cell.vSequence.text = "1"
+            cell.vSequence.text = String(indexPath.row + 1)
             return cell
         } else {
             let cell = tableView.dequeueReusableCellWithIdentifier("workOrderCell", forIndexPath: indexPath) as! WorkOrderTableViewCell
@@ -170,7 +209,9 @@ class MenuTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
         if segue.identifier == "workOrderSegue"{
             print("open work order segue")
-            //var DetailWorkOrderTableViewController:DetailWorkOrderTableViewController = segue?.destinationViewController as DetailWorkOrderTableViewController
+            let controller:DetailWorkOrderViewController = segue.destinationViewController as! DetailWorkOrderViewController
+            controller.workOrderId = self.workOrderId
+            controller.indexNumber = self.indexNumber
             
             //var indexPath = self.tableview.indexPathForSelectedRow() //get index of data for selected row
             

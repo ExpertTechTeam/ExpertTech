@@ -58,8 +58,6 @@
 		A1E91E561B6A7826003DDC35 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E91E521B6A7826003DDC35 /* Profile.swift */; };
 		A1E91E571B6A7826003DDC35 /* WorkOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E91E531B6A7826003DDC35 /* WorkOrder.swift */; };
 		A1E91E581B6A7826003DDC35 /* WorkOrderStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E91E541B6A7826003DDC35 /* WorkOrderStatus.swift */; };
-		A1ED40BF1B7CA2070099F26E /* TechniacalReportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ED40BE1B7CA2070099F26E /* TechniacalReportTableViewCell.swift */; };
-		A1ED40C11B7CA48C0099F26E /* ThankYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ED40C01B7CA48C0099F26E /* ThankYouViewController.swift */; };
 		A1ED40C31B7CAD010099F26E /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ED40C21B7CAD010099F26E /* MenuTableViewController.swift */; };
 		A1ED40C81B7CAD1B0099F26E /* OverViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ED40C41B7CAD1B0099F26E /* OverViewTableViewCell.swift */; };
 		A1ED40C91B7CAD1B0099F26E /* TechnicianReportTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ED40C51B7CAD1B0099F26E /* TechnicianReportTableViewController.swift */; };
@@ -605,7 +603,6 @@
 				F96594291B59526C00A8B63B /* LaunchScreen.storyboard in Resources */,
 				A1C263051B79EDD100D5DD72 /* overview_dailyvisit.png in Resources */,
 				A148B2401B676F6200840D7A /* OverViewTableViewCell.xib in Resources */,
-				A148B2411B676F6200840D7A /* WorkOrderTableViewCell.xib in Resources */,
 				3A8B20901B7CABD5009200F5 /* Localizations.bundle in Resources */,
 				F96594261B59526C00A8B63B /* Assets.xcassets in Resources */,
 				A106E5AD1B7C700B000EBEAC /* photo.png in Resources */,
@@ -674,16 +671,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A8B202C1B7CAA66009200F5 /* GetAllWorkOrderStatusController.swift in Sources */,
-				A148B2461B676FC800840D7A /* WorkOrderTableViewCell.swift in Sources */,
 				A1E91E561B6A7826003DDC35 /* Profile.swift in Sources */,
 				A1DB14E71B70CAC000E9AA09 /* SurveyOptionViewController.swift in Sources */,
 				3A8B202E1B7CAA8B009200F5 /* UpdateWorkOrderStatusController.swift in Sources */,
-				A148B2451B676FC800840D7A /* MenuTableViewController.swift in Sources */,
 				A14A0BC51B6E153E0040C90C /* DetailWorkOrderViewController.swift in Sources */,
 				A14CACC71B786DD400AFBC5A /* WorkOrderStatus2TableViewController.swift in Sources */,
 				A14CACCF1B78B4DF00AFBC5A /* Constants.swift in Sources */,
 				3A8B20241B7CA9FC009200F5 /* InsertCustFeedbackController.swift in Sources */,
-				A148B2471B676FC800840D7A /* OverViewTableViewCell.swift in Sources */,
 				A1E91E571B6A7826003DDC35 /* WorkOrder.swift in Sources */,
 				3A8B20221B7CA9E8009200F5 /* LoginController.swift in Sources */,
 				A1E91E581B6A7826003DDC35 /* WorkOrderStatus.swift in Sources */,
