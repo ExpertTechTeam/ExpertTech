@@ -42,15 +42,7 @@ class DashboardViewController: UIViewController,MKMapViewDelegate, UIPopoverCont
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    func centerMapOnLocation(location: CLLocation) {
-        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
-            regionRadius * 2.0, regionRadius * 2.0)
-        vMapView.setRegion(coordinateRegion, animated: true)
-        let point:MKPointAnnotation = MKPointAnnotation()
-        point.coordinate = location.coordinate
-        point.title = "1"
-        self.vMapView.addAnnotation(point)
-    }
+
     func centerMapOnLocation(){
         /*
         print("\(Double(workOrderList[0].woo_latitude)!), \(Double(workOrderList[0].woo_longitude)!)")

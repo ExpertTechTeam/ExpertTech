@@ -390,12 +390,6 @@
                                 </segments>
                                 <color key="tintColor" red="0.1137254902" green="0.44705882349999998" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="00:00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hHP-fn-1yz">
-                                <rect key="frame" x="570" y="735" width="46" height="21"/>
-                                <color key="tintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6zK-ln-wf9">
                                 <rect key="frame" x="0.0" y="724" width="703" height="44"/>
                                 <constraints>
@@ -404,23 +398,39 @@
                                 <items>
                                     <barButtonItem image="icon_instruction80.png" id="pgC-Un-GZI"/>
                                     <barButtonItem image="icon_expert80.png" id="qlw-za-x8k"/>
-                                    <barButtonItem image="icon_viewclip80.png" id="8Vp-U6-qtr"/>
+                                    <barButtonItem image="icon_viewclip80.png" id="8Vp-U6-qtr" userLabel="VVideo Bar Btn"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="j7m-EF-4wx"/>
-                                    <barButtonItem style="plain" id="txu-RR-fI2">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xma-Zc-nz5" customClass="StartDoneWorkOrderButton" customModule="ExpertTech" customModuleProvider="target">
-                                            <rect key="frame" x="615" y="7" width="68" height="30"/>
+                                    <barButtonItem style="plain" id="fT6-zZ-k8G">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="g2H-c2-O0L">
+                                            <rect key="frame" x="519" y="4.5" width="52" height="35"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <state key="normal" title="00:00">
+                                                <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </state>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" id="it5-yl-yB9">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="o41-OI-E7c" customClass="StartButton" customModule="ExpertTech" customModuleProvider="target">
+                                            <rect key="frame" x="581" y="7" width="46" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                             <state key="normal" title="Start"/>
                                             <connections>
-                                                <action selector="onTouchDownButton:" destination="6pF-yy-ZmR" eventType="touchDown" id="7vi-HY-e7l"/>
-                                                <action selector="onTouchUpButton" destination="6pF-yy-ZmR" eventType="touchUpInside" id="gqW-GX-Nk6"/>
-                                                <action selector="startWork" destination="6pF-yy-ZmR" eventType="touchUpInside" id="nNF-9Z-W5f"/>
+                                                <action selector="onClickStart:" destination="6pF-yy-ZmR" eventType="touchUpInside" id="4kh-ew-fxd"/>
                                             </connections>
                                         </button>
-                                        <connections>
-                                            <action selector="testTouchUp" destination="xma-Zc-nz5" id="Urc-VW-nkQ"/>
-                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" id="94k-gN-kaQ">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ujv-ww-9OO" customClass="DoneButton" customModule="ExpertTech" customModuleProvider="target">
+                                            <rect key="frame" x="637" y="4.5" width="46" height="35"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                            <state key="normal" title="Done"/>
+                                            <connections>
+                                                <action selector="onClickDone:" destination="6pF-yy-ZmR" eventType="touchUpInside" id="hPb-l3-JKh"/>
+                                            </connections>
+                                        </button>
                                     </barButtonItem>
                                 </items>
                                 <color key="tintColor" red="0.1137254902" green="0.44705882349999998" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
@@ -434,19 +444,24 @@
                             <constraint firstItem="PBG-OL-jro" firstAttribute="top" secondItem="kqH-bo-bHn" secondAttribute="bottom" constant="8" id="UrI-7P-Dbl"/>
                             <constraint firstItem="6zK-ln-wf9" firstAttribute="leading" secondItem="gcT-mx-WMM" secondAttribute="leadingMargin" constant="-20" id="cZg-xf-red"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6zK-ln-wf9" secondAttribute="trailing" constant="-20" id="dOa-ID-xej"/>
-                            <constraint firstItem="6zK-ln-wf9" firstAttribute="top" secondItem="hHP-fn-1yz" secondAttribute="bottom" constant="-32" id="fIj-ly-ykW"/>
                             <constraint firstAttribute="trailingMargin" secondItem="PBG-OL-jro" secondAttribute="trailing" constant="-20" id="jng-OG-OiJ"/>
                             <constraint firstItem="kqH-bo-bHn" firstAttribute="top" secondItem="RD7-rX-bAT" secondAttribute="bottom" constant="15" id="rdK-Hs-6Cv"/>
                             <constraint firstItem="kqH-bo-bHn" firstAttribute="leading" secondItem="gcT-mx-WMM" secondAttribute="leadingMargin" constant="18" id="uWp-h2-Fw9"/>
-                            <constraint firstItem="hHP-fn-1yz" firstAttribute="leading" secondItem="6zK-ln-wf9" secondAttribute="trailing" constant="-133" id="whb-1v-cjk"/>
                         </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
-                        <outlet property="vStartButton" destination="xma-Zc-nz5" id="rHc-WQ-oLZ"/>
-                        <outlet property="vTimeCount" destination="hHP-fn-1yz" id="WCo-R5-7H6"/>
-                        <outlet property="vToolbar" destination="6zK-ln-wf9" id="YCS-ZF-ZaJ"/>
+                        <outlet property="vDoneBarBtn" destination="94k-gN-kaQ" id="EaR-Vh-UJg"/>
+                        <outlet property="vDoneBtn" destination="ujv-ww-9OO" id="ZBc-bD-HEE"/>
+                        <outlet property="vExpertBarBtn" destination="qlw-za-x8k" id="ipb-9M-Oj3"/>
+                        <outlet property="vInstructionBarBtn" destination="pgC-Un-GZI" id="j5Q-ez-MGM"/>
+                        <outlet property="vStartBarBtn" destination="it5-yl-yB9" id="Bbc-TG-fEW"/>
+                        <outlet property="vStartBtn" destination="o41-OI-E7c" id="Sg0-DK-pJw"/>
+                        <outlet property="vTimeCounter" destination="g2H-c2-O0L" id="1PP-dH-02b"/>
+                        <outlet property="vTimeCounterBarBtn" destination="fT6-zZ-k8G" id="FOU-kX-9W6"/>
+                        <outlet property="vToolbar" destination="6zK-ln-wf9" id="9vB-Xd-9sr"/>
+                        <outlet property="vVideoBarBtn" destination="8Vp-U6-qtr" id="L1S-XA-gA1"/>
                         <segue destination="b9L-Rl-YA6" kind="modal" identifier="technicalReportSegue" id="Ioz-Y2-G0G"/>
                     </connections>
                 </viewController>
@@ -533,7 +548,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Detail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ig-Mz-d87">
-                                                    <rect key="frame" x="20" y="70" width="645" height="90.5"/>
+                                                    <rect key="frame" x="20" y="70" width="645" height="91"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -653,7 +668,7 @@
                         <sections>
                             <tableViewSection id="B4o-d9-Zzj">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" id="HkD-rD-cFD" customClass="TechniacalReportTableViewCell" customModule="ExpertTech" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" id="HkD-rD-cFD" customClass="TechReportTableViewCell" customModule="ExpertTech" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="109" width="1024" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HkD-rD-cFD" id="GHc-nA-Waf">
@@ -684,7 +699,7 @@
                             </tableViewSection>
                             <tableViewSection id="TMU-8U-W7x">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="NYw-cN-rsz" customClass="TechniacalReportTableViewCell" customModule="ExpertTech" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="NYw-cN-rsz" customClass="TechReportTableViewCell" customModule="ExpertTech" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="173" width="1024" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NYw-cN-rsz" id="Cf3-df-lmG">
@@ -715,7 +730,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="NOTES" id="jtX-Pk-5iN">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="102" id="c9s-oG-kEi" customClass="TechniacalReportTableViewCell" customModule="ExpertTech" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="102" id="c9s-oG-kEi" customClass="TechReportTableViewCell" customModule="ExpertTech" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="259" width="1024" height="102"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="c9s-oG-kEi" id="7cL-Bg-5rP">
@@ -741,7 +756,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="PHOTOS AND VIDEOS" id="6vD-x7-P86">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="116" id="tlQ-V3-2ZM" customClass="TechniacalReportTableViewCell" customModule="ExpertTech" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="116" id="tlQ-V3-2ZM" customClass="TechReportTableViewCell" customModule="ExpertTech" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="403" width="1024" height="116"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tlQ-V3-2ZM" id="b5E-Yd-74f">
@@ -765,7 +780,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="INSTALLED PARTS" id="YBk-Q7-Pq5">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" id="iYI-yP-DkP" customClass="TechniacalReportTableViewCell" customModule="ExpertTech" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" id="iYI-yP-DkP" customClass="TechReportTableViewCell" customModule="ExpertTech" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="561" width="1024" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iYI-yP-DkP" id="Hiz-R6-xv7">
@@ -1826,7 +1841,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Customer Detail" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MvO-XY-j5c">
-                                                    <rect key="frame" x="16" y="29" width="256" height="24.5"/>
+                                                    <rect key="frame" x="16" y="29" width="256" height="25"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1848,7 +1863,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No alerts or cautions" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FLh-wn-Ha5">
-                                                    <rect key="frame" x="19" y="29" width="253" height="24.5"/>
+                                                    <rect key="frame" x="19" y="29" width="253" height="25"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1870,7 +1885,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="No History" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Ho-Tb-pYr">
-                                                    <rect key="frame" x="20" y="29" width="252" height="24.5"/>
+                                                    <rect key="frame" x="20" y="29" width="252" height="25"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1892,7 +1907,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="30 minutes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cwu-oe-gtL">
-                                                    <rect key="frame" x="21" y="29" width="251" height="24.5"/>
+                                                    <rect key="frame" x="21" y="29" width="251" height="25"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>

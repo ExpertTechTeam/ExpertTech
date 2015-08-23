@@ -2,30 +2,28 @@
 //  ThankYouViewController.swift
 //  ExpertTech
 //
-//  Created by Kewalin Sakawattananon on 8/11/2558 BE.
+//  Created by Kewalin Sakawattananon on 8/23/2558 BE.
 //  Copyright © 2558 IBM. All rights reserved.
 //
 
 import UIKit
+
 class ThankYouViewController: UIViewController {
-    
     var isHiddenBackBtn:Bool = false
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         self.navigationController?.navigationBar.hidden = false
         self.view.backgroundColor = Constants.Color.LightGray
         self.navigationItem.setHidesBackButton(isHiddenBackBtn, animated: false)
+        // Do any additional setup after loading the view.
     }
-    
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+
     /*
     // MARK: - Navigation
 
