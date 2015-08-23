@@ -59,18 +59,19 @@ class MenuTableViewController: UITableViewController, UISplitViewControllerDeleg
             }
             UIView.animateWithDuration(0.7, delay: 2, options: UIViewAnimationOptions.CurveEaseInOut, animations: animations1) { (Bool) -> Void in
             }
+            /*
+            self.tableView.beginUpdates()
+            self.tableView.reloadSections(NSIndexSet(index: 1), withRowAnimation: UITableViewRowAnimation.Top)
+            self.tableView.reloadSections(NSIndexSet(index: 2), withRowAnimation: UITableViewRowAnimation.Top)
+            
+            self.tableView.endUpdates()*/
+            let completedWorkOrder = self.openWorkOrderList[self.indexNumber]
+            self.openWorkOrderList.removeAtIndex(self.indexNumber)
+            self.closeWorkOrderList.append(completedWorkOrder)
+            
         }
-        
-/*
-        self.tableView.beginUpdates()
-        self.tableView.reloadSections(NSIndexSet(index: 1), withRowAnimation: UITableViewRowAnimation.Top)
-        self.tableView.reloadSections(NSIndexSet(index: 2), withRowAnimation: UITableViewRowAnimation.Top)
-        
-        self.tableView.endUpdates()*/
-        let completedWorkOrder = self.openWorkOrderList[self.indexNumber]
-        self.openWorkOrderList.removeAtIndex(self.indexNumber)
-        self.closeWorkOrderList.append(completedWorkOrder)
         self.tableView.reloadData()
+
     }
     
     deinit {
@@ -116,11 +117,15 @@ class MenuTableViewController: UITableViewController, UISplitViewControllerDeleg
         if indexPath.section == 0 && indexPath.row == 0 {
             tableView.selectRowAtIndexPath(indexPath, animated: true, scrollPosition: UITableViewScrollPosition.Top)
             performSegueWithIdentifier("overViewSegue", sender: nil)
+            let dict: [String : AnyObject] = ["title" : "Daily Overview" as String]
+            NSNotificationCenter.defaultCenter().postNotificationName("sectionChange", object: nil, userInfo: dict)
         }
         if isSelectedFromMap || isCompletedWork {
             if indexPath.section == 1 && indexNumber == indexPath.row {
                 tableView.selectRowAtIndexPath(indexPath, animated: true, scrollPosition: UITableViewScrollPosition.Top)
                 performSegueWithIdentifier("workOrderSegue", sender: nil)
+                let dict: [String : AnyObject] = ["title" : "Expert Tech" as String]
+                NSNotificationCenter.defaultCenter().postNotificationName("sectionChange", object: nil, userInfo: dict)
             }
         }
     }
@@ -131,10 +136,15 @@ class MenuTableViewController: UITableViewController, UISplitViewControllerDeleg
         selectedCell!.setSelected(true, animated: false)
         if indexPath.section == 0 && indexPath.row == 0 {
             performSegueWithIdentifier("overViewSegue", sender: nil)
+            //self.dismissViewControllerAnimated(false, completion: nil)
+            let dict: [String : AnyObject] = ["title" : "Daily Overview" as String]
+            NSNotificationCenter.defaultCenter().postNotificationName("sectionChange", object: nil, userInfo: dict)
         }else if indexPath.section == 1 || indexPath.section == 2{
             self.indexNumber = indexPath.row
             self.workOrderId = Constants.WorkOrderList.workOrderList[indexPath.row].woo_id
             performSegueWithIdentifier("workOrderSegue", sender: nil)
+            let dict: [String : AnyObject] = ["title" : "Expert Tech" as String]
+            NSNotificationCenter.defaultCenter().postNotificationName("sectionChange", object: nil, userInfo: dict)
         }
     }
     

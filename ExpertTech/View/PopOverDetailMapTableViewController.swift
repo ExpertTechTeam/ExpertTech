@@ -10,15 +10,18 @@ import UIKit
 
 class PopOverDetailMapTableViewController: UITableViewController {
 
+    @IBOutlet weak var vCustomerDetailTxtView: UITextView!
+    @IBOutlet weak var vWorkOderNoBarBtn: UIBarButtonItem!
     @IBOutlet weak var vNavigationBar: UINavigationBar!
     var indexNumber:Int = 0
     var workOrderId:Int = 0
     override func viewDidLoad() {
         print("Popover")
         super.viewDidLoad()
-        self.vNavigationBar.barTintColor = Constants.Color.LightGray_BG
-        self.vNavigationBar.tintColor = UIColor.blueColor()
-        
+        self.vNavigationBar.barTintColor = Constants.Color.toolbar_bg
+            //Constants.Color.LightGray_BG
+        //self.vNavigationBar.tintColor = UIColor.blueColor()
+        self.vWorkOderNoBarBtn.tintColor = Constants.Color.midnightblue
     }
 
     override func didReceiveMemoryWarning() {

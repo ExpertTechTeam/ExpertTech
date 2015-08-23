@@ -16,7 +16,6 @@ class SurveyOptionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.hidden = true
-        self.view.backgroundColor = Constants.Color.LightGray
         self.vTakeSurwayBtn.layer.cornerRadius = 6.0
         self.vDoNotTakeSurway.layer.cornerRadius = 6.0
     }

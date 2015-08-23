@@ -8,15 +8,19 @@
 
 import UIKit
 
-class TechnicianReportTableViewController: UITableViewController, communicationControllerStatus, communicationControllerRootCause, UIPopoverPresentationControllerDelegate {
+class TechnicianReportTableViewController: UITableViewController, communicationControllerStatus, communicationControllerRootCause, UIPopoverPresentationControllerDelegate, UITextViewDelegate {
   
     @IBOutlet weak var vStatusLabel: UILabel!
     @IBOutlet weak var vRootCauseLabel: UILabel!
 
-    @IBOutlet weak var vNoteTxtField: UITextField!
+    @IBOutlet weak var vNoteTxtView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.vNoteTxtView.delegate = self
+    }
+    
+    func textViewDidBeginEditing(textView: UITextView) {
+        textView.text = ""
     }
     
     func popoverPresentationControllerDidDismissPopover(popoverPresentationController: UIPopoverPresentationController) {
@@ -77,6 +81,7 @@ class TechnicianReportTableViewController: UITableViewController, communicationC
         )
         alertController.addAction(okButton)
         self.presentViewController(alertController, animated: true, completion: nil)
+        
     }
     
     @IBAction func onPhotoVideoCLick(){

@@ -11,6 +11,8 @@ import MapKit
 
 class DetailWorkOrderTableViewController: UITableViewController, MKMapViewDelegate {
 
+    @IBOutlet weak var vCustomerDetailTxtView: UITextView!
+    @IBOutlet weak var vRequestDetailTxtView: UITextView!
     @IBOutlet weak var vMapView: MKMapView!
     let regionRadius: CLLocationDistance = 1000
     var indexNumber:Int = 0
