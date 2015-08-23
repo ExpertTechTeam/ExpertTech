@@ -8,13 +8,17 @@
 
 import UIKit
 
-class MenuTableViewController: UITableViewController {
+class MenuTableViewController: UITableViewController, UISplitViewControllerDelegate {
     var isSelectedFromMap:Bool = false
+    var isCompletedWork:Bool = false
+    var openWorkOrderList = Constants.WorkOrderList.workOrderList
+    var closeWorkOrderList = [WorkOrder]()
     var indexNumber:Int = 0
     var workOrderId:Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.splitViewController?.delegate = self
+        print("View Did Load")
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -26,8 +30,14 @@ class MenuTableViewController: UITableViewController {
         
     }
     
+    override func viewDidAppear(animated: Bool) {
+        print("View did appear")
+    }
+    
     func workOrderListChangeMethod(notif: NSNotification) {
         print("Work Order List Change")
+        
+
         isSelectedFromMap = true
         if let passedInt: AnyObject = notif.userInfo?["indexNumber"] {
             indexNumber = passedInt as! Int - 1
@@ -35,17 +45,32 @@ class MenuTableViewController: UITableViewController {
         if let passedInt: AnyObject = notif.userInfo?["workOrderId"] {
             workOrderId = passedInt as! Int
         }
-        print("index number : \(indexNumber), work order id : \(workOrderId)")
-        self.tableView.reloadData()
-        /*
-        if let passedString: AnyObject = notif.userInfo?["String"] {
-            myString = passedString as String
-            tableView.reloadRowsAtIndexPaths([NSIndexPath(forRow: 0, inSection: 0)], withRowAnimation: .Automatic)
+        if let isFromCompleteWork: AnyObject = notif.userInfo?["isCompletedWork"] {
+            isCompletedWork = isFromCompleteWork as! Bool
         }
-        if let passedInt: AnyObject = notif.userInfo?["Int"] {
-            myInt = passedInt as Int
-            tableView.reloadRowsAtIndexPaths([NSIndexPath(forRow: 1, inSection: 0)], withRowAnimation: .Automatic)
-        }*/
+        print("index number : \(indexNumber), work order id : \(workOrderId)")
+
+        if isCompletedWork {
+            let animations1: () -> Void = {
+                self.splitViewController?.preferredDisplayMode = .Automatic
+                self.splitViewController?.viewWillLayoutSubviews()
+                self.splitViewController?.view.layoutSubviews()
+                
+            }
+            UIView.animateWithDuration(0.7, delay: 2, options: UIViewAnimationOptions.CurveEaseInOut, animations: animations1) { (Bool) -> Void in
+            }
+        }
+        
+/*
+        self.tableView.beginUpdates()
+        self.tableView.reloadSections(NSIndexSet(index: 1), withRowAnimation: UITableViewRowAnimation.Top)
+        self.tableView.reloadSections(NSIndexSet(index: 2), withRowAnimation: UITableViewRowAnimation.Top)
+        
+        self.tableView.endUpdates()*/
+        let completedWorkOrder = self.openWorkOrderList[self.indexNumber]
+        self.openWorkOrderList.removeAtIndex(self.indexNumber)
+        self.closeWorkOrderList.append(completedWorkOrder)
+        self.tableView.reloadData()
     }
     
     deinit {
@@ -68,8 +93,10 @@ class MenuTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         if section == 0 {
             return 2
+        }else if section == 1 {
+            return openWorkOrderList.count
         }else{
-            return 2
+            return closeWorkOrderList.count
         }
     }
     
@@ -90,7 +117,7 @@ class MenuTableViewController: UITableViewController {
             tableView.selectRowAtIndexPath(indexPath, animated: true, scrollPosition: UITableViewScrollPosition.Top)
             performSegueWithIdentifier("overViewSegue", sender: nil)
         }
-        if isSelectedFromMap {
+        if isSelectedFromMap || isCompletedWork {
             if indexPath.section == 1 && indexNumber == indexPath.row {
                 tableView.selectRowAtIndexPath(indexPath, animated: true, scrollPosition: UITableViewScrollPosition.Top)
                 performSegueWithIdentifier("workOrderSegue", sender: nil)
@@ -147,16 +174,18 @@ class MenuTableViewController: UITableViewController {
             }
             return cell
         }else if indexPath.section == 1{
+            let workOrder = openWorkOrderList[indexPath.row]
             let cell = tableView.dequeueReusableCellWithIdentifier("workOrderCell", forIndexPath: indexPath) as! WorkOrderTableViewCell
-            cell.vOrderType1.text = "Type1"
-            cell.vOrderType2.text = "Type2"
+            cell.vOrderType1.text = workOrder.woo_latitude
+            cell.vOrderType2.text = workOrder.woo_longitude
             cell.vSequence.text = String(indexPath.row + 1)
             return cell
         } else {
+            let workOrder = closeWorkOrderList[indexPath.row]
             let cell = tableView.dequeueReusableCellWithIdentifier("workOrderCell", forIndexPath: indexPath) as! WorkOrderTableViewCell
             cell.vSequenceImg.image = nil
-            cell.vOrderType1.text = "Type1"
-            cell.vOrderType2.text = "Type2"
+            cell.vOrderType1.text = workOrder.woo_latitude
+            cell.vOrderType2.text = workOrder.woo_longitude
             cell.vSequence.text = ""
             cell.vOrderType1.textColor = UIColor.grayColor()
             cell.vOrderType2.textColor = UIColor.grayColor()

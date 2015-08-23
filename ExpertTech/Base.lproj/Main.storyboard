@@ -466,7 +466,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lgx-ey-JC3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="MaX-Uu-O5m" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3686.5" y="-593"/>
         </scene>
@@ -953,7 +952,7 @@
                                 <color key="tintColor" red="0.1137254902" green="0.44705882349999998" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Do Not Take Survey"/>
                                 <connections>
-                                    <segue destination="4BB-FV-IBW" kind="push" identifier="noTakeSurveySegue" id="e2A-jh-sk1"/>
+                                    <segue destination="HBO-RO-cvP" kind="push" identifier="noTakeSurveySegue" id="uXR-8a-baN"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1125,7 +1124,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Submit" id="Uod-a5-Od6">
                             <connections>
                                 <action selector="onSubmitFeedback" destination="Xqm-T0-LKC" id="bey-G7-dSv"/>
-                                <segue destination="4BB-FV-IBW" kind="push" id="P5u-oH-jLm"/>
+                                <segue destination="HBO-RO-cvP" kind="push" id="Jyl-mZ-exl"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1144,39 +1143,51 @@
             <point key="canvasLocation" x="11977" y="-46"/>
         </scene>
         <!--Thank You-->
-        <scene sceneID="gZj-1g-QHK">
+        <scene sceneID="auf-vm-HMC">
             <objects>
-                <viewController id="4BB-FV-IBW" customClass="ThankYouViewController" customModule="ExpertTech" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="HBO-RO-cvP" customClass="ThanksViewController" customModule="ExpertTech" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Ua8-Dm-UcC"/>
-                        <viewControllerLayoutGuide type="bottom" id="QGT-aq-EQA"/>
+                        <viewControllerLayoutGuide type="top" id="v1P-4x-giW"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZOt-5i-o3U"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="JOS-Pq-oiA">
+                    <view key="view" contentMode="scaleToFill" id="H7S-Ud-av9">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please return the iPad to your technician." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QaQ-t8-ev7">
-                                <rect key="frame" x="274" y="302" width="477" height="41"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please return the iPad to your technician." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OGe-v1-4jL">
+                                <rect key="frame" x="274" y="363" width="477" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F7O-Zg-xCQ">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
+                                <items>
+                                    <navigationItem title="Thank You" id="ruj-6g-0Zg">
+                                        <barButtonItem key="rightBarButtonItem" title="Close" id="3cc-Qn-5Ud">
+                                            <connections>
+                                                <action selector="onCloseClick:" destination="HBO-RO-cvP" id="skF-op-vIl"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Thank You" id="9Wi-3k-AOU">
-                        <barButtonItem key="rightBarButtonItem" title="Close" id="3YV-jH-NJx">
+                    <navigationItem key="navigationItem" title="Thank You" id="dQh-Ms-cD0">
+                        <barButtonItem key="rightBarButtonItem" title="Close" id="3rF-Pi-TgY">
                             <connections>
-                                <segue destination="MaX-Uu-O5m" kind="unwind" unwindAction="completeWorkOrder:" id="Gdr-w5-pqA"/>
+                                <action selector="onCloseClick:" destination="HBO-RO-cvP" id="HGp-Rr-48e"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="y4V-r4-bf0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T9Y-Az-i9s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="11977" y="1218"/>
+            <point key="canvasLocation" x="12010" y="1244"/>
         </scene>
         <!--Status2 Rescheduled-->
         <scene sceneID="73l-Jw-pJT">
@@ -1932,7 +1943,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fFv-cB-0qr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3259" y="168"/>
+            <point key="canvasLocation" x="3086" y="183"/>
         </scene>
     </scenes>
     <resources>
@@ -1946,6 +1957,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="EWY-H5-glj"/>
-        <segue reference="P5u-oH-jLm"/>
+        <segue reference="uXR-8a-baN"/>
     </inferredMetricsTieBreakers>
 </document>

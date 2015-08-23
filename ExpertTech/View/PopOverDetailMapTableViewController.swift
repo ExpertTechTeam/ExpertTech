@@ -31,7 +31,7 @@ class PopOverDetailMapTableViewController: UITableViewController {
     }
     @IBAction func onSelectWorkOrder(sender: AnyObject) {
         print("on select work order \(indexNumber), work order id \(workOrderId)")
-        let dict: [String : AnyObject] = ["indexNumber" : indexNumber as Int, "workOrderId" : workOrderId as Int]
+        let dict: [String : AnyObject] = ["indexNumber" : indexNumber as Int, "workOrderId" : workOrderId as Int, "isCompletedWork" :false as Bool]
         NSNotificationCenter.defaultCenter().postNotificationName("workOrderListChange", object: nil, userInfo: dict)
         self.dismissViewControllerAnimated(false, completion: nil)
 

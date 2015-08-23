@@ -48,7 +48,7 @@
 		A15A2C281B7DF7D50046BDAB /* PinAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15A2C271B7DF7D50046BDAB /* PinAnnotationView.swift */; };
 		A15A2C2A1B7E023A0046BDAB /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = A15A2C291B7E023A0046BDAB /* circle.png */; };
 		A16DE9781B89B3E300CE30D5 /* TechReportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16DE9771B89B3E300CE30D5 /* TechReportTableViewCell.swift */; };
-		A180405C1B89D4700062EB75 /* ThankYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A180405B1B89D4700062EB75 /* ThankYouViewController.swift */; };
+		A180405E1B89D8860062EB75 /* ThanksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A180405D1B89D8860062EB75 /* ThanksViewController.swift */; };
 		A1C262D11B79CB8900D5DD72 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1C262D01B79CB8900D5DD72 /* LocalAuthentication.framework */; };
 		A1C263011B79E68000D5DD72 /* icon_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = A1C263001B79E68000D5DD72 /* icon_circle.png */; };
 		A1C263051B79EDD100D5DD72 /* overview_dailyvisit.png in Resources */ = {isa = PBXBuildFile; fileRef = A1C263021B79EDD100D5DD72 /* overview_dailyvisit.png */; };
@@ -214,7 +214,7 @@
 		A15A2C271B7DF7D50046BDAB /* PinAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PinAnnotationView.swift; path = View/PinAnnotationView.swift; sourceTree = "<group>"; };
 		A15A2C291B7E023A0046BDAB /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
 		A16DE9771B89B3E300CE30D5 /* TechReportTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TechReportTableViewCell.swift; path = View/TechReportTableViewCell.swift; sourceTree = "<group>"; };
-		A180405B1B89D4700062EB75 /* ThankYouViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThankYouViewController.swift; path = View/ThankYouViewController.swift; sourceTree = "<group>"; };
+		A180405D1B89D8860062EB75 /* ThanksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThanksViewController.swift; path = View/ThanksViewController.swift; sourceTree = "<group>"; };
 		A1C262D01B79CB8900D5DD72 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		A1C263001B79E68000D5DD72 /* icon_circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_circle.png; sourceTree = "<group>"; };
 		A1C263021B79EDD100D5DD72 /* overview_dailyvisit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overview_dailyvisit.png; sourceTree = "<group>"; };
@@ -405,7 +405,7 @@
 				A1ED40C71B7CAD1B0099F26E /* WorkOrderTableViewCell.xib */,
 				A1DB14E41B70CA4800E9AA09 /* CustomerSignOffViewController.swift */,
 				A1DB14E61B70CAC000E9AA09 /* SurveyOptionViewController.swift */,
-				A180405B1B89D4700062EB75 /* ThankYouViewController.swift */,
+				A180405D1B89D8860062EB75 /* ThanksViewController.swift */,
 				A14CACBE1B78508D00AFBC5A /* WorkOrderStatus1TableViewController.swift */,
 				A14CACC61B786DD400AFBC5A /* WorkOrderStatus2TableViewController.swift */,
 				A1DB14E81B70CAEA00E9AA09 /* CustomerFeedbackViewController.swift */,
@@ -683,11 +683,11 @@
 				A1DB14E71B70CAC000E9AA09 /* SurveyOptionViewController.swift in Sources */,
 				3A8B202E1B7CAA8B009200F5 /* UpdateWorkOrderStatusController.swift in Sources */,
 				A14A0BC51B6E153E0040C90C /* DetailWorkOrderViewController.swift in Sources */,
+				A180405E1B89D8860062EB75 /* ThanksViewController.swift in Sources */,
 				A14CACC71B786DD400AFBC5A /* WorkOrderStatus2TableViewController.swift in Sources */,
 				A14CACCF1B78B4DF00AFBC5A /* Constants.swift in Sources */,
 				3A8B20241B7CA9FC009200F5 /* InsertCustFeedbackController.swift in Sources */,
 				A1E91E571B6A7826003DDC35 /* WorkOrder.swift in Sources */,
-				A180405C1B89D4700062EB75 /* ThankYouViewController.swift in Sources */,
 				3A8B20221B7CA9E8009200F5 /* LoginController.swift in Sources */,
 				A1E91E581B6A7826003DDC35 /* WorkOrderStatus.swift in Sources */,
 				A16DE9781B89B3E300CE30D5 /* TechReportTableViewCell.swift in Sources */,

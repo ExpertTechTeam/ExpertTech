@@ -31,6 +31,7 @@ class DetailWorkOrderViewController: UIViewController, UISplitViewControllerDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.splitViewController?.delegate = self
         vToolbar.setItems([vInstructionBarBtn,vExpertBarBtn,vVideoBarBtn,flexibleBarBtn,vDoneBarBtn,vTimeCounterBarBtn,vStartBarBtn], animated: false)
         vDoneBtn.hidden = true
         vTimeCounter.hidden = true

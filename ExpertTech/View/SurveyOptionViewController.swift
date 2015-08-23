@@ -33,7 +33,7 @@ class SurveyOptionViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         if segue.identifier == "noTakeSurveySegue"{
-            let thankyouVC = segue.destinationViewController as! ThankYouViewController
+            let thankyouVC = segue.destinationViewController as! ThanksViewController
             thankyouVC.isHiddenBackBtn = true
         }
         

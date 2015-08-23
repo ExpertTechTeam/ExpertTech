@@ -1,5 +1,5 @@
 //
-//  ThankYouViewController.swift
+//  ThanksViewController.swift
 //  ExpertTech
 //
 //  Created by Kewalin Sakawattananon on 8/23/2558 BE.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ThankYouViewController: UIViewController {
+class ThanksViewController: UIViewController {
     var isHiddenBackBtn:Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +23,14 @@ class ThankYouViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func onCloseClick(sender: AnyObject) {
+        print("close click")
+        let dict: [String : AnyObject] = ["indexNumber" : 2 as Int, "workOrderId" : 1 as Int, "isCompletedWork" : true as Bool]
+        NSNotificationCenter.defaultCenter().postNotificationName("workOrderListChange", object: nil, userInfo: dict)
+        self.dismissViewControllerAnimated(false, completion: nil)
+    }
+    
+    
     /*
     // MARK: - Navigation
 
