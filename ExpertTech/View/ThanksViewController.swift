@@ -13,7 +13,6 @@ class ThanksViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.hidden = false
-        self.view.backgroundColor = Constants.Color.LightGray
         self.navigationItem.setHidesBackButton(isHiddenBackBtn, animated: false)
         // Do any additional setup after loading the view.
     }
