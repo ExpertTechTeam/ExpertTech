@@ -12,7 +12,7 @@ import MapKit
 class DashboardViewController: UIViewController,MKMapViewDelegate, UIPopoverControllerDelegate{
     @IBOutlet weak var vMapView: MKMapView!
     let regionRadius: CLLocationDistance = 1000
-    var workOrderList = [WorkOrder]()
+    var workOrderList = Constants.WorkOrderList.workOrderList
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,13 +27,9 @@ class DashboardViewController: UIViewController,MKMapViewDelegate, UIPopoverCont
         let workOrder3 = WorkOrder(woo_id: 2, woo_lat: "13.747647", woo_lng: "100.521483")
         workOrderList.append(workOrder3)
         */
-        workOrderList = Constants.WorkOrderList.workOrderList
-       
-    }
-    override func viewDidAppear(animated: Bool) {
         self.pointMapOnLocation()
         self.centerMapOnLocation()
-        
+       
     }
 
     override func didReceiveMemoryWarning() {

@@ -18,9 +18,11 @@ class DetailWorkOrderTableViewController: UITableViewController, MKMapViewDelega
     var indexNumber:Int = 0
     var workOrderId:Int = 0
     var workOrderList = Constants.WorkOrderList.workOrderList
+    var curWorkOrder:WorkOrder!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.vMapView.delegate = self
+        
     }
     
     override func viewDidAppear(animated: Bool) {

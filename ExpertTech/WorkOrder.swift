@@ -46,6 +46,7 @@ public class WorkOrder {
     var woo_slotln      : String = ""
     var woo_portln      : String = ""
     var woo_exchange    : String = ""
+    var woo_duration    : NSDecimalNumber = 0
     
     init (woo_id:Int,woo_lat:String,woo_lng:String){
         self.woo_id = woo_id

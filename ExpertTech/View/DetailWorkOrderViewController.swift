@@ -11,31 +11,34 @@ import UIKit
 class DetailWorkOrderViewController: UIViewController, UISplitViewControllerDelegate{
     @IBOutlet weak var vStartBarBtn: UIBarButtonItem!
     @IBOutlet weak var vDoneBarBtn: UIBarButtonItem!
-    @IBOutlet weak var vTimeCounterBarBtn: UIBarButtonItem!
     @IBOutlet weak var vInstructionBarBtn: UIBarButtonItem!
     @IBOutlet weak var vExpertBarBtn: UIBarButtonItem!
     @IBOutlet weak var vVideoBarBtn: UIBarButtonItem!
     @IBOutlet weak var vStartBtn: StartButton!
     @IBOutlet weak var vDoneBtn: DoneButton!
-    @IBOutlet weak var vTimeCounter: UIButton!
     @IBOutlet weak var vToolbar: UIToolbar!
+    @IBOutlet weak var vTimeCount: UILabel!
+    
     var indexNumber:Int = 0
     var workOrderId:Int = 0
     var hideMaster:Bool = false
     var startTime = NSTimeInterval()
     var timer:NSTimer = NSTimer()
+    var elapsedTime: NSTimeInterval!
     var duration:NSDecimalNumber!
     var strMinutes:String!
     var strSeconds:String!
     let flexibleBarBtn = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
+    var curWorkOrder:WorkOrder!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.splitViewController?.delegate = self
-        vToolbar.setItems([vInstructionBarBtn,vExpertBarBtn,vVideoBarBtn,flexibleBarBtn,vDoneBarBtn,vTimeCounterBarBtn,vStartBarBtn], animated: false)
+        vToolbar.setItems([vInstructionBarBtn,vExpertBarBtn,vVideoBarBtn,flexibleBarBtn,vDoneBarBtn,vStartBarBtn], animated: false)
         vDoneBtn.hidden = true
-        vTimeCounter.hidden = true
-
+        vTimeCount.hidden = true
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -54,8 +57,8 @@ class DetailWorkOrderViewController: UIViewController, UISplitViewControllerDele
         let startBtn = sender as! StartButton
         startBtn.hidden = true
         vDoneBtn.hidden = false
-        vTimeCounter.hidden = false
-        vToolbar.setItems([vInstructionBarBtn,vExpertBarBtn,vVideoBarBtn,flexibleBarBtn,vStartBarBtn,vTimeCounterBarBtn,vDoneBarBtn], animated: false)
+        vTimeCount.hidden = false
+        vToolbar.setItems([vInstructionBarBtn,vExpertBarBtn,vVideoBarBtn,flexibleBarBtn,vStartBarBtn,vDoneBarBtn], animated: false)
         self.startWork()
         
     }
@@ -66,7 +69,6 @@ class DetailWorkOrderViewController: UIViewController, UISplitViewControllerDele
     }
     
     func startWork(){
-        print("start work")
         hideMaster = !hideMaster;
         let animations: () -> Void = {
             self.splitViewController?.preferredDisplayMode = .PrimaryHidden
@@ -75,7 +77,7 @@ class DetailWorkOrderViewController: UIViewController, UISplitViewControllerDele
             
         }
         UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: animations) { (Bool) -> Void in
-            
+            self.startCount()
         }
         
     }
@@ -96,7 +98,7 @@ class DetailWorkOrderViewController: UIViewController, UISplitViewControllerDele
         self.stopCount()
     
     }
-    
+    */
     func startCount(){
         if (!timer.valid) {
             let aSelector : Selector = "updateTime"
@@ -110,27 +112,38 @@ class DetailWorkOrderViewController: UIViewController, UISplitViewControllerDele
         timer.invalidate()
         duration = NSDecimalNumber(string: "\(strMinutes).\(strSeconds)")
         print("Duration : \(duration)")
+
+       
     }
     
     func updateTime() {
         let currentTime = NSDate.timeIntervalSinceReferenceDate()
         //Find the difference between current time and start time.
-        var elapsedTime: NSTimeInterval = currentTime - startTime
+        self.elapsedTime = currentTime - startTime
         //calculate the minutes in elapsed time.
         let minutes = UInt8(elapsedTime / 60.0)
-        elapsedTime -= (NSTimeInterval(minutes) * 60)
+        self.elapsedTime = self.elapsedTime - (NSTimeInterval(minutes) * 60)
         //calculate the seconds in elapsed time.
         let seconds = UInt8(elapsedTime)
-        elapsedTime -= NSTimeInterval(seconds)
+        self.elapsedTime =  self.elapsedTime - NSTimeInterval(seconds)
         //add the leading zero for minutes, seconds and store them as string constants
-        strMinutes = String(format: "%02d", minutes)
-        strSeconds = String(format: "%02d", seconds)
+        self.strMinutes = String(format: "%02d", minutes)
+        self.strSeconds = String(format: "%02d", seconds)
         //concatenate minuets, seconds as assign it to the UILabel
-        vTimeCount.text = "\(strMinutes):\(strSeconds)"
-    }*/
+        self.vTimeCount.text = "\(self.strMinutes):\(self.strSeconds)"
+
+    }
     
     @IBAction func cancelFromTechnicalReport(segue:UIStoryboardSegue){
-        print("cancel to cmplete work order")
+        print("cancel to complete work order")
+        startCount()
+    }
+    
+    @IBAction func completedWorkOrder(segue:UIStoryboardSegue){
+        print("completed work order")
+        stopCount()
+        let dict: [String : AnyObject] = ["indexNumber" : indexNumber]
+        NSNotificationCenter.defaultCenter().postNotificationName("completedWorkOrder", object: nil, userInfo: dict)
     }
     
     // MARK: - Navigation
@@ -141,8 +154,9 @@ class DetailWorkOrderViewController: UIViewController, UISplitViewControllerDele
         // Pass the selected object to the new view controller.
         if segue.identifier == "detailWorkOrderSegue"{
             let controller = (segue.destinationViewController as! DetailWorkOrderTableViewController)
-            controller.workOrderId = self.workOrderId
+           // controller.workOrderId = self.workOrderId
             controller.indexNumber = self.indexNumber
+            controller.curWorkOrder = self.curWorkOrder
             print("detailWorkOrderSegue")
         }
     }

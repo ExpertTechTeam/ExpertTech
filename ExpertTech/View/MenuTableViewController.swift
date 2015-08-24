@@ -14,11 +14,12 @@ class MenuTableViewController: UITableViewController, UISplitViewControllerDeleg
     var openWorkOrderList = Constants.WorkOrderList.workOrderList
     var completedWorkOrderList = [WorkOrder]()
     var indexNumber:Int = 0
-    var workOrderId:Int = 0
+    var curWorkOrder:WorkOrder!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.splitViewController?.delegate = self
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "workOrderListChangeMethod:", name: "workOrderListChange", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "selectedFromMapPinMethod:", name: "selectedFromMapPin", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "completedWorkOrderMethod:", name: "completedWorkOrder", object: nil)
         tableView.registerNib(UINib(nibName: "OverViewTableViewCell", bundle: nil), forCellReuseIdentifier: "overViewCell")
         tableView.registerNib(UINib(nibName: "OpenWorkOrderTableViewCell", bundle: nil), forCellReuseIdentifier: "openWorkOrderCell")
         tableView.registerNib(UINib(nibName: "CompletedWorkOrderTableViewCell", bundle: nil), forCellReuseIdentifier: "completedWorkOrderCell")
@@ -30,46 +31,49 @@ class MenuTableViewController: UITableViewController, UISplitViewControllerDeleg
     
     // MARK: - Notification
     
-    func workOrderListChangeMethod(notif: NSNotification) {
-        print("Work Order List Change")
-        isSelectedFromMap = true
+    func selectedFromMapPinMethod(notif: NSNotification) {
+        print("selected from map pin")
+        self.isSelectedFromMap = true
+        self.isCompletedWork = false
         if let passedInt: AnyObject = notif.userInfo?["indexNumber"] {
-            indexNumber = passedInt as! Int - 1
+            self.indexNumber = passedInt as! Int
         }
-        if let passedInt: AnyObject = notif.userInfo?["workOrderId"] {
-            workOrderId = passedInt as! Int
-        }
-        if let isFromCompleteWork: AnyObject = notif.userInfo?["isCompletedWork"] {
-            isCompletedWork = isFromCompleteWork as! Bool
-        }
-        print("index number : \(indexNumber), work order id : \(workOrderId)")
+        print("index number : \(indexNumber)")
 
-        if isCompletedWork {
-            let animations1: () -> Void = {
-                self.splitViewController?.preferredDisplayMode = .Automatic
-                self.splitViewController?.viewWillLayoutSubviews()
-                self.splitViewController?.view.layoutSubviews()
-                
-            }
-            UIView.animateWithDuration(0.7, delay: 2, options: UIViewAnimationOptions.CurveEaseInOut, animations: animations1) { (Bool) -> Void in
-            }
-            /*
-            self.tableView.beginUpdates()
-            self.tableView.reloadSections(NSIndexSet(index: 1), withRowAnimation: UITableViewRowAnimation.Top)
-            self.tableView.reloadSections(NSIndexSet(index: 2), withRowAnimation: UITableViewRowAnimation.Top)
-            
-            self.tableView.endUpdates()*/
-            let completedWorkOrder = self.openWorkOrderList[self.indexNumber]
-            self.openWorkOrderList.removeAtIndex(self.indexNumber)
-            self.completedWorkOrderList.append(completedWorkOrder)
-            
-        }
         self.tableView.reloadData()
 
     }
+    func completedWorkOrderMethod(notif: NSNotification) {
+        print("completed work order method")
+        self.isCompletedWork = true
+        self.isSelectedFromMap = false
+        if let passedInt: AnyObject = notif.userInfo?["indexNumber"] {
+            self.indexNumber = passedInt as! Int
+        }
+        let animations1: () -> Void = {
+            self.splitViewController?.preferredDisplayMode = .Automatic
+            self.splitViewController?.viewWillLayoutSubviews()
+            self.splitViewController?.view.layoutSubviews()
+            
+        }
+        UIView.animateWithDuration(0.7, delay: 2, options: UIViewAnimationOptions.CurveEaseInOut, animations: animations1) { (Bool) -> Void in
+        }
+        /*
+        self.tableView.beginUpdates()
+        self.tableView.reloadSections(NSIndexSet(index: 1), withRowAnimation: UITableViewRowAnimation.Top)
+        self.tableView.reloadSections(NSIndexSet(index: 2), withRowAnimation: UITableViewRowAnimation.Top)
+        
+        self.tableView.endUpdates()*/
+        let completedWorkOrder = self.openWorkOrderList[self.indexNumber]
+        self.openWorkOrderList.removeAtIndex(self.indexNumber)
+        self.completedWorkOrderList.append(completedWorkOrder)
+        
+        self.tableView.reloadData()
+    }
     
     deinit {
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: "workOrderListChange", object:nil)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: "selectedFromMapPin", object:nil)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: "completedWorkOrder", object:nil)
     }
 
     // MARK: - Table view data source and delegate
@@ -100,18 +104,33 @@ class MenuTableViewController: UITableViewController, UISplitViewControllerDeleg
     }
     
     override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        if indexPath.section == 0 && indexPath.row == 0 {
-            tableView.selectRowAtIndexPath(indexPath, animated: true, scrollPosition: UITableViewScrollPosition.Top)
-            performSegueWithIdentifier("overViewSegue", sender: nil)
-            let dict: [String : AnyObject] = ["title" : "Daily Overview" as String]
-            NSNotificationCenter.defaultCenter().postNotificationName("sectionChange", object: nil, userInfo: dict)
-        }
-        if isSelectedFromMap || isCompletedWork {
-            if indexPath.section == 1 && indexNumber == indexPath.row {
+        if indexPath.section == 0  {
+            if indexPath.row == 0 {
                 tableView.selectRowAtIndexPath(indexPath, animated: true, scrollPosition: UITableViewScrollPosition.Top)
-                performSegueWithIdentifier("workOrderSegue", sender: nil)
-                let dict: [String : AnyObject] = ["title" : "Expert Tech" as String]
+                performSegueWithIdentifier("overViewSegue", sender: nil)
+                let dict: [String : AnyObject] = ["title" : "Daily Overview" as String]
                 NSNotificationCenter.defaultCenter().postNotificationName("sectionChange", object: nil, userInfo: dict)
+            }
+            
+        }else if indexPath.section == 1 {
+            if isSelectedFromMap  {
+                if indexPath.row == indexNumber {
+                    print("section == 1")
+                    tableView.selectRowAtIndexPath(indexPath, animated: true, scrollPosition: UITableViewScrollPosition.Top)
+                    self.curWorkOrder = self.openWorkOrderList[indexPath.row]
+                    performSegueWithIdentifier("workOrderSegue", sender: nil)
+                    let dict: [String : AnyObject] = ["title" : "Expert Tech" as String]
+                    NSNotificationCenter.defaultCenter().postNotificationName("sectionChange", object: nil, userInfo: dict)
+                }
+            }
+            if isCompletedWork {
+                if indexPath.row == 0 {
+                    tableView.selectRowAtIndexPath(indexPath, animated: true, scrollPosition: UITableViewScrollPosition.Top)
+                    performSegueWithIdentifier("workOrderSegue", sender: nil)
+                    self.curWorkOrder = self.openWorkOrderList[indexPath.row]
+                    let dict: [String : AnyObject] = ["title" : "Expert Tech" as String]
+                    NSNotificationCenter.defaultCenter().postNotificationName("sectionChange", object: nil, userInfo: dict)
+                }
             }
         }
     }
@@ -124,9 +143,17 @@ class MenuTableViewController: UITableViewController, UISplitViewControllerDeleg
             performSegueWithIdentifier("overViewSegue", sender: nil)
             let dict: [String : AnyObject] = ["title" : "Daily Overview" as String]
             NSNotificationCenter.defaultCenter().postNotificationName("sectionChange", object: nil, userInfo: dict)
-        }else if indexPath.section == 1 || indexPath.section == 2{
+        }else if indexPath.section == 1{
             self.indexNumber = indexPath.row
-            self.workOrderId = Constants.WorkOrderList.workOrderList[indexPath.row].woo_id
+            //self.workOrderId = Constants.WorkOrderList.workOrderList[indexPath.row].woo_id
+            self.curWorkOrder = self.openWorkOrderList[indexPath.row]
+            performSegueWithIdentifier("workOrderSegue", sender: nil)
+            let dict: [String : AnyObject] = ["title" : "Expert Tech" as String]
+            NSNotificationCenter.defaultCenter().postNotificationName("sectionChange", object: nil, userInfo: dict)
+        }else if indexPath.section == 2{
+            self.indexNumber = indexPath.row
+            //self.workOrderId = Constants.WorkOrderList.workOrderList[indexPath.row].woo_id
+            self.curWorkOrder = self.completedWorkOrderList[indexPath.row]
             performSegueWithIdentifier("workOrderSegue", sender: nil)
             let dict: [String : AnyObject] = ["title" : "Expert Tech" as String]
             NSNotificationCenter.defaultCenter().postNotificationName("sectionChange", object: nil, userInfo: dict)
@@ -195,8 +222,9 @@ class MenuTableViewController: UITableViewController, UISplitViewControllerDeleg
         if segue.identifier == "workOrderSegue"{
             print("open work order segue")
             let controller:DetailWorkOrderViewController = segue.destinationViewController as! DetailWorkOrderViewController
-            controller.workOrderId = self.workOrderId
+           // controller.workOrderId = self.workOrderId
             controller.indexNumber = self.indexNumber
+            controller.curWorkOrder = self.curWorkOrder
             //var indexPath = self.tableview.indexPathForSelectedRow() //get index of data for selected row
             //secondViewController.data = self.dataArray.objectAtIndex(indexPath.row) // get data by index and pass it to second view controller
         }else if segue.identifier == "overViewSegue"{

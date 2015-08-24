@@ -24,8 +24,6 @@ class ThanksViewController: UIViewController {
     
     @IBAction func onCloseClick(sender: AnyObject) {
         print("close click")
-        let dict: [String : AnyObject] = ["indexNumber" : 2 as Int, "workOrderId" : 1 as Int, "isCompletedWork" : true as Bool]
-        NSNotificationCenter.defaultCenter().postNotificationName("workOrderListChange", object: nil, userInfo: dict)
         self.dismissViewControllerAnimated(false, completion: nil)
     }
     

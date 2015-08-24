@@ -406,16 +406,6 @@
                                     <barButtonItem image="icon_expert80.png" id="qlw-za-x8k"/>
                                     <barButtonItem image="icon_viewclip80.png" id="8Vp-U6-qtr" userLabel="VVideo Bar Btn"/>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="j7m-EF-4wx"/>
-                                    <barButtonItem style="plain" id="fT6-zZ-k8G">
-                                        <button key="customView" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="g2H-c2-O0L">
-                                            <rect key="frame" x="519" y="4.5" width="52" height="35"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <state key="normal" title="00:00">
-                                                <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            </state>
-                                        </button>
-                                    </barButtonItem>
                                     <barButtonItem style="plain" id="it5-yl-yB9">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="o41-OI-E7c" customClass="StartButton" customModule="ExpertTech" customModuleProvider="target">
                                             <rect key="frame" x="581" y="7" width="46" height="30"/>
@@ -441,6 +431,11 @@
                                 </items>
                                 <color key="tintColor" red="0.1137254902" green="0.44705882349999998" blue="0.67450980390000004" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vmy-b2-Kp4">
+                                <rect key="frame" x="426" y="735" width="72" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -449,6 +444,8 @@
                             <constraint firstItem="PBG-OL-jro" firstAttribute="leading" secondItem="gcT-mx-WMM" secondAttribute="leadingMargin" constant="-20" id="SMJ-nO-bhP"/>
                             <constraint firstItem="PBG-OL-jro" firstAttribute="top" secondItem="kqH-bo-bHn" secondAttribute="bottom" constant="8" id="UrI-7P-Dbl"/>
                             <constraint firstItem="6zK-ln-wf9" firstAttribute="leading" secondItem="gcT-mx-WMM" secondAttribute="leadingMargin" constant="-20" id="cZg-xf-red"/>
+                            <constraint firstItem="Vmy-b2-Kp4" firstAttribute="centerY" secondItem="6zK-ln-wf9" secondAttribute="centerY" id="d3N-ax-AA2"/>
+                            <constraint firstItem="Vmy-b2-Kp4" firstAttribute="leading" secondItem="6zK-ln-wf9" secondAttribute="trailing" constant="-247" id="dBj-5J-IdO"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6zK-ln-wf9" secondAttribute="trailing" constant="-20" id="dOa-ID-xej"/>
                             <constraint firstAttribute="trailingMargin" secondItem="PBG-OL-jro" secondAttribute="trailing" constant="-20" id="jng-OG-OiJ"/>
                             <constraint firstItem="kqH-bo-bHn" firstAttribute="top" secondItem="RD7-rX-bAT" secondAttribute="bottom" constant="15" id="rdK-Hs-6Cv"/>
@@ -464,14 +461,14 @@
                         <outlet property="vInstructionBarBtn" destination="pgC-Un-GZI" id="j5Q-ez-MGM"/>
                         <outlet property="vStartBarBtn" destination="it5-yl-yB9" id="Bbc-TG-fEW"/>
                         <outlet property="vStartBtn" destination="o41-OI-E7c" id="Sg0-DK-pJw"/>
-                        <outlet property="vTimeCounter" destination="g2H-c2-O0L" id="1PP-dH-02b"/>
-                        <outlet property="vTimeCounterBarBtn" destination="fT6-zZ-k8G" id="FOU-kX-9W6"/>
+                        <outlet property="vTimeCount" destination="Vmy-b2-Kp4" id="0bZ-8w-xXX"/>
                         <outlet property="vToolbar" destination="6zK-ln-wf9" id="9vB-Xd-9sr"/>
                         <outlet property="vVideoBarBtn" destination="8Vp-U6-qtr" id="L1S-XA-gA1"/>
                         <segue destination="b9L-Rl-YA6" kind="modal" identifier="technicalReportSegue" id="Ioz-Y2-G0G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lgx-ey-JC3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="kMA-hv-ZiQ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3686.5" y="-593"/>
         </scene>
@@ -499,7 +496,7 @@
                                         <rect key="frame" x="0.0" y="77" width="703" height="159"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cb5-Db-GhP" id="keK-yp-pmP">
-                                            <rect key="frame" x="0.0" y="0.0" width="703" height="159"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="703" height="158.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Customer Details" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fni-jL-0iy">
@@ -1195,6 +1192,7 @@
                         <barButtonItem key="rightBarButtonItem" title="Close" id="3rF-Pi-TgY">
                             <connections>
                                 <action selector="onCloseClick:" destination="HBO-RO-cvP" id="HGp-Rr-48e"/>
+                                <segue destination="kMA-hv-ZiQ" kind="unwind" unwindAction="completedWorkOrder:" id="NFs-QI-Zro"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
