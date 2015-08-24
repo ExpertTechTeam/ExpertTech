@@ -44,9 +44,8 @@ class LoginViewController: UIViewController {
         
         
         //Test WL Connection
-        print("---------- 1 -----------")
-        LoginController().login("t10001", password: "passw0rd", uiView: self)
-        print("---------- 6 -----------")
+//        LoginController().login("t10001", password: "passw0rd", uiView: self)
+        InsertCustFeedbackController().insert("4 PTW11221042", workOrderId: 10001, timeless: 8, helpful: 7, quantity: 6, commu: 5, overall: 7, createdDate: "2015-08-22 11:00:00")
 
     }
     
@@ -117,7 +116,6 @@ class LoginViewController: UIViewController {
     }
 
     func updateView(response: NSArray){
-        print("---------- 7 -----------")
 
         self.loginResult = response
         
@@ -133,7 +131,6 @@ class LoginViewController: UIViewController {
             print("LAST NAME:  \(lname)")
             
         }
-        print("---------- 8 -----------")
 
     }
     

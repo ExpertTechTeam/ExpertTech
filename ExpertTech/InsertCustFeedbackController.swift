@@ -11,21 +11,23 @@ import Foundation
 class InsertCustFeedbackController : NSObject, WLDelegate {
     
     
-    func insert(workUnit: String, workOrderId: Int, timeless: Int, helpful: Int, quantity: Int, commu: Int, overall: Int, createdDate: NSDate){
+    func insert(workUnit: String, workOrderId: Int, timeless: Int, helpful: Int, quantity: Int, commu: Int, overall: Int, createdDate: String){
         //parameters : [workunit, workorderid, timeless, helpful, quantity, commu, overall, createddate]
         
+        print("---------- InsertCustFeedbackController ----------")
         let invocationData = WLProcedureInvocationData(adapterName: "MySQLDBAdapter", procedureName: "insertCustFeedback")
         invocationData.parameters = [workUnit, workOrderId, timeless, helpful, quantity, commu, overall, createdDate]
         WLClient.sharedInstance().invokeProcedure(invocationData, withDelegate: self)
         
+        
     }
     
     func onSuccess(response: WLResponse!) {
-        print("[InsertCustFeedbackController] On Success")
+        print("[InsertCustFeedbackController] onSuccess")
     }
     
     func onFailure(response: WLFailResponse!) {
-        print("[InsertCustFeedbackController] On Failure")
+        print("[InsertCustFeedbackController] onFailure")
         
     }
     
