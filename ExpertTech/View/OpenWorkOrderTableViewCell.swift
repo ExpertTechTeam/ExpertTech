@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WorkOrderTableViewCell: UITableViewCell {
+class OpenWorkOrderTableViewCell: UITableViewCell {
     @IBOutlet weak var vSequence:UILabel!
     @IBOutlet weak var vOrderType1:UILabel!
     @IBOutlet weak var vOrderType2:UILabel!

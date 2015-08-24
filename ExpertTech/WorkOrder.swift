@@ -47,7 +47,11 @@ public class WorkOrder {
     var woo_portln      : String = ""
     var woo_exchange    : String = ""
     
-    
+    init (woo_id:Int,woo_lat:String,woo_lng:String){
+        self.woo_id = woo_id
+        self.woo_latitude = woo_lat
+        self.woo_longitude = woo_lng
+    }
     
     
     

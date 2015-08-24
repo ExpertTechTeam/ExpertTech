@@ -9,24 +9,32 @@
 import UIKit
 
 class DetailWorkOrderViewController: UIViewController, UISplitViewControllerDelegate{
+    @IBOutlet weak var vStartBarBtn: UIBarButtonItem!
+    @IBOutlet weak var vDoneBarBtn: UIBarButtonItem!
+    @IBOutlet weak var vTimeCounterBarBtn: UIBarButtonItem!
+    @IBOutlet weak var vInstructionBarBtn: UIBarButtonItem!
+    @IBOutlet weak var vExpertBarBtn: UIBarButtonItem!
+    @IBOutlet weak var vVideoBarBtn: UIBarButtonItem!
+    @IBOutlet weak var vStartBtn: StartButton!
+    @IBOutlet weak var vDoneBtn: DoneButton!
+    @IBOutlet weak var vTimeCounter: UIButton!
     @IBOutlet weak var vToolbar: UIToolbar!
-    @IBOutlet weak var vTimeCount:UILabel!
-    @IBOutlet weak var vStartButton:StartDoneWorkOrderButton!
+    var indexNumber:Int = 0
+    var workOrderId:Int = 0
     var hideMaster:Bool = false
     var startTime = NSTimeInterval()
     var timer:NSTimer = NSTimer()
     var duration:NSDecimalNumber!
     var strMinutes:String!
     var strSeconds:String!
-    
+    let flexibleBarBtn = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.FlexibleSpace, target: nil, action: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.vTimeCount.hidden = true
-        // Do any additional setup after loading the view.
-        vToolbar.frame = CGRectMake(0, 50, 320, 35)
-       // vToolbar.sizeToFit()
-        print("load")
+        self.splitViewController?.delegate = self
+        vToolbar.setItems([vInstructionBarBtn,vExpertBarBtn,vVideoBarBtn,flexibleBarBtn,vDoneBarBtn,vTimeCounterBarBtn,vStartBarBtn], animated: false)
+        vDoneBtn.hidden = true
+        vTimeCounter.hidden = true
 
     }
     
@@ -34,8 +42,23 @@ class DetailWorkOrderViewController: UIViewController, UISplitViewControllerDele
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
     
+    @IBAction func onClickStart(sender :AnyObject!){
+        print("START")
+        let startBtn = sender as! StartButton
+        startBtn.hidden = true
+        vDoneBtn.hidden = false
+        vTimeCounter.hidden = false
+        vToolbar.setItems([vInstructionBarBtn,vExpertBarBtn,vVideoBarBtn,flexibleBarBtn,vStartBarBtn,vTimeCounterBarBtn,vDoneBarBtn], animated: false)
+        self.startWork()
+        
+    }
+    
+    @IBAction func onClickDone(sender:AnyObject){
+        print("DONE")
+        performSegueWithIdentifier("technicalReportSegue", sender: sender)
+    }
+    /*
     @IBAction func onTouchUpButton(){
         if vStartButton.titleLabel?.text == "Start"{
             vStartButton.onTouchUpStart()
@@ -51,15 +74,16 @@ class DetailWorkOrderViewController: UIViewController, UISplitViewControllerDele
             performSegueWithIdentifier("technicalReportSegue", sender: sender)
         }
     }
-    
+    */
 
     func splitViewController(svc: UISplitViewController, shouldHideViewController vc: UIViewController, inOrientation orientation: UIInterfaceOrientation) -> Bool {
         return hideMaster
     }
     
     
-    @IBAction func startWork(){
-        print("start")
+    func startWork(){
+        print("start work")
+        //self.vStopBtn.frame.origin = self.vStartBtn.frame.origin
         hideMaster = !hideMaster;
         let animations: () -> Void = {
             self.splitViewController?.preferredDisplayMode = .PrimaryHidden
@@ -68,7 +92,10 @@ class DetailWorkOrderViewController: UIViewController, UISplitViewControllerDele
             
         }
         UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: animations) { (Bool) -> Void in
-        }/*
+            
+        }
+        
+        /*
         let animations1: () -> Void = {
             self.splitViewController?.preferredDisplayMode = .Automatic
             self.splitViewController?.viewWillLayoutSubviews()
@@ -132,9 +159,12 @@ class DetailWorkOrderViewController: UIViewController, UISplitViewControllerDele
     
     
     @IBAction func cancelFromTechnicalReport(segue:UIStoryboardSegue){
-        vStartButton.onTouchUpDone()
+        print("cancel to cmplete work order")
+        //vStartBtn.hidden = true
+        //vStopBtn.hidden = false
+        //vToolbar.setItems([flexibleBarBtn,vStartBarBtn,vDoneBarBtn], animated: false)
     }
-    
+    /*
     @IBAction func completeWorkOrder(segue:UIStoryboardSegue){
         
         print("Back")
@@ -170,25 +200,24 @@ class DetailWorkOrderViewController: UIViewController, UISplitViewControllerDele
         }
         */
         
-        
-        vStartButton.layer.borderWidth = 1.0;
-        vStartButton.layer.cornerRadius = 4.0;
-        vStartButton.layer.borderColor = UIColor(hex: 0x0168A2).CGColor
-        vStartButton.setTitleColor(UIColor(hex: 0x0168A2), forState: UIControlState.Normal)
-        vStartButton.setTitle("Start", forState: UIControlState.Normal)
-        vStartButton.layer.backgroundColor = UIColor.whiteColor().CGColor
 
-    }
+    }*/
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "detailWorkOrderSegue"{
+            let controller = (segue.destinationViewController as! DetailWorkOrderTableViewController)
+            controller.workOrderId = self.workOrderId
+            controller.indexNumber = self.indexNumber
+            print("detailWorkOrderSegue")
+        }
     }
-    */
+    
     
 }

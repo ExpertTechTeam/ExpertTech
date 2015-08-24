@@ -16,7 +16,7 @@
 		<key>status_name_en</key>
 		<string>Completed</string>
 		<key>status_name_th</key>
-		<string>ปิดงาน</string>
+		<string>เสร็จงาน</string>
 	</dict>
 	<dict>
 		<key>status_id</key>
@@ -24,50 +24,50 @@
 		<key>status_name_en</key>
 		<string>Open</string>
 		<key>status_name_th</key>
-		<string>ปิดงาน</string>
+		<string>จ่ายงาน</string>
 	</dict>
 	<dict>
 		<key>status_id</key>
 		<integer>3</integer>
-        <key>status_name_en</key>
+		<key>status_name_en</key>
 		<string>Suspended</string>
 		<key>status_name_th</key>
-		<string>ปิดงาน</string>
-        <key>sub</key>
-        <array>
-            <dict>
-                <key>id</key>
-                <integer>0</integer>
-                <key>name_en</key>
-                <string>Waiting for parts</string>
-                <key>name_th</key>
-                <string></string>
-            </dict>
-            <dict>
-                <key>id</key>
-                <integer>1</integer>
-                <key>name_en</key>
-                <string>Pending reschedule</string>
-                <key>name_th</key>
-                <string></string>
-            </dict>
-            <dict>
-                <key>id</key>
-                <integer>2</integer>
-                <key>name_en</key>
-                <string>Pending Replacement product</string>
-                <key>name_th</key>
-                <string></string>
-            </dict>
-            <dict>
-                <key>id</key>
-                <integer>0</integer>
-                <key>name_en</key>
-                <string>Pending replacement of prior workorder</string>
-                <key>name_th</key>
-                <string></string>
-            </dict>
-        </array>
+		<string>หยุดรองาน</string>
+		<key>sub</key>
+		<array>
+			<dict>
+				<key>id</key>
+				<integer>0</integer>
+				<key>name_en</key>
+				<string>Waiting for parts</string>
+				<key>name_th</key>
+				<string>รอชิ้นอะไหล่</string>
+			</dict>
+			<dict>
+				<key>id</key>
+				<integer>1</integer>
+				<key>name_en</key>
+				<string>Pending reschedule</string>
+				<key>name_th</key>
+				<string>รอ</string>
+			</dict>
+			<dict>
+				<key>id</key>
+				<integer>2</integer>
+				<key>name_en</key>
+				<string>Pending Replacement product</string>
+				<key>name_th</key>
+				<string>รอสินค้าทดแทน</string>
+			</dict>
+			<dict>
+				<key>id</key>
+				<integer>0</integer>
+				<key>name_en</key>
+				<string>Pending replacement of prior workorder</string>
+				<key>name_th</key>
+				<string>รอทดแทนงานก่อนหน้า</string>
+			</dict>
+		</array>
 	</dict>
 	<dict>
 		<key>status_id</key>
@@ -75,43 +75,42 @@
 		<key>status_name_en</key>
 		<string>Rescheduled</string>
 		<key>status_name_th</key>
-		<string>ปิดงาน</string>
-        <key>sub</key>
-        <array>
-            <dict>
-                <key>id</key>
-                <integer>0</integer>
-                <key>name_en</key>
-                <string>Pre-required work not completed</string>
-                <key>name_th</key>
-                <string></string>
-            </dict>
-            <dict>
-                <key>id</key>
-                <integer>1</integer>
-                <key>name_en</key>
-                <string>Cannot complete in time frame</string>
-                <key>name_th</key>
-                <string></string>
-            </dict>
-            <dict>
-                <key>id</key>
-                <integer>2</integer>
-                <key>name_en</key>
-                <string>Customer request</string>
-                <key>name_th</key>
-                <string></string>
-            </dict>
-            <dict>
-                <key>id</key>
-                <integer>3</integer>
-                <key>name_en</key>
-                <string>Work order clash</string>
-                <key>name_th</key>
-                <string></string>
-            </dict>
-        </array>
-
+		<string>เลื่อนงาน</string>
+		<key>sub</key>
+		<array>
+			<dict>
+				<key>id</key>
+				<integer>0</integer>
+				<key>name_en</key>
+				<string>Pre-required work not completed</string>
+				<key>name_th</key>
+				<string>งานเบื้องต้นไม่เสร็จ</string>
+			</dict>
+			<dict>
+				<key>id</key>
+				<integer>1</integer>
+				<key>name_en</key>
+				<string>Cannot complete in time frame</string>
+				<key>name_th</key>
+				<string>ไม่ทันเวลา</string>
+			</dict>
+			<dict>
+				<key>id</key>
+				<integer>2</integer>
+				<key>name_en</key>
+				<string>Customer request</string>
+				<key>name_th</key>
+				<string>ลูกค้าร้องขอ</string>
+			</dict>
+			<dict>
+				<key>id</key>
+				<integer>3</integer>
+				<key>name_en</key>
+				<string>Work order clash</string>
+				<key>name_th</key>
+				<string>ช้อมูลงานขัดแย้ง</string>
+			</dict>
+		</array>
 	</dict>
 	<dict>
 		<key>status_id</key>
@@ -119,34 +118,34 @@
 		<key>status_name_en</key>
 		<string>No Action</string>
 		<key>status_name_th</key>
-		<string>ปิดงาน</string>
-        <key>sub</key>
-        <array>
-            <dict>
-                <key>id</key>
-                <integer>0</integer>
-                <key>name_en</key>
-                <string>Power issue corrected by Utility</string>
-                <key>name_th</key>
-                <string></string>
-            </dict>
-            <dict>
-                <key>id</key>
-                <integer>1</integer>
-                <key>name_en</key>
-                <string>cannot replicate fault</string>
-                <key>name_th</key>
-                <string></string>
-            </dict>
-            <dict>
-                <key>id</key>
-                <integer>2</integer>
-                <key>name_en</key>
-                <string>Not covered</string>
-                <key>name_th</key>
-                <string></string>
-            </dict>
-        </array>
+		<string>ไม่กระทำการ</string>
+		<key>sub</key>
+		<array>
+			<dict>
+				<key>id</key>
+				<integer>0</integer>
+				<key>name_en</key>
+				<string>Power issue corrected by Utility</string>
+				<key>name_th</key>
+				<string>ไฟฟ้าแก้ไขโดยโปรแกรม</string>
+			</dict>
+			<dict>
+				<key>id</key>
+				<integer>1</integer>
+				<key>name_en</key>
+				<string>cannot replicate fault</string>
+				<key>name_th</key>
+				<string>สำรองไฟไม่ได้</string>
+			</dict>
+			<dict>
+				<key>id</key>
+				<integer>2</integer>
+				<key>name_en</key>
+				<string>Not covered</string>
+				<key>name_th</key>
+				<string>งานไม่คลอบคลุม</string>
+			</dict>
+		</array>
 	</dict>
 </array>
 </plist>

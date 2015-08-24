@@ -27,6 +27,8 @@
 		3A8B20961B7CAC86009200F5 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A8B20951B7CAC86009200F5 /* CoreData.framework */; };
 		3A8B20981B7CAC90009200F5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A8B20971B7CAC90009200F5 /* CoreLocation.framework */; };
 		3A8B209A1B7CAC98009200F5 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A8B20991B7CAC98009200F5 /* Security.framework */; };
+		A104D67F1B88EBD300B98CF3 /* StartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A104D67E1B88EBD300B98CF3 /* StartButton.swift */; };
+		A104D6811B88F71700B98CF3 /* DoneButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A104D6801B88F71700B98CF3 /* DoneButton.swift */; };
 		A106E59F1B7C4C1D000EBEAC /* icon_technician.png in Resources */ = {isa = PBXBuildFile; fileRef = A106E59E1B7C4C1D000EBEAC /* icon_technician.png */; };
 		A106E5A71B7C52CC000EBEAC /* icon_expert80@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A106E5A61B7C52CC000EBEAC /* icon_expert80@2x.png */; };
 		A106E5A91B7C52F1000EBEAC /* icon_instruction80@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A106E5A81B7C52F1000EBEAC /* icon_instruction80@2x.png */; };
@@ -45,6 +47,12 @@
 		A14CACCF1B78B4DF00AFBC5A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14CACCE1B78B4DF00AFBC5A /* Constants.swift */; };
 		A15A2C281B7DF7D50046BDAB /* PinAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15A2C271B7DF7D50046BDAB /* PinAnnotationView.swift */; };
 		A15A2C2A1B7E023A0046BDAB /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = A15A2C291B7E023A0046BDAB /* circle.png */; };
+		A16DE9781B89B3E300CE30D5 /* TechReportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16DE9771B89B3E300CE30D5 /* TechReportTableViewCell.swift */; };
+		A180405E1B89D8860062EB75 /* ThanksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A180405D1B89D8860062EB75 /* ThanksViewController.swift */; };
+		A180407E1B8A2C940062EB75 /* PhotoPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A180407D1B8A2C940062EB75 /* PhotoPopoverViewController.swift */; };
+		A18040801B8A32C10062EB75 /* PhotoPopoverSubTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A180407F1B8A32C10062EB75 /* PhotoPopoverSubTableViewController.swift */; };
+		A18040821B8B019C0062EB75 /* CompletedWorkOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18040811B8B019C0062EB75 /* CompletedWorkOrderTableViewCell.swift */; };
+		A18040841B8B01BE0062EB75 /* CompletedWorkOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A18040831B8B01BE0062EB75 /* CompletedWorkOrderTableViewCell.xib */; };
 		A1C262D11B79CB8900D5DD72 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1C262D01B79CB8900D5DD72 /* LocalAuthentication.framework */; };
 		A1C263011B79E68000D5DD72 /* icon_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = A1C263001B79E68000D5DD72 /* icon_circle.png */; };
 		A1C263051B79EDD100D5DD72 /* overview_dailyvisit.png in Resources */ = {isa = PBXBuildFile; fileRef = A1C263021B79EDD100D5DD72 /* overview_dailyvisit.png */; };
@@ -58,13 +66,11 @@
 		A1E91E561B6A7826003DDC35 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E91E521B6A7826003DDC35 /* Profile.swift */; };
 		A1E91E571B6A7826003DDC35 /* WorkOrder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E91E531B6A7826003DDC35 /* WorkOrder.swift */; };
 		A1E91E581B6A7826003DDC35 /* WorkOrderStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E91E541B6A7826003DDC35 /* WorkOrderStatus.swift */; };
-		A1ED40BF1B7CA2070099F26E /* TechniacalReportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ED40BE1B7CA2070099F26E /* TechniacalReportTableViewCell.swift */; };
-		A1ED40C11B7CA48C0099F26E /* ThankYouViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ED40C01B7CA48C0099F26E /* ThankYouViewController.swift */; };
 		A1ED40C31B7CAD010099F26E /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ED40C21B7CAD010099F26E /* MenuTableViewController.swift */; };
 		A1ED40C81B7CAD1B0099F26E /* OverViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ED40C41B7CAD1B0099F26E /* OverViewTableViewCell.swift */; };
 		A1ED40C91B7CAD1B0099F26E /* TechnicianReportTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ED40C51B7CAD1B0099F26E /* TechnicianReportTableViewController.swift */; };
-		A1ED40CA1B7CAD1B0099F26E /* WorkOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ED40C61B7CAD1B0099F26E /* WorkOrderTableViewCell.swift */; };
-		A1ED40CB1B7CAD1B0099F26E /* WorkOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1ED40C71B7CAD1B0099F26E /* WorkOrderTableViewCell.xib */; };
+		A1ED40CA1B7CAD1B0099F26E /* OpenWorkOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ED40C61B7CAD1B0099F26E /* OpenWorkOrderTableViewCell.swift */; };
+		A1ED40CB1B7CAD1B0099F26E /* OpenWorkOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1ED40C71B7CAD1B0099F26E /* OpenWorkOrderTableViewCell.xib */; };
 		A1ED40CE1B7DD0B30099F26E /* menu_dashboard.png in Resources */ = {isa = PBXBuildFile; fileRef = A1ED40CC1B7DD0B30099F26E /* menu_dashboard.png */; };
 		A1ED40CF1B7DD0B30099F26E /* menu_vehicle.png in Resources */ = {isa = PBXBuildFile; fileRef = A1ED40CD1B7DD0B30099F26E /* menu_vehicle.png */; };
 		A1ED40D11B7DD20F0099F26E /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ED40D01B7DD20F0099F26E /* DashboardViewController.swift */; };
@@ -191,6 +197,8 @@
 		3A8B20A11B7CACC0009200F5 /* libstdc++.6.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.tbd"; path = "usr/lib/libstdc++.6.tbd"; sourceTree = SDKROOT; };
 		3A8B20A31B7CB403009200F5 /* ExpertTech-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ExpertTech-Bridging-Header.h"; sourceTree = "<group>"; };
 		8FC225681CC8AB9346F8E1CB /* Pods_ExpertTech.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ExpertTech.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A104D67E1B88EBD300B98CF3 /* StartButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartButton.swift; sourceTree = "<group>"; };
+		A104D6801B88F71700B98CF3 /* DoneButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DoneButton.swift; path = View/DoneButton.swift; sourceTree = "<group>"; };
 		A106E59E1B7C4C1D000EBEAC /* icon_technician.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_technician.png; sourceTree = "<group>"; };
 		A106E5A61B7C52CC000EBEAC /* icon_expert80@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_expert80@2x.png"; sourceTree = "<group>"; };
 		A106E5A81B7C52F1000EBEAC /* icon_instruction80@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_instruction80@2x.png"; sourceTree = "<group>"; };
@@ -209,6 +217,12 @@
 		A14CACCE1B78B4DF00AFBC5A /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A15A2C271B7DF7D50046BDAB /* PinAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PinAnnotationView.swift; path = View/PinAnnotationView.swift; sourceTree = "<group>"; };
 		A15A2C291B7E023A0046BDAB /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
+		A16DE9771B89B3E300CE30D5 /* TechReportTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TechReportTableViewCell.swift; path = View/TechReportTableViewCell.swift; sourceTree = "<group>"; };
+		A180405D1B89D8860062EB75 /* ThanksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThanksViewController.swift; path = View/ThanksViewController.swift; sourceTree = "<group>"; };
+		A180407D1B8A2C940062EB75 /* PhotoPopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoPopoverViewController.swift; path = View/PhotoPopoverViewController.swift; sourceTree = "<group>"; };
+		A180407F1B8A32C10062EB75 /* PhotoPopoverSubTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoPopoverSubTableViewController.swift; path = View/PhotoPopoverSubTableViewController.swift; sourceTree = "<group>"; };
+		A18040811B8B019C0062EB75 /* CompletedWorkOrderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompletedWorkOrderTableViewCell.swift; path = View/CompletedWorkOrderTableViewCell.swift; sourceTree = "<group>"; };
+		A18040831B8B01BE0062EB75 /* CompletedWorkOrderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CompletedWorkOrderTableViewCell.xib; path = View/CompletedWorkOrderTableViewCell.xib; sourceTree = "<group>"; };
 		A1C262D01B79CB8900D5DD72 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		A1C263001B79E68000D5DD72 /* icon_circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_circle.png; sourceTree = "<group>"; };
 		A1C263021B79EDD100D5DD72 /* overview_dailyvisit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overview_dailyvisit.png; sourceTree = "<group>"; };
@@ -222,13 +236,11 @@
 		A1E91E521B6A7826003DDC35 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		A1E91E531B6A7826003DDC35 /* WorkOrder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkOrder.swift; sourceTree = "<group>"; };
 		A1E91E541B6A7826003DDC35 /* WorkOrderStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WorkOrderStatus.swift; sourceTree = "<group>"; };
-		A1ED40BE1B7CA2070099F26E /* TechniacalReportTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TechniacalReportTableViewCell.swift; path = View/TechniacalReportTableViewCell.swift; sourceTree = "<group>"; };
-		A1ED40C01B7CA48C0099F26E /* ThankYouViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThankYouViewController.swift; path = View/ThankYouViewController.swift; sourceTree = "<group>"; };
 		A1ED40C21B7CAD010099F26E /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuTableViewController.swift; path = View/MenuTableViewController.swift; sourceTree = "<group>"; };
 		A1ED40C41B7CAD1B0099F26E /* OverViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OverViewTableViewCell.swift; path = View/OverViewTableViewCell.swift; sourceTree = "<group>"; };
 		A1ED40C51B7CAD1B0099F26E /* TechnicianReportTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TechnicianReportTableViewController.swift; path = View/TechnicianReportTableViewController.swift; sourceTree = "<group>"; };
-		A1ED40C61B7CAD1B0099F26E /* WorkOrderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorkOrderTableViewCell.swift; path = View/WorkOrderTableViewCell.swift; sourceTree = "<group>"; };
-		A1ED40C71B7CAD1B0099F26E /* WorkOrderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WorkOrderTableViewCell.xib; path = View/WorkOrderTableViewCell.xib; sourceTree = "<group>"; };
+		A1ED40C61B7CAD1B0099F26E /* OpenWorkOrderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OpenWorkOrderTableViewCell.swift; path = View/OpenWorkOrderTableViewCell.swift; sourceTree = "<group>"; };
+		A1ED40C71B7CAD1B0099F26E /* OpenWorkOrderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OpenWorkOrderTableViewCell.xib; path = View/OpenWorkOrderTableViewCell.xib; sourceTree = "<group>"; };
 		A1ED40CC1B7DD0B30099F26E /* menu_dashboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_dashboard.png; sourceTree = "<group>"; };
 		A1ED40CD1B7DD0B30099F26E /* menu_vehicle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_vehicle.png; sourceTree = "<group>"; };
 		A1ED40D01B7DD20F0099F26E /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DashboardViewController.swift; path = View/DashboardViewController.swift; sourceTree = "<group>"; };
@@ -396,17 +408,23 @@
 				A148B23E1B676F6200840D7A /* OverViewTableViewCell.xib */,
 				A1ED40C41B7CAD1B0099F26E /* OverViewTableViewCell.swift */,
 				A1ED40C51B7CAD1B0099F26E /* TechnicianReportTableViewController.swift */,
-				A1ED40C61B7CAD1B0099F26E /* WorkOrderTableViewCell.swift */,
-				A1ED40C71B7CAD1B0099F26E /* WorkOrderTableViewCell.xib */,
-				A1ED40BE1B7CA2070099F26E /* TechniacalReportTableViewCell.swift */,
+				A16DE9771B89B3E300CE30D5 /* TechReportTableViewCell.swift */,
+				A1ED40C61B7CAD1B0099F26E /* OpenWorkOrderTableViewCell.swift */,
+				A1ED40C71B7CAD1B0099F26E /* OpenWorkOrderTableViewCell.xib */,
+				A18040811B8B019C0062EB75 /* CompletedWorkOrderTableViewCell.swift */,
+				A18040831B8B01BE0062EB75 /* CompletedWorkOrderTableViewCell.xib */,
 				A1DB14E41B70CA4800E9AA09 /* CustomerSignOffViewController.swift */,
-				A1ED40C01B7CA48C0099F26E /* ThankYouViewController.swift */,
 				A1DB14E61B70CAC000E9AA09 /* SurveyOptionViewController.swift */,
+				A180405D1B89D8860062EB75 /* ThanksViewController.swift */,
 				A14CACBE1B78508D00AFBC5A /* WorkOrderStatus1TableViewController.swift */,
 				A14CACC61B786DD400AFBC5A /* WorkOrderStatus2TableViewController.swift */,
 				A1DB14E81B70CAEA00E9AA09 /* CustomerFeedbackViewController.swift */,
 				A14CACC41B786CA500AFBC5A /* RootCauseTableViewController.swift */,
 				A15A2C271B7DF7D50046BDAB /* PinAnnotationView.swift */,
+				A104D67E1B88EBD300B98CF3 /* StartButton.swift */,
+				A104D6801B88F71700B98CF3 /* DoneButton.swift */,
+				A180407D1B8A2C940062EB75 /* PhotoPopoverViewController.swift */,
+				A180407F1B8A32C10062EB75 /* PhotoPopoverSubTableViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -592,7 +610,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1C263071B79EDD100D5DD72 /* overview_resolutionrate.png in Resources */,
-				A1ED40CB1B7CAD1B0099F26E /* WorkOrderTableViewCell.xib in Resources */,
+				A1ED40CB1B7CAD1B0099F26E /* OpenWorkOrderTableViewCell.xib in Resources */,
 				A106E59F1B7C4C1D000EBEAC /* icon_technician.png in Resources */,
 				A106E5A91B7C52F1000EBEAC /* icon_instruction80@2x.png in Resources */,
 				A106E5A71B7C52CC000EBEAC /* icon_expert80@2x.png in Resources */,
@@ -602,10 +620,10 @@
 				A15A2C2A1B7E023A0046BDAB /* circle.png in Resources */,
 				A1ED40CF1B7DD0B30099F26E /* menu_vehicle.png in Resources */,
 				A106E5AB1B7C530B000EBEAC /* icon_viewclip80@2x.png in Resources */,
+				A18040841B8B01BE0062EB75 /* CompletedWorkOrderTableViewCell.xib in Resources */,
 				F96594291B59526C00A8B63B /* LaunchScreen.storyboard in Resources */,
 				A1C263051B79EDD100D5DD72 /* overview_dailyvisit.png in Resources */,
 				A148B2401B676F6200840D7A /* OverViewTableViewCell.xib in Resources */,
-				A148B2411B676F6200840D7A /* WorkOrderTableViewCell.xib in Resources */,
 				3A8B20901B7CABD5009200F5 /* Localizations.bundle in Resources */,
 				F96594261B59526C00A8B63B /* Assets.xcassets in Resources */,
 				A106E5AD1B7C700B000EBEAC /* photo.png in Resources */,
@@ -674,37 +692,41 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A8B202C1B7CAA66009200F5 /* GetAllWorkOrderStatusController.swift in Sources */,
-				A148B2461B676FC800840D7A /* WorkOrderTableViewCell.swift in Sources */,
 				A1E91E561B6A7826003DDC35 /* Profile.swift in Sources */,
 				A1DB14E71B70CAC000E9AA09 /* SurveyOptionViewController.swift in Sources */,
 				3A8B202E1B7CAA8B009200F5 /* UpdateWorkOrderStatusController.swift in Sources */,
-				A148B2451B676FC800840D7A /* MenuTableViewController.swift in Sources */,
 				A14A0BC51B6E153E0040C90C /* DetailWorkOrderViewController.swift in Sources */,
+				A180405E1B89D8860062EB75 /* ThanksViewController.swift in Sources */,
 				A14CACC71B786DD400AFBC5A /* WorkOrderStatus2TableViewController.swift in Sources */,
 				A14CACCF1B78B4DF00AFBC5A /* Constants.swift in Sources */,
 				3A8B20241B7CA9FC009200F5 /* InsertCustFeedbackController.swift in Sources */,
-				A148B2471B676FC800840D7A /* OverViewTableViewCell.swift in Sources */,
 				A1E91E571B6A7826003DDC35 /* WorkOrder.swift in Sources */,
 				3A8B20221B7CA9E8009200F5 /* LoginController.swift in Sources */,
 				A1E91E581B6A7826003DDC35 /* WorkOrderStatus.swift in Sources */,
+				A16DE9781B89B3E300CE30D5 /* TechReportTableViewCell.swift in Sources */,
 				A1DB14E51B70CA4800E9AA09 /* CustomerSignOffViewController.swift in Sources */,
 				A1ED40D91B7DE8790099F26E /* PopOverDetailMapTableViewController.swift in Sources */,
 				A148B2311B66281200840D7A /* LoginViewController.swift in Sources */,
+				A104D67F1B88EBD300B98CF3 /* StartButton.swift in Sources */,
 				A1ED40C91B7CAD1B0099F26E /* TechnicianReportTableViewController.swift in Sources */,
 				A14A0BC31B6B84720040C90C /* DetailWorkOrderTableViewController.swift in Sources */,
 				A14CACBF1B78508D00AFBC5A /* WorkOrderStatus1TableViewController.swift in Sources */,
 				3A8B20281B7CAA2F009200F5 /* InsertNewWorkUnitController.swift in Sources */,
+				A18040801B8A32C10062EB75 /* PhotoPopoverSubTableViewController.swift in Sources */,
 				A1DB14E91B70CAEA00E9AA09 /* CustomerFeedbackViewController.swift in Sources */,
 				A15A2C281B7DF7D50046BDAB /* PinAnnotationView.swift in Sources */,
 				A14CACC51B786CA500AFBC5A /* RootCauseTableViewController.swift in Sources */,
 				A1ED40C31B7CAD010099F26E /* MenuTableViewController.swift in Sources */,
 				A1C263091B79F78E00D5DD72 /* MainPageViewController.swift in Sources */,
 				A1ED40D11B7DD20F0099F26E /* DashboardViewController.swift in Sources */,
+				A18040821B8B019C0062EB75 /* CompletedWorkOrderTableViewCell.swift in Sources */,
+				A104D6811B88F71700B98CF3 /* DoneButton.swift in Sources */,
 				A133E95F1B7076A3003C531F /* StartDoneWorkOrderButton.swift in Sources */,
 				A1E91E551B6A7826003DDC35 /* CustomerFeedback.swift in Sources */,
 				A1ED40C81B7CAD1B0099F26E /* OverViewTableViewCell.swift in Sources */,
 				F96594241B59526C00A8B63B /* ExpertTech.xcdatamodeld in Sources */,
-				A1ED40CA1B7CAD1B0099F26E /* WorkOrderTableViewCell.swift in Sources */,
+				A180407E1B8A2C940062EB75 /* PhotoPopoverViewController.swift in Sources */,
+				A1ED40CA1B7CAD1B0099F26E /* OpenWorkOrderTableViewCell.swift in Sources */,
 				F965941C1B59526C00A8B63B /* AppDelegate.swift in Sources */,
 				3A8B202A1B7CAA47009200F5 /* GetWorkOrderDetailByWorkUnitController.swift in Sources */,
 				3A8B20261B7CAA17009200F5 /* GetWorkOrderByWorkUnitController.swift in Sources */,

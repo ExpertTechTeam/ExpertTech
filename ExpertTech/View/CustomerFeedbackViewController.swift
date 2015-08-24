@@ -20,7 +20,6 @@ class CustomerFeedbackViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         self.navigationController?.navigationBar.hidden = false
-        self.view.backgroundColor = Constants.Color.LightGray
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,7 +45,9 @@ class CustomerFeedbackViewController: UIViewController {
         vOverallSlider.thumbTintColor = UIColor.lightGrayColor()
     }
     
+    @IBAction func onSubmitFeedback(){
     
+    }
     
 
     /*

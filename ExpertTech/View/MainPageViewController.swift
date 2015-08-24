@@ -10,34 +10,30 @@ import UIKit
 
 class MainPageViewController: UIViewController {
 
+    @IBOutlet weak var vTitleItem: UINavigationItem!
     override func viewDidLoad() {
         super.viewDidLoad()
         let technicianIcon = UIImage(named: "icon_technician")
         let imageView = UIImageView(image: technicianIcon)
         let imageLeftBarButton = UIBarButtonItem(customView: imageView)
-        
         self.navigationItem.leftBarButtonItem = imageLeftBarButton;
-        /*
-        let technicianImg: UIImage = UIImage(named: "icon_technician")!
-        technicianImg.drawInRect(CGRectMake(0, 0, 22, 22))
-        vTechniicianImg.image=technicianImg*/
-        // Do any additional setup after loading the view.
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "sectionChangeMethod:", name: "sectionChange", object: nil)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func sectionChangeMethod(notif: NSNotification) {
+        print("Section Change")
+        if let passedString: AnyObject = notif.userInfo?["title"] {
+            self.vTitleItem.title = passedString as? String
+            print("\(passedString)")
+        }
+        
     }
-    */
-
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: "sectionChange", object:nil)
+    }
 }

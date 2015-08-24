@@ -111,6 +111,13 @@ class LoginViewController: UIViewController {
     }
     */
     
+    @IBAction func login(){
+        let username = self.vUsernameTxtField.text
+        let password = self.vPasswordTxtField.text
+        
+        
+    }
+    
     @IBAction func logout(segue : UIStoryboardSegue){
         print("Logout")
     }

@@ -16,7 +16,6 @@ class SurveyOptionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.hidden = true
-        self.view.backgroundColor = Constants.Color.LightGray
         self.vTakeSurwayBtn.layer.cornerRadius = 6.0
         self.vDoNotTakeSurway.layer.cornerRadius = 6.0
     }
@@ -26,8 +25,6 @@ class SurveyOptionViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -35,8 +32,8 @@ class SurveyOptionViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         if segue.identifier == "noTakeSurveySegue"{
-          //  let thankyouVC = segue.destinationViewController as! ThankYouViewController
-          //  thankyouVC.isHiddenBackBtn = true
+            let thankyouVC = segue.destinationViewController as! ThanksViewController
+            thankyouVC.isHiddenBackBtn = true
         }
         
     }
