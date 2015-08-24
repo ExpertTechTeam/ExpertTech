@@ -19,15 +19,17 @@ class TechnicianReportTableViewController: UITableViewController, communicationC
         self.vNoteTxtView.delegate = self
     }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    // MARK: - TextView delegate
     func textViewDidBeginEditing(textView: UITextView) {
         textView.text = ""
     }
     
-    func popoverPresentationControllerDidDismissPopover(popoverPresentationController: UIPopoverPresentationController) {
-        //do som stuff from the popover
-    }
-    
-    
+    // MARK: - back from protocal
     func backFromSelectedStatus(statusId: Int, statusId2 : Int) {
         let statusFilePath = NSBundle.mainBundle().pathForResource("WorkOrderStatus", ofType: "plist")
         let statusArray = NSArray(contentsOfFile: statusFilePath!)!
@@ -49,10 +51,7 @@ class TechnicianReportTableViewController: UITableViewController, communicationC
         vRootCauseLabel.textColor = UIColor.blackColor()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+
     
     // MARK: - Navigation
 
@@ -69,7 +68,7 @@ class TechnicianReportTableViewController: UITableViewController, communicationC
             let workOrderRootCauseVC = navWorkOrderRootCauseVC.topViewController as! RootCauseTableViewController
             workOrderRootCauseVC.delegate = self
         }else if segue.identifier == "photoSegue" {
-            let photoVC = segue.destinationViewController as! PhotoPopoverViewController
+            //let photoVC = segue.destinationViewController as! PhotoPopoverViewController
 
         }
         

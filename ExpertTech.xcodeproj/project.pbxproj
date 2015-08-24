@@ -34,7 +34,6 @@
 		A106E5A91B7C52F1000EBEAC /* icon_instruction80@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A106E5A81B7C52F1000EBEAC /* icon_instruction80@2x.png */; };
 		A106E5AB1B7C530B000EBEAC /* icon_viewclip80@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A106E5AA1B7C530B000EBEAC /* icon_viewclip80@2x.png */; };
 		A106E5AD1B7C700B000EBEAC /* photo.png in Resources */ = {isa = PBXBuildFile; fileRef = A106E5AC1B7C700B000EBEAC /* photo.png */; };
-		A133E95F1B7076A3003C531F /* StartDoneWorkOrderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A133E95E1B7076A3003C531F /* StartDoneWorkOrderButton.swift */; };
 		A148B2311B66281200840D7A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A148B2301B66281200840D7A /* LoginViewController.swift */; };
 		A148B2401B676F6200840D7A /* OverViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A148B23E1B676F6200840D7A /* OverViewTableViewCell.xib */; };
 		A14A0BC31B6B84720040C90C /* DetailWorkOrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14A0BC21B6B84720040C90C /* DetailWorkOrderTableViewController.swift */; };
@@ -204,7 +203,6 @@
 		A106E5A81B7C52F1000EBEAC /* icon_instruction80@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_instruction80@2x.png"; sourceTree = "<group>"; };
 		A106E5AA1B7C530B000EBEAC /* icon_viewclip80@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_viewclip80@2x.png"; sourceTree = "<group>"; };
 		A106E5AC1B7C700B000EBEAC /* photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photo.png; sourceTree = "<group>"; };
-		A133E95E1B7076A3003C531F /* StartDoneWorkOrderButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StartDoneWorkOrderButton.swift; path = View/StartDoneWorkOrderButton.swift; sourceTree = "<group>"; };
 		A148B2301B66281200840D7A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = View/LoginViewController.swift; sourceTree = "<group>"; };
 		A148B23E1B676F6200840D7A /* OverViewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverViewTableViewCell.xib; sourceTree = "<group>"; };
 		A14A0BC21B6B84720040C90C /* DetailWorkOrderTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DetailWorkOrderTableViewController.swift; path = View/DetailWorkOrderTableViewController.swift; sourceTree = "<group>"; };
@@ -400,31 +398,30 @@
 				A148B2301B66281200840D7A /* LoginViewController.swift */,
 				A1C263081B79F78E00D5DD72 /* MainPageViewController.swift */,
 				A1ED40C21B7CAD010099F26E /* MenuTableViewController.swift */,
-				A1ED40D01B7DD20F0099F26E /* DashboardViewController.swift */,
-				A1ED40D81B7DE8790099F26E /* PopOverDetailMapTableViewController.swift */,
-				A14A0BC41B6E153E0040C90C /* DetailWorkOrderViewController.swift */,
-				A14A0BC21B6B84720040C90C /* DetailWorkOrderTableViewController.swift */,
-				A133E95E1B7076A3003C531F /* StartDoneWorkOrderButton.swift */,
 				A148B23E1B676F6200840D7A /* OverViewTableViewCell.xib */,
 				A1ED40C41B7CAD1B0099F26E /* OverViewTableViewCell.swift */,
-				A1ED40C51B7CAD1B0099F26E /* TechnicianReportTableViewController.swift */,
-				A16DE9771B89B3E300CE30D5 /* TechReportTableViewCell.swift */,
 				A1ED40C61B7CAD1B0099F26E /* OpenWorkOrderTableViewCell.swift */,
 				A1ED40C71B7CAD1B0099F26E /* OpenWorkOrderTableViewCell.xib */,
 				A18040811B8B019C0062EB75 /* CompletedWorkOrderTableViewCell.swift */,
 				A18040831B8B01BE0062EB75 /* CompletedWorkOrderTableViewCell.xib */,
+				A1ED40D01B7DD20F0099F26E /* DashboardViewController.swift */,
+				A15A2C271B7DF7D50046BDAB /* PinAnnotationView.swift */,
+				A1ED40D81B7DE8790099F26E /* PopOverDetailMapTableViewController.swift */,
+				A14A0BC41B6E153E0040C90C /* DetailWorkOrderViewController.swift */,
+				A14A0BC21B6B84720040C90C /* DetailWorkOrderTableViewController.swift */,
+				A104D67E1B88EBD300B98CF3 /* StartButton.swift */,
+				A104D6801B88F71700B98CF3 /* DoneButton.swift */,
+				A1ED40C51B7CAD1B0099F26E /* TechnicianReportTableViewController.swift */,
+				A16DE9771B89B3E300CE30D5 /* TechReportTableViewCell.swift */,
+				A14CACBE1B78508D00AFBC5A /* WorkOrderStatus1TableViewController.swift */,
+				A14CACC61B786DD400AFBC5A /* WorkOrderStatus2TableViewController.swift */,
+				A180407D1B8A2C940062EB75 /* PhotoPopoverViewController.swift */,
+				A180407F1B8A32C10062EB75 /* PhotoPopoverSubTableViewController.swift */,
 				A1DB14E41B70CA4800E9AA09 /* CustomerSignOffViewController.swift */,
 				A1DB14E61B70CAC000E9AA09 /* SurveyOptionViewController.swift */,
 				A180405D1B89D8860062EB75 /* ThanksViewController.swift */,
-				A14CACBE1B78508D00AFBC5A /* WorkOrderStatus1TableViewController.swift */,
-				A14CACC61B786DD400AFBC5A /* WorkOrderStatus2TableViewController.swift */,
 				A1DB14E81B70CAEA00E9AA09 /* CustomerFeedbackViewController.swift */,
 				A14CACC41B786CA500AFBC5A /* RootCauseTableViewController.swift */,
-				A15A2C271B7DF7D50046BDAB /* PinAnnotationView.swift */,
-				A104D67E1B88EBD300B98CF3 /* StartButton.swift */,
-				A104D6801B88F71700B98CF3 /* DoneButton.swift */,
-				A180407D1B8A2C940062EB75 /* PhotoPopoverViewController.swift */,
-				A180407F1B8A32C10062EB75 /* PhotoPopoverSubTableViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -452,6 +449,16 @@
 				3A8B202D1B7CAA8B009200F5 /* UpdateWorkOrderStatusController.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		A18040851B8B0B130062EB75 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				A14CACC21B785DD200AFBC5A /* WorkOrderStatus.plist */,
+				A14CACCC1B786F9900AFBC5A /* RootCause.plist */,
+				A14CACCE1B78B4DF00AFBC5A /* Constants.swift */,
+			);
+			name = Constants;
 			sourceTree = "<group>";
 		};
 		A35FD91F1C1295DFAF439BE9 /* Pods */ = {
@@ -529,6 +536,7 @@
 		F965941A1B59526C00A8B63B /* ExpertTech */ = {
 			isa = PBXGroup;
 			children = (
+				A18040851B8B0B130062EB75 /* Constants */,
 				A148B22F1B6627B400840D7A /* Controller */,
 				A148B22E1B6627A900840D7A /* Model */,
 				A148B22D1B66278B00840D7A /* View */,
@@ -539,9 +547,6 @@
 				F96594271B59526C00A8B63B /* LaunchScreen.storyboard */,
 				F965942A1B59526C00A8B63B /* Info.plist */,
 				F96594221B59526C00A8B63B /* ExpertTech.xcdatamodeld */,
-				A14CACC21B785DD200AFBC5A /* WorkOrderStatus.plist */,
-				A14CACCC1B786F9900AFBC5A /* RootCause.plist */,
-				A14CACCE1B78B4DF00AFBC5A /* Constants.swift */,
 			);
 			path = ExpertTech;
 			sourceTree = "<group>";
@@ -721,7 +726,6 @@
 				A1ED40D11B7DD20F0099F26E /* DashboardViewController.swift in Sources */,
 				A18040821B8B019C0062EB75 /* CompletedWorkOrderTableViewCell.swift in Sources */,
 				A104D6811B88F71700B98CF3 /* DoneButton.swift in Sources */,
-				A133E95F1B7076A3003C531F /* StartDoneWorkOrderButton.swift in Sources */,
 				A1E91E551B6A7826003DDC35 /* CustomerFeedback.swift in Sources */,
 				A1ED40C81B7CAD1B0099F26E /* OverViewTableViewCell.swift in Sources */,
 				F96594241B59526C00A8B63B /* ExpertTech.xcdatamodeld in Sources */,

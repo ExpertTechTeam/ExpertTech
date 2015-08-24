@@ -43,6 +43,12 @@ class DetailWorkOrderViewController: UIViewController, UISplitViewControllerDele
         // Dispose of any resources that can be recreated.
     }
     
+    // MARK: - splitview delegate
+    func splitViewController(svc: UISplitViewController, shouldHideViewController vc: UIViewController, inOrientation orientation: UIInterfaceOrientation) -> Bool {
+        return hideMaster
+    }
+    
+    // MARK: - user action
     @IBAction func onClickStart(sender :AnyObject!){
         print("START")
         let startBtn = sender as! StartButton
@@ -58,32 +64,9 @@ class DetailWorkOrderViewController: UIViewController, UISplitViewControllerDele
         print("DONE")
         performSegueWithIdentifier("technicalReportSegue", sender: sender)
     }
-    /*
-    @IBAction func onTouchUpButton(){
-        if vStartButton.titleLabel?.text == "Start"{
-            vStartButton.onTouchUpStart()
-        }else{
-            vStartButton.onTouchUpDone()
-        }
-    }
-    @IBAction func onTouchDownButton(sender :AnyObject!){
-        if vStartButton.titleLabel?.text == "Start"{
-            vStartButton.onTouchDownStart()
-        }else{
-            vStartButton.onTouchDownDone()
-            performSegueWithIdentifier("technicalReportSegue", sender: sender)
-        }
-    }
-    */
-
-    func splitViewController(svc: UISplitViewController, shouldHideViewController vc: UIViewController, inOrientation orientation: UIInterfaceOrientation) -> Bool {
-        return hideMaster
-    }
-    
     
     func startWork(){
         print("start work")
-        //self.vStopBtn.frame.origin = self.vStartBtn.frame.origin
         hideMaster = !hideMaster;
         let animations: () -> Void = {
             self.splitViewController?.preferredDisplayMode = .PrimaryHidden
@@ -95,16 +78,6 @@ class DetailWorkOrderViewController: UIViewController, UISplitViewControllerDele
             
         }
         
-        /*
-        let animations1: () -> Void = {
-            self.splitViewController?.preferredDisplayMode = .Automatic
-            self.splitViewController?.viewWillLayoutSubviews()
-            self.splitViewController?.view.layoutSubviews()
-            
-        }
-        UIView.animateWithDuration(0.3, delay: 4, options: UIViewAnimationOptions.CurveEaseInOut, animations: animations1) { (Bool) -> Void in
-        }
-        */
     }
     
     /*
@@ -155,55 +128,10 @@ class DetailWorkOrderViewController: UIViewController, UISplitViewControllerDele
         //concatenate minuets, seconds as assign it to the UILabel
         vTimeCount.text = "\(strMinutes):\(strSeconds)"
     }*/
-        
-    
     
     @IBAction func cancelFromTechnicalReport(segue:UIStoryboardSegue){
         print("cancel to cmplete work order")
-        //vStartBtn.hidden = true
-        //vStopBtn.hidden = false
-        //vToolbar.setItems([flexibleBarBtn,vStartBarBtn,vDoneBarBtn], animated: false)
     }
-    /*
-    @IBAction func completeWorkOrder(segue:UIStoryboardSegue){
-        
-        print("Back")
-        hideMaster = !hideMaster;
-        let animations1: () -> Void = {
-            self.splitViewController?.preferredDisplayMode = .PrimaryHidden
-            self.splitViewController?.viewWillLayoutSubviews()
-            self.splitViewController?.view.layoutSubviews()
-        }
-        
-        UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: animations1) { (Bool) -> Void in
-            
-            self.splitViewController?.preferredDisplayMode = .Automatic
-            self.splitViewController?.viewWillLayoutSubviews()
-            self.splitViewController?.view.layoutSubviews()
-        }
-        /*
-        let animations2: () -> Void = {
-            self.splitViewController?.preferredDisplayMode = .PrimaryHidden
-            self.splitViewController?.viewWillLayoutSubviews()
-            self.splitViewController?.view.layoutSubviews()
-            
-        }
-        UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: animations2) { (Bool) -> Void in
-        }
-        let animations3: () -> Void = {
-            self.splitViewController?.preferredDisplayMode = .Automatic
-            self.splitViewController?.viewWillLayoutSubviews()
-            self.splitViewController?.view.layoutSubviews()
-            
-        }
-        UIView.animateWithDuration(0.3, delay: 4, options: UIViewAnimationOptions.CurveEaseInOut, animations: animations3) { (Bool) -> Void in
-        }
-        */
-        
-
-    }*/
-    
-
     
     // MARK: - Navigation
 
