@@ -28,8 +28,6 @@ class DashboardViewController: UIViewController,MKMapViewDelegate, UIPopoverCont
         workOrderList.append(workOrder3)
         */
         workOrderList = Constants.WorkOrderList.workOrderList
-        //let initialLocation = CLLocation(latitude: 13.781116, longitude: 100.545497)
-        //self.centerMapOnLocation(initialLocation)
        
     }
     override func viewDidAppear(animated: Bool) {
@@ -42,7 +40,7 @@ class DashboardViewController: UIViewController,MKMapViewDelegate, UIPopoverCont
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    // MARK: - Pin and centerlize MapView
     func centerMapOnLocation(){
         /*
         print("\(Double(workOrderList[0].woo_latitude)!), \(Double(workOrderList[0].woo_longitude)!)")
@@ -70,8 +68,8 @@ class DashboardViewController: UIViewController,MKMapViewDelegate, UIPopoverCont
         var region: MKCoordinateRegion = MKCoordinateRegion()
         region.center.latitude = topLeftCoord.latitude - (topLeftCoord.latitude - bottomRightCoord.latitude) * 0.5
         region.center.longitude = topLeftCoord.longitude + (bottomRightCoord.longitude - topLeftCoord.longitude) * 0.5
-        region.span.latitudeDelta = fabs(topLeftCoord.latitude - bottomRightCoord.latitude) * 1.4
-        region.span.longitudeDelta = fabs(bottomRightCoord.longitude - topLeftCoord.longitude) * 1.4
+        region.span.latitudeDelta = fabs(topLeftCoord.latitude - bottomRightCoord.latitude) * 2
+        region.span.longitudeDelta = fabs(bottomRightCoord.longitude - topLeftCoord.longitude) * 2
         region = vMapView.regionThatFits(region)
         vMapView.setRegion(region, animated: true)
         
@@ -92,7 +90,7 @@ class DashboardViewController: UIViewController,MKMapViewDelegate, UIPopoverCont
         }
 
     }
-    
+    // MARK: - MapView delegate
     func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
         mapView.deselectAnnotation(view.annotation, animated: true)
         let controller = self.storyboard?.instantiateViewControllerWithIdentifier("PopOverDetailMapTableViewController") as! PopOverDetailMapTableViewController
@@ -111,18 +109,6 @@ class DashboardViewController: UIViewController,MKMapViewDelegate, UIPopoverCont
         let annotationView = PinAnnotationView(annotation: annotation, reuseIdentifier: "pin")
         return annotationView
     }
-        /*
-   func mapView(mapView: MKMapView, didUpdateUserLocation userLocation: MKUserLocation) {
-        let region:MKCoordinateRegion = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 2000, 2000);
-        self.vMapView.setRegion(self.vMapView.regionThatFits(region), animated: true)
-        // Add annotation
-        let point:MKPointAnnotation = MKPointAnnotation()
-        point.coordinate = userLocation.coordinate
-        point.title = "Where am I?"
-        point.subtitle = "I'm here"
-        self.vMapView.addAnnotation(point)
-    }
-    */
     
     /*
     // MARK: - Navigation

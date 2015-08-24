@@ -49,6 +49,10 @@
 		A15A2C2A1B7E023A0046BDAB /* circle.png in Resources */ = {isa = PBXBuildFile; fileRef = A15A2C291B7E023A0046BDAB /* circle.png */; };
 		A16DE9781B89B3E300CE30D5 /* TechReportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16DE9771B89B3E300CE30D5 /* TechReportTableViewCell.swift */; };
 		A180405E1B89D8860062EB75 /* ThanksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A180405D1B89D8860062EB75 /* ThanksViewController.swift */; };
+		A180407E1B8A2C940062EB75 /* PhotoPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A180407D1B8A2C940062EB75 /* PhotoPopoverViewController.swift */; };
+		A18040801B8A32C10062EB75 /* PhotoPopoverSubTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A180407F1B8A32C10062EB75 /* PhotoPopoverSubTableViewController.swift */; };
+		A18040821B8B019C0062EB75 /* CompletedWorkOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A18040811B8B019C0062EB75 /* CompletedWorkOrderTableViewCell.swift */; };
+		A18040841B8B01BE0062EB75 /* CompletedWorkOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A18040831B8B01BE0062EB75 /* CompletedWorkOrderTableViewCell.xib */; };
 		A1C262D11B79CB8900D5DD72 /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1C262D01B79CB8900D5DD72 /* LocalAuthentication.framework */; };
 		A1C263011B79E68000D5DD72 /* icon_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = A1C263001B79E68000D5DD72 /* icon_circle.png */; };
 		A1C263051B79EDD100D5DD72 /* overview_dailyvisit.png in Resources */ = {isa = PBXBuildFile; fileRef = A1C263021B79EDD100D5DD72 /* overview_dailyvisit.png */; };
@@ -65,8 +69,8 @@
 		A1ED40C31B7CAD010099F26E /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ED40C21B7CAD010099F26E /* MenuTableViewController.swift */; };
 		A1ED40C81B7CAD1B0099F26E /* OverViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ED40C41B7CAD1B0099F26E /* OverViewTableViewCell.swift */; };
 		A1ED40C91B7CAD1B0099F26E /* TechnicianReportTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ED40C51B7CAD1B0099F26E /* TechnicianReportTableViewController.swift */; };
-		A1ED40CA1B7CAD1B0099F26E /* WorkOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ED40C61B7CAD1B0099F26E /* WorkOrderTableViewCell.swift */; };
-		A1ED40CB1B7CAD1B0099F26E /* WorkOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1ED40C71B7CAD1B0099F26E /* WorkOrderTableViewCell.xib */; };
+		A1ED40CA1B7CAD1B0099F26E /* OpenWorkOrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ED40C61B7CAD1B0099F26E /* OpenWorkOrderTableViewCell.swift */; };
+		A1ED40CB1B7CAD1B0099F26E /* OpenWorkOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1ED40C71B7CAD1B0099F26E /* OpenWorkOrderTableViewCell.xib */; };
 		A1ED40CE1B7DD0B30099F26E /* menu_dashboard.png in Resources */ = {isa = PBXBuildFile; fileRef = A1ED40CC1B7DD0B30099F26E /* menu_dashboard.png */; };
 		A1ED40CF1B7DD0B30099F26E /* menu_vehicle.png in Resources */ = {isa = PBXBuildFile; fileRef = A1ED40CD1B7DD0B30099F26E /* menu_vehicle.png */; };
 		A1ED40D11B7DD20F0099F26E /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ED40D01B7DD20F0099F26E /* DashboardViewController.swift */; };
@@ -215,6 +219,10 @@
 		A15A2C291B7E023A0046BDAB /* circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = circle.png; sourceTree = "<group>"; };
 		A16DE9771B89B3E300CE30D5 /* TechReportTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TechReportTableViewCell.swift; path = View/TechReportTableViewCell.swift; sourceTree = "<group>"; };
 		A180405D1B89D8860062EB75 /* ThanksViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ThanksViewController.swift; path = View/ThanksViewController.swift; sourceTree = "<group>"; };
+		A180407D1B8A2C940062EB75 /* PhotoPopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoPopoverViewController.swift; path = View/PhotoPopoverViewController.swift; sourceTree = "<group>"; };
+		A180407F1B8A32C10062EB75 /* PhotoPopoverSubTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoPopoverSubTableViewController.swift; path = View/PhotoPopoverSubTableViewController.swift; sourceTree = "<group>"; };
+		A18040811B8B019C0062EB75 /* CompletedWorkOrderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CompletedWorkOrderTableViewCell.swift; path = View/CompletedWorkOrderTableViewCell.swift; sourceTree = "<group>"; };
+		A18040831B8B01BE0062EB75 /* CompletedWorkOrderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CompletedWorkOrderTableViewCell.xib; path = View/CompletedWorkOrderTableViewCell.xib; sourceTree = "<group>"; };
 		A1C262D01B79CB8900D5DD72 /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		A1C263001B79E68000D5DD72 /* icon_circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_circle.png; sourceTree = "<group>"; };
 		A1C263021B79EDD100D5DD72 /* overview_dailyvisit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overview_dailyvisit.png; sourceTree = "<group>"; };
@@ -231,8 +239,8 @@
 		A1ED40C21B7CAD010099F26E /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuTableViewController.swift; path = View/MenuTableViewController.swift; sourceTree = "<group>"; };
 		A1ED40C41B7CAD1B0099F26E /* OverViewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OverViewTableViewCell.swift; path = View/OverViewTableViewCell.swift; sourceTree = "<group>"; };
 		A1ED40C51B7CAD1B0099F26E /* TechnicianReportTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TechnicianReportTableViewController.swift; path = View/TechnicianReportTableViewController.swift; sourceTree = "<group>"; };
-		A1ED40C61B7CAD1B0099F26E /* WorkOrderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorkOrderTableViewCell.swift; path = View/WorkOrderTableViewCell.swift; sourceTree = "<group>"; };
-		A1ED40C71B7CAD1B0099F26E /* WorkOrderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = WorkOrderTableViewCell.xib; path = View/WorkOrderTableViewCell.xib; sourceTree = "<group>"; };
+		A1ED40C61B7CAD1B0099F26E /* OpenWorkOrderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OpenWorkOrderTableViewCell.swift; path = View/OpenWorkOrderTableViewCell.swift; sourceTree = "<group>"; };
+		A1ED40C71B7CAD1B0099F26E /* OpenWorkOrderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = OpenWorkOrderTableViewCell.xib; path = View/OpenWorkOrderTableViewCell.xib; sourceTree = "<group>"; };
 		A1ED40CC1B7DD0B30099F26E /* menu_dashboard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_dashboard.png; sourceTree = "<group>"; };
 		A1ED40CD1B7DD0B30099F26E /* menu_vehicle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_vehicle.png; sourceTree = "<group>"; };
 		A1ED40D01B7DD20F0099F26E /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DashboardViewController.swift; path = View/DashboardViewController.swift; sourceTree = "<group>"; };
@@ -401,8 +409,10 @@
 				A1ED40C41B7CAD1B0099F26E /* OverViewTableViewCell.swift */,
 				A1ED40C51B7CAD1B0099F26E /* TechnicianReportTableViewController.swift */,
 				A16DE9771B89B3E300CE30D5 /* TechReportTableViewCell.swift */,
-				A1ED40C61B7CAD1B0099F26E /* WorkOrderTableViewCell.swift */,
-				A1ED40C71B7CAD1B0099F26E /* WorkOrderTableViewCell.xib */,
+				A1ED40C61B7CAD1B0099F26E /* OpenWorkOrderTableViewCell.swift */,
+				A1ED40C71B7CAD1B0099F26E /* OpenWorkOrderTableViewCell.xib */,
+				A18040811B8B019C0062EB75 /* CompletedWorkOrderTableViewCell.swift */,
+				A18040831B8B01BE0062EB75 /* CompletedWorkOrderTableViewCell.xib */,
 				A1DB14E41B70CA4800E9AA09 /* CustomerSignOffViewController.swift */,
 				A1DB14E61B70CAC000E9AA09 /* SurveyOptionViewController.swift */,
 				A180405D1B89D8860062EB75 /* ThanksViewController.swift */,
@@ -413,6 +423,8 @@
 				A15A2C271B7DF7D50046BDAB /* PinAnnotationView.swift */,
 				A104D67E1B88EBD300B98CF3 /* StartButton.swift */,
 				A104D6801B88F71700B98CF3 /* DoneButton.swift */,
+				A180407D1B8A2C940062EB75 /* PhotoPopoverViewController.swift */,
+				A180407F1B8A32C10062EB75 /* PhotoPopoverSubTableViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -598,7 +610,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1C263071B79EDD100D5DD72 /* overview_resolutionrate.png in Resources */,
-				A1ED40CB1B7CAD1B0099F26E /* WorkOrderTableViewCell.xib in Resources */,
+				A1ED40CB1B7CAD1B0099F26E /* OpenWorkOrderTableViewCell.xib in Resources */,
 				A106E59F1B7C4C1D000EBEAC /* icon_technician.png in Resources */,
 				A106E5A91B7C52F1000EBEAC /* icon_instruction80@2x.png in Resources */,
 				A106E5A71B7C52CC000EBEAC /* icon_expert80@2x.png in Resources */,
@@ -608,6 +620,7 @@
 				A15A2C2A1B7E023A0046BDAB /* circle.png in Resources */,
 				A1ED40CF1B7DD0B30099F26E /* menu_vehicle.png in Resources */,
 				A106E5AB1B7C530B000EBEAC /* icon_viewclip80@2x.png in Resources */,
+				A18040841B8B01BE0062EB75 /* CompletedWorkOrderTableViewCell.xib in Resources */,
 				F96594291B59526C00A8B63B /* LaunchScreen.storyboard in Resources */,
 				A1C263051B79EDD100D5DD72 /* overview_dailyvisit.png in Resources */,
 				A148B2401B676F6200840D7A /* OverViewTableViewCell.xib in Resources */,
@@ -699,18 +712,21 @@
 				A14A0BC31B6B84720040C90C /* DetailWorkOrderTableViewController.swift in Sources */,
 				A14CACBF1B78508D00AFBC5A /* WorkOrderStatus1TableViewController.swift in Sources */,
 				3A8B20281B7CAA2F009200F5 /* InsertNewWorkUnitController.swift in Sources */,
+				A18040801B8A32C10062EB75 /* PhotoPopoverSubTableViewController.swift in Sources */,
 				A1DB14E91B70CAEA00E9AA09 /* CustomerFeedbackViewController.swift in Sources */,
 				A15A2C281B7DF7D50046BDAB /* PinAnnotationView.swift in Sources */,
 				A14CACC51B786CA500AFBC5A /* RootCauseTableViewController.swift in Sources */,
 				A1ED40C31B7CAD010099F26E /* MenuTableViewController.swift in Sources */,
 				A1C263091B79F78E00D5DD72 /* MainPageViewController.swift in Sources */,
 				A1ED40D11B7DD20F0099F26E /* DashboardViewController.swift in Sources */,
+				A18040821B8B019C0062EB75 /* CompletedWorkOrderTableViewCell.swift in Sources */,
 				A104D6811B88F71700B98CF3 /* DoneButton.swift in Sources */,
 				A133E95F1B7076A3003C531F /* StartDoneWorkOrderButton.swift in Sources */,
 				A1E91E551B6A7826003DDC35 /* CustomerFeedback.swift in Sources */,
 				A1ED40C81B7CAD1B0099F26E /* OverViewTableViewCell.swift in Sources */,
 				F96594241B59526C00A8B63B /* ExpertTech.xcdatamodeld in Sources */,
-				A1ED40CA1B7CAD1B0099F26E /* WorkOrderTableViewCell.swift in Sources */,
+				A180407E1B8A2C940062EB75 /* PhotoPopoverViewController.swift in Sources */,
+				A1ED40CA1B7CAD1B0099F26E /* OpenWorkOrderTableViewCell.swift in Sources */,
 				F965941C1B59526C00A8B63B /* AppDelegate.swift in Sources */,
 				3A8B202A1B7CAA47009200F5 /* GetWorkOrderDetailByWorkUnitController.swift in Sources */,
 				3A8B20261B7CAA17009200F5 /* GetWorkOrderByWorkUnitController.swift in Sources */,

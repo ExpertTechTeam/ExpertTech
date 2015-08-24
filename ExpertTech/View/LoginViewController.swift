@@ -113,6 +113,9 @@ class LoginViewController: UIViewController {
     */
     
     @IBAction func login(){
+        let username = self.vUsernameTxtField.text
+        let password = self.vPasswordTxtField.text
+        
         
     }
     

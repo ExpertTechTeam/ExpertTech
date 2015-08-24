@@ -12,32 +12,26 @@ class MenuTableViewController: UITableViewController, UISplitViewControllerDeleg
     var isSelectedFromMap:Bool = false
     var isCompletedWork:Bool = false
     var openWorkOrderList = Constants.WorkOrderList.workOrderList
-    var closeWorkOrderList = [WorkOrder]()
+    var completedWorkOrderList = [WorkOrder]()
     var indexNumber:Int = 0
     var workOrderId:Int = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         self.splitViewController?.delegate = self
-        print("View Did Load")
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "workOrderListChangeMethod:", name: "workOrderListChange", object: nil)
         tableView.registerNib(UINib(nibName: "OverViewTableViewCell", bundle: nil), forCellReuseIdentifier: "overViewCell")
-        tableView.registerNib(UINib(nibName: "WorkOrderTableViewCell", bundle: nil), forCellReuseIdentifier: "workOrderCell")
-        
+        tableView.registerNib(UINib(nibName: "OpenWorkOrderTableViewCell", bundle: nil), forCellReuseIdentifier: "openWorkOrderCell")
+        tableView.registerNib(UINib(nibName: "CompletedWorkOrderTableViewCell", bundle: nil), forCellReuseIdentifier: "completedWorkOrderCell")
     }
     
-    override func viewDidAppear(animated: Bool) {
-        print("View did appear")
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
+    
+    // MARK: - Notification
     
     func workOrderListChangeMethod(notif: NSNotification) {
         print("Work Order List Change")
-        
-
         isSelectedFromMap = true
         if let passedInt: AnyObject = notif.userInfo?["indexNumber"] {
             indexNumber = passedInt as! Int - 1
@@ -67,7 +61,7 @@ class MenuTableViewController: UITableViewController, UISplitViewControllerDeleg
             self.tableView.endUpdates()*/
             let completedWorkOrder = self.openWorkOrderList[self.indexNumber]
             self.openWorkOrderList.removeAtIndex(self.indexNumber)
-            self.closeWorkOrderList.append(completedWorkOrder)
+            self.completedWorkOrderList.append(completedWorkOrder)
             
         }
         self.tableView.reloadData()
@@ -78,26 +72,18 @@ class MenuTableViewController: UITableViewController, UISplitViewControllerDeleg
         NSNotificationCenter.defaultCenter().removeObserver(self, name: "workOrderListChange", object:nil)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    // MARK: - Table view data source
-
+    // MARK: - Table view data source and delegate
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 3
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         if section == 0 {
             return 2
         }else if section == 1 {
             return openWorkOrderList.count
         }else{
-            return closeWorkOrderList.count
+            return completedWorkOrderList.count > 0 ? completedWorkOrderList.count : 1
         }
     }
     
@@ -136,7 +122,6 @@ class MenuTableViewController: UITableViewController, UISplitViewControllerDeleg
         selectedCell!.setSelected(true, animated: false)
         if indexPath.section == 0 && indexPath.row == 0 {
             performSegueWithIdentifier("overViewSegue", sender: nil)
-            //self.dismissViewControllerAnimated(false, completion: nil)
             let dict: [String : AnyObject] = ["title" : "Daily Overview" as String]
             NSNotificationCenter.defaultCenter().postNotificationName("sectionChange", object: nil, userInfo: dict)
         }else if indexPath.section == 1 || indexPath.section == 2{
@@ -148,16 +133,11 @@ class MenuTableViewController: UITableViewController, UISplitViewControllerDeleg
         }
     }
     
-    // if tableView is set in attribute inspector with selection to multiple Selection it should work.
-    
-    // Just set it back in deselect
-    
     override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
         let cellToDeSelect = tableView.cellForRowAtIndexPath(indexPath)
         cellToDeSelect!.setSelected(false, animated: false)
     }
 
-    
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String?
     {
         if section == 0 {
@@ -185,77 +165,40 @@ class MenuTableViewController: UITableViewController, UISplitViewControllerDeleg
             return cell
         }else if indexPath.section == 1{
             let workOrder = openWorkOrderList[indexPath.row]
-            let cell = tableView.dequeueReusableCellWithIdentifier("workOrderCell", forIndexPath: indexPath) as! WorkOrderTableViewCell
+            let cell = tableView.dequeueReusableCellWithIdentifier("openWorkOrderCell", forIndexPath: indexPath) as! OpenWorkOrderTableViewCell
             cell.vOrderType1.text = workOrder.woo_latitude
             cell.vOrderType2.text = workOrder.woo_longitude
             cell.vSequence.text = String(indexPath.row + 1)
             return cell
         } else {
-            let workOrder = closeWorkOrderList[indexPath.row]
-            let cell = tableView.dequeueReusableCellWithIdentifier("workOrderCell", forIndexPath: indexPath) as! WorkOrderTableViewCell
-            cell.vSequenceImg.image = nil
-            cell.vOrderType1.text = workOrder.woo_latitude
-            cell.vOrderType2.text = workOrder.woo_longitude
-            cell.vSequence.text = ""
-            cell.vOrderType1.textColor = UIColor.grayColor()
-            cell.vOrderType2.textColor = UIColor.grayColor()
-            return cell
+            if completedWorkOrderList.count > 0 {
+                let workOrder = completedWorkOrderList[indexPath.row]
+                let cell = tableView.dequeueReusableCellWithIdentifier("completedWorkOrderCell", forIndexPath: indexPath) as! CompletedWorkOrderTableViewCell
+                cell.vOrderType1.text = workOrder.woo_latitude
+                cell.vOrderType2.text = workOrder.woo_longitude
+                return cell
+            }else{
+                let cell = UITableViewCell()
+                cell.textLabel!.text = "You have no completed work orders"
+                cell.textLabel!.textColor = UIColor.grayColor()
+                cell.textLabel!.font = UIFont.italicSystemFontOfSize(13.0)
+                cell.userInteractionEnabled = false
+                return cell
+            }
+
         }
 
     }
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
     
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
         if segue.identifier == "workOrderSegue"{
             print("open work order segue")
             let controller:DetailWorkOrderViewController = segue.destinationViewController as! DetailWorkOrderViewController
             controller.workOrderId = self.workOrderId
             controller.indexNumber = self.indexNumber
-            
             //var indexPath = self.tableview.indexPathForSelectedRow() //get index of data for selected row
-            
-//secondViewController.data = self.dataArray.objectAtIndex(indexPath.row) // get data by index and pass it to second view controller
-            
+            //secondViewController.data = self.dataArray.objectAtIndex(indexPath.row) // get data by index and pass it to second view controller
         }else if segue.identifier == "overViewSegue"{
             print("Over view segue")
         }

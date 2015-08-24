@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TechnicianReportTableViewController: UITableViewController, communicationControllerStatus, communicationControllerRootCause, UIPopoverPresentationControllerDelegate, UITextViewDelegate {
+class TechnicianReportTableViewController: UITableViewController, communicationControllerStatus, communicationControllerRootCause, UIPopoverPresentationControllerDelegate, UITextViewDelegate, UIPopoverControllerDelegate {
   
     @IBOutlet weak var vStatusLabel: UILabel!
     @IBOutlet weak var vRootCauseLabel: UILabel!
@@ -68,6 +68,9 @@ class TechnicianReportTableViewController: UITableViewController, communicationC
             let navWorkOrderRootCauseVC = segue.destinationViewController as! UINavigationController
             let workOrderRootCauseVC = navWorkOrderRootCauseVC.topViewController as! RootCauseTableViewController
             workOrderRootCauseVC.delegate = self
+        }else if segue.identifier == "photoSegue" {
+            let photoVC = segue.destinationViewController as! PhotoPopoverViewController
+
         }
         
     }
@@ -83,9 +86,6 @@ class TechnicianReportTableViewController: UITableViewController, communicationC
         self.presentViewController(alertController, animated: true, completion: nil)
         
     }
-    
-    @IBAction func onPhotoVideoCLick(){
-        
-    }
+
 
 }
