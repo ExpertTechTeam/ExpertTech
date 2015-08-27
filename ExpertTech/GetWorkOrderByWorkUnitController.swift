@@ -11,24 +11,25 @@ import Foundation
 class GetWorkOrderByWorkUnitController : NSObject, WLDelegate{
     
     var feedsArray = []
-//    var callerView : LoginViewController = LoginViewController()  //Defind callerView
+    var callerView : MenuTableViewController = MenuTableViewController()  //Defind callerView
     
-    func get(workUnit: String, uiView: LoginViewController){
-//        parameters : [workunit]
+    func get(workUnit: String, uiView: MenuTableViewController){
+     //   parameters : [workunit]
         
         let invocationData = WLProcedureInvocationData(adapterName: "MySQLDBAdapter", procedureName: "getWorkOrderByWorkUnit")
         invocationData.parameters = [workUnit]
         WLClient.sharedInstance().invokeProcedure(invocationData, withDelegate: self)
         
-       // callerView = uiView
+        callerView = uiView
         
         
     }
     
     func onSuccess(response: WLResponse!) {
         print("[GetWorkOrderByWorkUnitController] onSuccess")
-        
-//        self.callerView.updateView(response)
+        feedsArray = response.getResponseJson()["resultSet"] as! NSArray
+        print("\(feedsArray.count)")
+        self.callerView.updateView(feedsArray)
         
     }
     

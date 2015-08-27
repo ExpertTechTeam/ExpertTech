@@ -12,21 +12,14 @@ import MapKit
 class DashboardViewController: UIViewController,MKMapViewDelegate, UIPopoverControllerDelegate{
     @IBOutlet weak var vMapView: MKMapView!
     let regionRadius: CLLocationDistance = 1000
-    var workOrderList = Constants.WorkOrderList.workOrderList
+    var openWorkOrderArrayList:NSArray = NSArray()
     
+    var vWorkUnit:String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("Work Unit : \(vWorkUnit)")
         // Do any additional setup after loading the view.
         self.vMapView.delegate = self
-        /*
-        let workOrder1 = WorkOrder(woo_id: 0, woo_lat: "13.746203", woo_lng: "100.522836")
-        workOrderList.append(workOrder1)
-        let workOrder2 = WorkOrder(woo_id: 1, woo_lat: "13.752036", woo_lng: "100.521985")
-        workOrderList.append(workOrder2)
-        let workOrder3 = WorkOrder(woo_id: 2, woo_lat: "13.747647", woo_lng: "100.521483")
-        workOrderList.append(workOrder3)
-        */
         self.pointMapOnLocation()
         self.centerMapOnLocation()
        
@@ -72,15 +65,21 @@ class DashboardViewController: UIViewController,MKMapViewDelegate, UIPopoverCont
         
     }
     func pointMapOnLocation(){
-        
+        print("Point Map on location : \(openWorkOrderArrayList.count)")
         var i:Int = 1
-        for workOrder in workOrderList{
-            let location = CLLocation(latitude: Double(workOrder.woo_latitude)!, longitude: Double(workOrder.woo_longitude)!)
-            print("\(Double(workOrderList[i-1].woo_latitude)!), \(Double(workOrderList[i-1].woo_longitude)!)")
+        for workOrder in openWorkOrderArrayList{
+            let lat = Double(workOrder["WOO_LATITUDE"] as! String)!
+            let long = Double(workOrder["WOO_LONGITUDE"] as! String)!
+            let wooId = (workOrder["WOO_ID"] as? NSDecimalNumber)!
+            let location = CLLocation(latitude: lat, longitude: long)
+            print("\(lat), \(long)")
             let point:MKPointAnnotation = MKPointAnnotation()
             point.coordinate = location.coordinate
             point.title = String(i)
-            point.subtitle = String(workOrder.woo_id)
+            print("WOOID \(wooId)")
+            point.subtitle = String(wooId)
+           // let dict: [String : AnyObject] = ["workorder" : workOrder as! NSDictionary]
+           // point.dictionaryWithValuesForKeys(["workorder" : workOrder as! NSDictionary])
             self.vMapView.addAnnotation(point)
             i++
         }
@@ -96,7 +95,8 @@ class DashboardViewController: UIViewController,MKMapViewDelegate, UIPopoverCont
         let subtitle:String = (view.annotation?.subtitle!!)!
 
         controller.indexNumber = Int(title)!
-        controller.workOrderId = Int(subtitle)!
+        controller.workOrderId = NSDecimalNumber(string: subtitle)
+        
         popover.presentPopoverFromRect(view.frame, inView: view.superview!, permittedArrowDirections: UIPopoverArrowDirection.Any, animated: true)
 
     }
@@ -106,7 +106,7 @@ class DashboardViewController: UIViewController,MKMapViewDelegate, UIPopoverCont
         return annotationView
     }
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -114,6 +114,8 @@ class DashboardViewController: UIViewController,MKMapViewDelegate, UIPopoverCont
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+    
+
+    
 
 }

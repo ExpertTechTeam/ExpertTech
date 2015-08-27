@@ -74,6 +74,23 @@
 		A1ED40CF1B7DD0B30099F26E /* menu_vehicle.png in Resources */ = {isa = PBXBuildFile; fileRef = A1ED40CD1B7DD0B30099F26E /* menu_vehicle.png */; };
 		A1ED40D11B7DD20F0099F26E /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ED40D01B7DD20F0099F26E /* DashboardViewController.swift */; };
 		A1ED40D91B7DE8790099F26E /* PopOverDetailMapTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1ED40D81B7DE8790099F26E /* PopOverDetailMapTableViewController.swift */; };
+		A1FE97311B8EB312009D1973 /* locationMap.png in Resources */ = {isa = PBXBuildFile; fileRef = A1FE97221B8EB312009D1973 /* locationMap.png */; };
+		A1FE97321B8EB312009D1973 /* expert1.png in Resources */ = {isa = PBXBuildFile; fileRef = A1FE97231B8EB312009D1973 /* expert1.png */; };
+		A1FE97331B8EB312009D1973 /* expert2.png in Resources */ = {isa = PBXBuildFile; fileRef = A1FE97241B8EB312009D1973 /* expert2.png */; };
+		A1FE97341B8EB312009D1973 /* expert3.png in Resources */ = {isa = PBXBuildFile; fileRef = A1FE97251B8EB312009D1973 /* expert3.png */; };
+		A1FE97351B8EB312009D1973 /* instruction.png in Resources */ = {isa = PBXBuildFile; fileRef = A1FE97261B8EB312009D1973 /* instruction.png */; };
+		A1FE97361B8EB312009D1973 /* vehical_car.png in Resources */ = {isa = PBXBuildFile; fileRef = A1FE97271B8EB312009D1973 /* vehical_car.png */; };
+		A1FE97371B8EB312009D1973 /* correct.png in Resources */ = {isa = PBXBuildFile; fileRef = A1FE97281B8EB312009D1973 /* correct.png */; };
+		A1FE97381B8EB312009D1973 /* vehical_cordcanddy.png in Resources */ = {isa = PBXBuildFile; fileRef = A1FE97291B8EB312009D1973 /* vehical_cordcanddy.png */; };
+		A1FE97391B8EB312009D1973 /* video1.png in Resources */ = {isa = PBXBuildFile; fileRef = A1FE972A1B8EB312009D1973 /* video1.png */; };
+		A1FE973A1B8EB312009D1973 /* video2.png in Resources */ = {isa = PBXBuildFile; fileRef = A1FE972B1B8EB312009D1973 /* video2.png */; };
+		A1FE973B1B8EB312009D1973 /* vehical_dsl.png in Resources */ = {isa = PBXBuildFile; fileRef = A1FE972C1B8EB312009D1973 /* vehical_dsl.png */; };
+		A1FE973C1B8EB312009D1973 /* vehical_modem1.png in Resources */ = {isa = PBXBuildFile; fileRef = A1FE972D1B8EB312009D1973 /* vehical_modem1.png */; };
+		A1FE973D1B8EB312009D1973 /* vehical_powercord.png in Resources */ = {isa = PBXBuildFile; fileRef = A1FE972E1B8EB312009D1973 /* vehical_powercord.png */; };
+		A1FE973E1B8EB312009D1973 /* vehical_satellite.png in Resources */ = {isa = PBXBuildFile; fileRef = A1FE972F1B8EB312009D1973 /* vehical_satellite.png */; };
+		A1FE973F1B8EB312009D1973 /* vehical_wifiadapter.png in Resources */ = {isa = PBXBuildFile; fileRef = A1FE97301B8EB312009D1973 /* vehical_wifiadapter.png */; };
+		A1FE97411B8EC73F009D1973 /* VehicleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FE97401B8EC73F009D1973 /* VehicleTableViewController.swift */; };
+		A1FE97431B8EE461009D1973 /* VehicleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1FE97421B8EE461009D1973 /* VehicleDetailViewController.swift */; };
 		CC765CDE9EBA77FC061E8480 /* Pods_ExpertTech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FC225681CC8AB9346F8E1CB /* Pods_ExpertTech.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		F965941C1B59526C00A8B63B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F965941B1B59526C00A8B63B /* AppDelegate.swift */; };
 		F96594211B59526C00A8B63B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F965941F1B59526C00A8B63B /* Main.storyboard */; };
@@ -243,6 +260,23 @@
 		A1ED40CD1B7DD0B30099F26E /* menu_vehicle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_vehicle.png; sourceTree = "<group>"; };
 		A1ED40D01B7DD20F0099F26E /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DashboardViewController.swift; path = View/DashboardViewController.swift; sourceTree = "<group>"; };
 		A1ED40D81B7DE8790099F26E /* PopOverDetailMapTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PopOverDetailMapTableViewController.swift; path = View/PopOverDetailMapTableViewController.swift; sourceTree = "<group>"; };
+		A1FE97221B8EB312009D1973 /* locationMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = locationMap.png; sourceTree = "<group>"; };
+		A1FE97231B8EB312009D1973 /* expert1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = expert1.png; sourceTree = "<group>"; };
+		A1FE97241B8EB312009D1973 /* expert2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = expert2.png; sourceTree = "<group>"; };
+		A1FE97251B8EB312009D1973 /* expert3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = expert3.png; sourceTree = "<group>"; };
+		A1FE97261B8EB312009D1973 /* instruction.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = instruction.png; sourceTree = "<group>"; };
+		A1FE97271B8EB312009D1973 /* vehical_car.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vehical_car.png; sourceTree = "<group>"; };
+		A1FE97281B8EB312009D1973 /* correct.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = correct.png; sourceTree = "<group>"; };
+		A1FE97291B8EB312009D1973 /* vehical_cordcanddy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vehical_cordcanddy.png; sourceTree = "<group>"; };
+		A1FE972A1B8EB312009D1973 /* video1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = video1.png; sourceTree = "<group>"; };
+		A1FE972B1B8EB312009D1973 /* video2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = video2.png; sourceTree = "<group>"; };
+		A1FE972C1B8EB312009D1973 /* vehical_dsl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vehical_dsl.png; sourceTree = "<group>"; };
+		A1FE972D1B8EB312009D1973 /* vehical_modem1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vehical_modem1.png; sourceTree = "<group>"; };
+		A1FE972E1B8EB312009D1973 /* vehical_powercord.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vehical_powercord.png; sourceTree = "<group>"; };
+		A1FE972F1B8EB312009D1973 /* vehical_satellite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vehical_satellite.png; sourceTree = "<group>"; };
+		A1FE97301B8EB312009D1973 /* vehical_wifiadapter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vehical_wifiadapter.png; sourceTree = "<group>"; };
+		A1FE97401B8EC73F009D1973 /* VehicleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VehicleTableViewController.swift; path = View/VehicleTableViewController.swift; sourceTree = "<group>"; };
+		A1FE97421B8EE461009D1973 /* VehicleDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VehicleDetailViewController.swift; sourceTree = "<group>"; };
 		CBD04698935FE637BEFC4F5A /* Pods-ExpertTech.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExpertTech.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExpertTech/Pods-ExpertTech.release.xcconfig"; sourceTree = "<group>"; };
 		D6AF87070C6C060ADCABF368 /* Pods-ExpertTech.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExpertTech.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ExpertTech/Pods-ExpertTech.debug.xcconfig"; sourceTree = "<group>"; };
 		F96594181B59526C00A8B63B /* ExpertTech.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpertTech.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -407,6 +441,8 @@
 				A1ED40D01B7DD20F0099F26E /* DashboardViewController.swift */,
 				A15A2C271B7DF7D50046BDAB /* PinAnnotationView.swift */,
 				A1ED40D81B7DE8790099F26E /* PopOverDetailMapTableViewController.swift */,
+				A1FE97401B8EC73F009D1973 /* VehicleTableViewController.swift */,
+				A1FE97421B8EE461009D1973 /* VehicleDetailViewController.swift */,
 				A14A0BC41B6E153E0040C90C /* DetailWorkOrderViewController.swift */,
 				A14A0BC21B6B84720040C90C /* DetailWorkOrderTableViewController.swift */,
 				A104D67E1B88EBD300B98CF3 /* StartButton.swift */,
@@ -461,6 +497,28 @@
 			name = Constants;
 			sourceTree = "<group>";
 		};
+		A1FE97211B8EB2FA009D1973 /* static */ = {
+			isa = PBXGroup;
+			children = (
+				A1FE97221B8EB312009D1973 /* locationMap.png */,
+				A1FE97231B8EB312009D1973 /* expert1.png */,
+				A1FE97241B8EB312009D1973 /* expert2.png */,
+				A1FE97251B8EB312009D1973 /* expert3.png */,
+				A1FE97261B8EB312009D1973 /* instruction.png */,
+				A1FE97271B8EB312009D1973 /* vehical_car.png */,
+				A1FE97281B8EB312009D1973 /* correct.png */,
+				A1FE97291B8EB312009D1973 /* vehical_cordcanddy.png */,
+				A1FE972A1B8EB312009D1973 /* video1.png */,
+				A1FE972B1B8EB312009D1973 /* video2.png */,
+				A1FE972C1B8EB312009D1973 /* vehical_dsl.png */,
+				A1FE972D1B8EB312009D1973 /* vehical_modem1.png */,
+				A1FE972E1B8EB312009D1973 /* vehical_powercord.png */,
+				A1FE972F1B8EB312009D1973 /* vehical_satellite.png */,
+				A1FE97301B8EB312009D1973 /* vehical_wifiadapter.png */,
+			);
+			name = static;
+			sourceTree = "<group>";
+		};
 		A35FD91F1C1295DFAF439BE9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -495,6 +553,7 @@
 		F94EE4411B5A5AB0009E2D9D /* images */ = {
 			isa = PBXGroup;
 			children = (
+				A1FE97211B8EB2FA009D1973 /* static */,
 				A15A2C291B7E023A0046BDAB /* circle.png */,
 				A1ED40CC1B7DD0B30099F26E /* menu_dashboard.png */,
 				A1ED40CD1B7DD0B30099F26E /* menu_vehicle.png */,
@@ -620,24 +679,39 @@
 				A106E5A91B7C52F1000EBEAC /* icon_instruction80@2x.png in Resources */,
 				A106E5A71B7C52CC000EBEAC /* icon_expert80@2x.png in Resources */,
 				3A8B208C1B7CABD5009200F5 /* worklight.plist in Resources */,
+				A1FE973A1B8EB312009D1973 /* video2.png in Resources */,
+				A1FE973D1B8EB312009D1973 /* vehical_powercord.png in Resources */,
+				A1FE973C1B8EB312009D1973 /* vehical_modem1.png in Resources */,
 				A14CACCD1B786F9900AFBC5A /* RootCause.plist in Resources */,
+				A1FE97361B8EB312009D1973 /* vehical_car.png in Resources */,
+				A1FE97311B8EB312009D1973 /* locationMap.png in Resources */,
 				A1C263061B79EDD100D5DD72 /* overview_rating.png in Resources */,
 				A15A2C2A1B7E023A0046BDAB /* circle.png in Resources */,
+				A1FE97371B8EB312009D1973 /* correct.png in Resources */,
+				A1FE973B1B8EB312009D1973 /* vehical_dsl.png in Resources */,
+				A1FE973E1B8EB312009D1973 /* vehical_satellite.png in Resources */,
 				A1ED40CF1B7DD0B30099F26E /* menu_vehicle.png in Resources */,
 				A106E5AB1B7C530B000EBEAC /* icon_viewclip80@2x.png in Resources */,
 				A18040841B8B01BE0062EB75 /* CompletedWorkOrderTableViewCell.xib in Resources */,
+				A1FE97341B8EB312009D1973 /* expert3.png in Resources */,
+				A1FE97391B8EB312009D1973 /* video1.png in Resources */,
 				F96594291B59526C00A8B63B /* LaunchScreen.storyboard in Resources */,
 				A1C263051B79EDD100D5DD72 /* overview_dailyvisit.png in Resources */,
+				A1FE973F1B8EB312009D1973 /* vehical_wifiadapter.png in Resources */,
 				A148B2401B676F6200840D7A /* OverViewTableViewCell.xib in Resources */,
 				3A8B20901B7CABD5009200F5 /* Localizations.bundle in Resources */,
 				F96594261B59526C00A8B63B /* Assets.xcassets in Resources */,
+				A1FE97351B8EB312009D1973 /* instruction.png in Resources */,
 				A106E5AD1B7C700B000EBEAC /* photo.png in Resources */,
 				A1ED40CE1B7DD0B30099F26E /* menu_dashboard.png in Resources */,
 				F96594211B59526C00A8B63B /* Main.storyboard in Resources */,
 				3A8B208E1B7CABD5009200F5 /* iOS-Cloudant-Data-Layer-SDK-Podfile in Resources */,
 				A14CACC31B785DD200AFBC5A /* WorkOrderStatus.plist in Resources */,
+				A1FE97321B8EB312009D1973 /* expert1.png in Resources */,
 				A1C263011B79E68000D5DD72 /* icon_circle.png in Resources */,
 				F9FFE7BA1B5E2D38005A28B8 /* pic_map.png in Resources */,
+				A1FE97331B8EB312009D1973 /* expert2.png in Resources */,
+				A1FE97381B8EB312009D1973 /* vehical_cordcanddy.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -700,6 +774,7 @@
 				A1E91E561B6A7826003DDC35 /* Profile.swift in Sources */,
 				A1DB14E71B70CAC000E9AA09 /* SurveyOptionViewController.swift in Sources */,
 				3A8B202E1B7CAA8B009200F5 /* UpdateWorkOrderStatusController.swift in Sources */,
+				A1FE97411B8EC73F009D1973 /* VehicleTableViewController.swift in Sources */,
 				A14A0BC51B6E153E0040C90C /* DetailWorkOrderViewController.swift in Sources */,
 				A180405E1B89D8860062EB75 /* ThanksViewController.swift in Sources */,
 				A14CACC71B786DD400AFBC5A /* WorkOrderStatus2TableViewController.swift in Sources */,
@@ -713,6 +788,7 @@
 				A1ED40D91B7DE8790099F26E /* PopOverDetailMapTableViewController.swift in Sources */,
 				A148B2311B66281200840D7A /* LoginViewController.swift in Sources */,
 				A104D67F1B88EBD300B98CF3 /* StartButton.swift in Sources */,
+				A1FE97431B8EE461009D1973 /* VehicleDetailViewController.swift in Sources */,
 				A1ED40C91B7CAD1B0099F26E /* TechnicianReportTableViewController.swift in Sources */,
 				A14A0BC31B6B84720040C90C /* DetailWorkOrderTableViewController.swift in Sources */,
 				A14CACBF1B78508D00AFBC5A /* WorkOrderStatus1TableViewController.swift in Sources */,

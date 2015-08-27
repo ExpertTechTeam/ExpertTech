@@ -18,9 +18,15 @@ class DetailWorkOrderViewController: UIViewController, UISplitViewControllerDele
     @IBOutlet weak var vDoneBtn: DoneButton!
     @IBOutlet weak var vToolbar: UIToolbar!
     @IBOutlet weak var vTimeCount: UILabel!
+    @IBOutlet weak var vSegmentControl: UISegmentedControl!
+    @IBOutlet weak var vOverview: UIView!
+    @IBOutlet weak var vLocation: UIView!
+    @IBOutlet weak var vNotes: UIView!
+    @IBOutlet weak var vInstructions: UIView!
     
+    var isSelectedVehicle:Bool = false
     var indexNumber:Int = 0
-    var workOrderId:Int = 0
+    var workOrderId:NSDecimalNumber = 0
     var hideMaster:Bool = false
     var startTime = NSTimeInterval()
     var timer:NSTimer = NSTimer()
@@ -34,11 +40,12 @@ class DetailWorkOrderViewController: UIViewController, UISplitViewControllerDele
     override func viewDidLoad() {
         super.viewDidLoad()
         self.splitViewController?.delegate = self
-        vToolbar.setItems([vInstructionBarBtn,vExpertBarBtn,vVideoBarBtn,flexibleBarBtn,vDoneBarBtn,vStartBarBtn], animated: false)
-        vDoneBtn.hidden = true
-        vTimeCount.hidden = true
-        
-        
+        self.vToolbar.setItems([vInstructionBarBtn,vExpertBarBtn,vVideoBarBtn,flexibleBarBtn,vDoneBarBtn,vStartBarBtn], animated: false)
+        self.vDoneBtn.hidden = true
+        self.vTimeCount.hidden = true
+        self.vSegmentControl.selectedSegmentIndex = 0
+        self.vStartBarBtn.enabled = isSelectedVehicle
+        //self.onChangeSegment(vSegmentControl)
     }
     
     override func didReceiveMemoryWarning() {
@@ -52,6 +59,49 @@ class DetailWorkOrderViewController: UIViewController, UISplitViewControllerDele
     }
     
     // MARK: - user action
+    @IBAction func onChangeSegment(sender: AnyObject) {
+        switch vSegmentControl.selectedSegmentIndex {
+            case 1 :
+                print("1")
+                self.vOverview.hidden = true
+                self.vLocation.hidden = false
+                self.vNotes.hidden = true
+                self.vInstructions.hidden = true
+            case 2 :
+                print("2")
+                self.vOverview.hidden = true
+                self.vLocation.hidden = true
+                self.vNotes.hidden = false
+                self.vInstructions.hidden = true
+            case 3 :
+                print("3")
+                self.vOverview.hidden = true
+                self.vLocation.hidden = true
+                self.vNotes.hidden = true
+                self.vInstructions.hidden = false
+            default :
+                print("0")
+                self.vOverview.hidden = false
+                self.vLocation.hidden = true
+                self.vNotes.hidden = true
+                self.vInstructions.hidden = true
+
+        }
+    }
+    
+    @IBAction func onClickInstruction(sender: AnyObject) {
+        
+    }
+    
+    @IBAction func onClickExpert(sender: AnyObject) {
+        
+    }
+    
+    @IBAction func onClickVideo(sender: AnyObject) {
+        
+    }
+    
+    
     @IBAction func onClickStart(sender :AnyObject!){
         print("START")
         let startBtn = sender as! StartButton
@@ -67,6 +117,8 @@ class DetailWorkOrderViewController: UIViewController, UISplitViewControllerDele
         print("DONE")
         performSegueWithIdentifier("technicalReportSegue", sender: sender)
     }
+    
+    
     
     func startWork(){
         hideMaster = !hideMaster;
@@ -154,9 +206,9 @@ class DetailWorkOrderViewController: UIViewController, UISplitViewControllerDele
         // Pass the selected object to the new view controller.
         if segue.identifier == "detailWorkOrderSegue"{
             let controller = (segue.destinationViewController as! DetailWorkOrderTableViewController)
-           // controller.workOrderId = self.workOrderId
+            controller.workOrderId = self.workOrderId
             controller.indexNumber = self.indexNumber
-            controller.curWorkOrder = self.curWorkOrder
+            //controller.curWorkOrder = self.curWorkOrder
             print("detailWorkOrderSegue")
         }
     }

@@ -21,8 +21,25 @@ class StartButton: UIButton {
         self.setTitle("Start ", forState: UIControlState.Highlighted)
         self.setTitleColor(Constants.Color.Blue, forState: UIControlState.Normal)
         self.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Highlighted)
-
     }
+    
+    override var enabled:Bool {
+        get {
+            return super.enabled
+        }
+        set {
+            if newValue {
+                layer.borderColor = Constants.Color.Blue.CGColor
+                self.setTitleColor(Constants.Color.Blue, forState: UIControlState.Normal)
+            }else {
+                layer.borderColor = UIColor.grayColor().CGColor
+                self.setTitleColor(UIColor.grayColor(), forState: UIControlState.Normal)
+                
+            }
+            super.enabled = newValue
+        }
+    }
+    
     override var highlighted: Bool {
         get {
             return super.highlighted
@@ -38,38 +55,5 @@ class StartButton: UIButton {
         }
     }
 
-    /*
-    func onTouchDownStart(){
-        
-        layer.backgroundColor = Constants.Color.Blue.CGColor
-        layer.borderColor = Constants.Color.Blue.CGColor
-        self.titleLabel?.textColor = UIColor.whiteColor()
-        self.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-    }
-    
-    func onTouchUpStart(){
-        layer.backgroundColor = UIColor.whiteColor().CGColor
-        layer.borderColor = UIColor.redColor().CGColor
-        self.setTitle("Done", forState: UIControlState.Normal)
-        self.titleLabel?.textColor = UIColor.redColor()
-        self.setTitleColor(UIColor.redColor(), forState: UIControlState.Normal)
-        
-    }
-    
-    func onTouchDownDone(){
-        layer.backgroundColor = UIColor.redColor().CGColor
-        layer.borderColor = UIColor.redColor().CGColor
-        self.titleLabel?.textColor = UIColor.whiteColor()
-        self.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
-    }
-    
-    func onTouchUpDone(){
-        layer.backgroundColor = UIColor.whiteColor().CGColor
-        layer.borderWidth = 1.0;
-        layer.cornerRadius = 4.0;
-        layer.borderColor = UIColor.redColor().CGColor
-        self.titleLabel?.textColor = UIColor.redColor()
-        self.setTitleColor(UIColor.redColor(), forState: UIControlState.Normal)
-    }*/
 
 }

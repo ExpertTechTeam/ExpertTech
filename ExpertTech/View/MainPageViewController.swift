@@ -11,6 +11,11 @@ import UIKit
 class MainPageViewController: UIViewController {
 
     @IBOutlet weak var vTitleItem: UINavigationItem!
+    @IBOutlet weak var vTechnicianNameBarBtn: UIBarButtonItem!
+    
+    var vTechnicianName = ""
+    var vWorkUnit = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let technicianIcon = UIImage(named: "icon_technician")
@@ -18,6 +23,8 @@ class MainPageViewController: UIViewController {
         let imageLeftBarButton = UIBarButtonItem(customView: imageView)
         self.navigationItem.leftBarButtonItem = imageLeftBarButton;
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "sectionChangeMethod:", name: "sectionChange", object: nil)
+        
+        self.vTechnicianNameBarBtn.title = self.vTechnicianName
     }
 
     override func didReceiveMemoryWarning() {
@@ -36,4 +43,21 @@ class MainPageViewController: UIViewController {
     deinit {
         NSNotificationCenter.defaultCenter().removeObserver(self, name: "sectionChange", object:nil)
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        print("Prepare for Segue from Menu Table View Controller")
+        let splitViewMainPageVC = segue.destinationViewController as! UISplitViewController
+       // let masterPageVC = splitViewMainPageVC.viewControllers as! MainPageViewController
+        let navMasterVC  = splitViewMainPageVC.viewControllers.first as! UINavigationController
+        let menuTableVC = navMasterVC.topViewController as! MenuTableViewController
+        let navDetailVC = splitViewMainPageVC.viewControllers.last as! UINavigationController
+        let detailVC = navDetailVC.topViewController as! DashboardViewController
+        
+        detailVC.vWorkUnit = self.vWorkUnit
+        menuTableVC.vWorkUnit = self.vWorkUnit
+        //GetWorkOrderByWorkUnitController().get(vWorkUnit, uiView: menuTableVC)
+        
+        
+    }
+
 }

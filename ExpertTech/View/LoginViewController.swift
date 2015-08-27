@@ -45,7 +45,7 @@ class LoginViewController: UIViewController {
         
         //Test WL Connection
 //        LoginController().login("t10001", password: "passw0rd", uiView: self)
-        InsertCustFeedbackController().insert("4 PTW11221042", workOrderId: 10001, timeless: 8, helpful: 7, quantity: 6, commu: 5, overall: 7, createdDate: "2015-08-22 11:00:00")
+        //InsertCustFeedbackController().insert("4 PTW11221042", workOrderId: 10001, timeless: 8, helpful: 7, quantity: 6, commu: 5, overall: 7, createdDate: "2015-08-22 11:00:00")
 
     }
     
@@ -112,10 +112,10 @@ class LoginViewController: UIViewController {
     */
     
     @IBAction func login(){
-        let username = self.vUsernameTxtField.text
-        let password = self.vPasswordTxtField.text
+        let username = self.vUsernameTxtField!.text
+        let password = self.vPasswordTxtField!.text
         
-        
+        LoginController().login(username!, password: password!, uiView: self)
     }
     
     @IBAction func logout(segue : UIStoryboardSegue){
@@ -127,18 +127,48 @@ class LoginViewController: UIViewController {
         self.loginResult = response
         
         print("Found the result from LoginController : \(response.count) item")
-        for item in self.loginResult as NSArray {
-            
+        if self.loginResult.count > 0 {
+            print("login passed")
+            performSegueWithIdentifier("loginSegue", sender: self.loginResult[0])
+            /*for item in self.loginResult as NSArray {
+                
+                let id: Int = item["PRO_ID"] as! Int
+                let fname: String = item["PRO_FNAME"] as! String
+                let lname: String = item["PRO_LNAME"] as! String
+                
+                print("ID:         \(id)")
+                print("FIRST NAME: \(fname)")
+                print("LAST NAME:  \(lname)")
+                
+            }*/
+        }else{
+            print("login failed")
+            let alert = UIAlertController(title: "Login Failed", message: "Please try again.", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+        
+
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "loginSegue"{
+            let item = sender as! NSDictionary
             let id: Int = item["PRO_ID"] as! Int
             let fname: String = item["PRO_FNAME"] as! String
             let lname: String = item["PRO_LNAME"] as! String
+            let workunit: String = item["PRO_WORKUNIT"] as! String
             
             print("ID:         \(id)")
             print("FIRST NAME: \(fname)")
             print("LAST NAME:  \(lname)")
+            print("WORK UNIT:  \(workunit)")
+            let navMainPageVC = segue.destinationViewController as! UINavigationController
+            let mainPageVC = navMainPageVC.topViewController as! MainPageViewController
+//            let mainPageController:MainPageViewController = segue.destinationViewController as! MainPageViewController
+            mainPageVC.vTechnicianName = "\(fname) \(lname)/\(workunit)"
+            mainPageVC.vWorkUnit = workunit
+            
             
         }
-
     }
-    
 }

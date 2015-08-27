@@ -75,7 +75,7 @@ class TechnicianReportTableViewController: UITableViewController, communicationC
     }
     
     @IBAction func technicalSignOff(){
-        let alertController = UIAlertController(title: "", message: "To conplete the report, hand the iPad to your customer to Signoff", preferredStyle: UIAlertControllerStyle.Alert)
+        let alertController = UIAlertController(title: "", message: "To complete the report, hand the iPad to your customer to Signoff", preferredStyle: UIAlertControllerStyle.Alert)
         let okButton =  UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { (UIAlertAction) -> Void in
                 self.performSegueWithIdentifier("customerSignOffSegue", sender: nil)
             

@@ -23,12 +23,12 @@ class OverViewTableViewCell: UITableViewCell {
         if selected == true {
             bgView.backgroundColor = Constants.Color.Blue
             self.selectedBackgroundView = bgView
-            self.vStatus.textColor = UIColor.greenColor()
+            //self.vStatus.textColor = UIColor.greenColor()
             self.vTitle.textColor = UIColor.whiteColor()
         }else{
             bgView.backgroundColor = UIColor.whiteColor()
             self.selectedBackgroundView = bgView
-            self.vStatus.textColor = UIColor.greenColor()
+            //self.vStatus.textColor = UIColor.greenColor()
             self.vTitle.textColor = Constants.Color.Blue
         }
         // Configure the view for the selected state
