@@ -26,8 +26,6 @@ class DetailWorkOrderTableViewController: UITableViewController, MKMapViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         self.vMapView.delegate = self
-        //let indexNumberStr = "\(workOrderId)"
-        print("Work Order ID from Detail Work Order Table Vire Controller : \(workOrderId)")
         GetWorkOrderDetailByWorkUnitController().getFromSelectMenu(workOrderId, uiView: self)
     }
     

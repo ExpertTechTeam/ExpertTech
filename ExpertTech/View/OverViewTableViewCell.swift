@@ -12,6 +12,8 @@ class OverViewTableViewCell: UITableViewCell {
     @IBOutlet weak var vImageTitle:UIImageView!
     @IBOutlet weak var vTitle:UILabel!
     @IBOutlet weak var vStatus:UILabel!
+    
+    var isSelectedVehicle:Bool = false
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,15 +22,24 @@ class OverViewTableViewCell: UITableViewCell {
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         let bgView = UIView()
-        if selected == true {
+        if selected  {
             bgView.backgroundColor = Constants.Color.Blue
             self.selectedBackgroundView = bgView
-            //self.vStatus.textColor = UIColor.greenColor()
+            if isSelectedVehicle {
+                self.vStatus.textColor = UIColor.greenColor()
+            }else{
+                self.vStatus.textColor = UIColor.whiteColor()
+            }
+            //
             self.vTitle.textColor = UIColor.whiteColor()
         }else{
             bgView.backgroundColor = UIColor.whiteColor()
             self.selectedBackgroundView = bgView
-            //self.vStatus.textColor = UIColor.greenColor()
+            if isSelectedVehicle {
+                self.vStatus.textColor = UIColor.greenColor()
+            }else{
+                self.vStatus.textColor = UIColor.grayColor()
+            }
             self.vTitle.textColor = Constants.Color.Blue
         }
         // Configure the view for the selected state

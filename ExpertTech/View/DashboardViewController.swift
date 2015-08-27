@@ -72,11 +72,11 @@ class DashboardViewController: UIViewController,MKMapViewDelegate, UIPopoverCont
             let long = Double(workOrder["WOO_LONGITUDE"] as! String)!
             let wooId = (workOrder["WOO_ID"] as? NSDecimalNumber)!
             let location = CLLocation(latitude: lat, longitude: long)
-            print("\(lat), \(long)")
+            //print("\(lat), \(long)")
             let point:MKPointAnnotation = MKPointAnnotation()
             point.coordinate = location.coordinate
             point.title = String(i)
-            print("WOOID \(wooId)")
+            print("WOO_ID \(wooId)")
             point.subtitle = String(wooId)
            // let dict: [String : AnyObject] = ["workorder" : workOrder as! NSDictionary]
            // point.dictionaryWithValuesForKeys(["workorder" : workOrder as! NSDictionary])

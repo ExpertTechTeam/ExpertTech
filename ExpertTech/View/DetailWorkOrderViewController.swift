@@ -89,19 +89,6 @@ class DetailWorkOrderViewController: UIViewController, UISplitViewControllerDele
         }
     }
     
-    @IBAction func onClickInstruction(sender: AnyObject) {
-        
-    }
-    
-    @IBAction func onClickExpert(sender: AnyObject) {
-        
-    }
-    
-    @IBAction func onClickVideo(sender: AnyObject) {
-        
-    }
-    
-    
     @IBAction func onClickStart(sender :AnyObject!){
         print("START")
         let startBtn = sender as! StartButton

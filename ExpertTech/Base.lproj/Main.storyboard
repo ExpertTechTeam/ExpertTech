@@ -438,7 +438,6 @@
                                 <items>
                                     <barButtonItem image="icon_instruction80.png" id="pgC-Un-GZI">
                                         <connections>
-                                            <action selector="onClickInstruction:" destination="6pF-yy-ZmR" id="o8k-3i-dk9"/>
                                             <segue destination="k6q-d6-AMp" kind="popover" popoverAnchorBarButtonItem="pgC-Un-GZI" id="JPO-8N-6Ry">
                                                 <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                             </segue>
@@ -446,7 +445,6 @@
                                     </barButtonItem>
                                     <barButtonItem image="icon_expert80.png" id="qlw-za-x8k">
                                         <connections>
-                                            <action selector="onClickExpert:" destination="6pF-yy-ZmR" id="9S0-rR-Z8Z"/>
                                             <segue destination="XoF-fr-06M" kind="popover" popoverAnchorBarButtonItem="qlw-za-x8k" id="4el-be-lXv">
                                                 <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                             </segue>
@@ -454,7 +452,6 @@
                                     </barButtonItem>
                                     <barButtonItem image="icon_viewclip80.png" id="8Vp-U6-qtr" userLabel="VVideo Bar Btn">
                                         <connections>
-                                            <action selector="onClickVideo:" destination="6pF-yy-ZmR" id="gXx-A6-6Zj"/>
                                             <segue destination="e0L-rb-yXn" kind="popover" popoverAnchorBarButtonItem="8Vp-U6-qtr" id="XFL-l7-QHD">
                                                 <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
                                             </segue>
@@ -2157,10 +2154,10 @@
             </objects>
             <point key="canvasLocation" x="8661" y="1489"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Toolbar Popover Table View Controller-->
         <scene sceneID="bYz-UZ-KAF">
             <objects>
-                <tableViewController id="k6q-d6-AMp" sceneMemberID="viewController">
+                <tableViewController id="k6q-d6-AMp" customClass="ToolbarPopoverTableViewController" customModule="ExpertTech" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="c58-FN-B1W">
                         <rect key="frame" x="0.0" y="0.0" width="300" height="175"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2239,15 +2236,18 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="300" height="175"/>
+                    <connections>
+                        <outlet property="vNavigationBar" destination="hPq-Dg-pZv" id="q0W-fM-JJP"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gtx-oD-9r1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4952" y="-1196.5"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Toolbar Popover Table View Controller-->
         <scene sceneID="bqD-6b-5I0">
             <objects>
-                <tableViewController id="XoF-fr-06M" sceneMemberID="viewController">
+                <tableViewController id="XoF-fr-06M" customClass="ToolbarPopoverTableViewController" customModule="ExpertTech" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="fwW-iM-sEX">
                         <rect key="frame" x="0.0" y="0.0" width="230" height="343"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2314,15 +2314,18 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="230" height="343"/>
+                    <connections>
+                        <outlet property="vNavigationBar" destination="Jl4-MH-j00" id="mnO-AG-bnl"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CXh-F6-Cwe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4917" y="-844.5"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Toolbar Popover Table View Controller-->
         <scene sceneID="nFs-sc-G69">
             <objects>
-                <tableViewController id="e0L-rb-yXn" sceneMemberID="viewController">
+                <tableViewController id="e0L-rb-yXn" customClass="ToolbarPopoverTableViewController" customModule="ExpertTech" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="zNL-b4-p24">
                         <rect key="frame" x="0.0" y="0.0" width="300" height="203"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2394,6 +2397,9 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="300" height="203"/>
+                    <connections>
+                        <outlet property="vNavigationBar" destination="ir4-XZ-sUC" id="MwU-De-as7"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CTL-hz-O8o" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -32,7 +32,6 @@ class MainPageViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     func sectionChangeMethod(notif: NSNotification) {
-        print("Section Change")
         if let passedString: AnyObject = notif.userInfo?["title"] {
             self.vTitleItem.title = passedString as? String
             print("\(passedString)")
@@ -45,19 +44,15 @@ class MainPageViewController: UIViewController {
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        print("Prepare for Segue from Menu Table View Controller")
-        let splitViewMainPageVC = segue.destinationViewController as! UISplitViewController
-       // let masterPageVC = splitViewMainPageVC.viewControllers as! MainPageViewController
-        let navMasterVC  = splitViewMainPageVC.viewControllers.first as! UINavigationController
-        let menuTableVC = navMasterVC.topViewController as! MenuTableViewController
-        let navDetailVC = splitViewMainPageVC.viewControllers.last as! UINavigationController
-        let detailVC = navDetailVC.topViewController as! DashboardViewController
-        
-        detailVC.vWorkUnit = self.vWorkUnit
-        menuTableVC.vWorkUnit = self.vWorkUnit
-        //GetWorkOrderByWorkUnitController().get(vWorkUnit, uiView: menuTableVC)
-        
-        
+        if segue.identifier == "splitViewSegue"{
+            let splitViewMainPageVC = segue.destinationViewController as! UISplitViewController
+            let navMasterVC  = splitViewMainPageVC.viewControllers.first as! UINavigationController
+            let menuTableVC = navMasterVC.topViewController as! MenuTableViewController
+            let navDetailVC = splitViewMainPageVC.viewControllers.last as! UINavigationController
+            let detailVC = navDetailVC.topViewController as! DashboardViewController
+            detailVC.vWorkUnit = self.vWorkUnit
+            menuTableVC.vWorkUnit = self.vWorkUnit
+        }
     }
 
 }

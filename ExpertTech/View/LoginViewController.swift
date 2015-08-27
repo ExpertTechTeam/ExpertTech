@@ -130,17 +130,6 @@ class LoginViewController: UIViewController {
         if self.loginResult.count > 0 {
             print("login passed")
             performSegueWithIdentifier("loginSegue", sender: self.loginResult[0])
-            /*for item in self.loginResult as NSArray {
-                
-                let id: Int = item["PRO_ID"] as! Int
-                let fname: String = item["PRO_FNAME"] as! String
-                let lname: String = item["PRO_LNAME"] as! String
-                
-                print("ID:         \(id)")
-                print("FIRST NAME: \(fname)")
-                print("LAST NAME:  \(lname)")
-                
-            }*/
         }else{
             print("login failed")
             let alert = UIAlertController(title: "Login Failed", message: "Please try again.", preferredStyle: UIAlertControllerStyle.Alert)
@@ -164,7 +153,6 @@ class LoginViewController: UIViewController {
             print("WORK UNIT:  \(workunit)")
             let navMainPageVC = segue.destinationViewController as! UINavigationController
             let mainPageVC = navMainPageVC.topViewController as! MainPageViewController
-//            let mainPageController:MainPageViewController = segue.destinationViewController as! MainPageViewController
             mainPageVC.vTechnicianName = "\(fname) \(lname)/\(workunit)"
             mainPageVC.vWorkUnit = workunit
             

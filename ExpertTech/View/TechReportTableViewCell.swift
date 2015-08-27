@@ -19,9 +19,16 @@ class TechReportTableViewCell: UITableViewCell {
     
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
+        let bgView = UIView()
+        if selected == true {
+            bgView.backgroundColor = Constants.Color.Blue
+            self.selectedBackgroundView = bgView
+        }else{
+            bgView.backgroundColor = UIColor.whiteColor()
+            self.selectedBackgroundView = bgView
+        }
     }
+
     
     override func layoutSubviews() {
         super.layoutSubviews()

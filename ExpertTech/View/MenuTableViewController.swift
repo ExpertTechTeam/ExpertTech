@@ -239,12 +239,11 @@ class MenuTableViewController: UITableViewController, UISplitViewControllerDeleg
                 cell.vImageTitle.image = UIImage(named: "menu_vehicle.png")
                 cell.vTitle.text = "Vehicle"
                 if isSelectedVehicle {
-                    cell.vStatus.textColor = UIColor.greenColor()
                     cell.vStatus.text = "Selected"
                 }else{
-                    cell.vStatus.textColor = UIColor.grayColor()
                     cell.vStatus.text = "Select to Vehicle"
                 }
+                cell.isSelectedVehicle = isSelectedVehicle
             }
             return cell
         }else if indexPath.section == 1{
@@ -294,7 +293,7 @@ class MenuTableViewController: UITableViewController, UISplitViewControllerDeleg
     // MARK: - Navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "workOrderSegue"{
-            print("open work order segue")
+            print("Open work order segue")
             let controller:DetailWorkOrderViewController = segue.destinationViewController as! DetailWorkOrderViewController
             controller.workOrderId = self.curWorkOrderDict["WOO_ID"] as! NSDecimalNumber
             controller.indexNumber = self.indexNumber
